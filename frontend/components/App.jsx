@@ -9,7 +9,6 @@ import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
   <div>
-    <h1>BeatCloud</h1>
       <Route exact path="/" component={Home} />
       <AuthRoute exact path="/login" component={LogIn} />
       <AuthRoute exact path="/signup" component={SignUp} />
