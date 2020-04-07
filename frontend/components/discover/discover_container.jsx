@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import Discover from './discover';
 
-const msp = ({ session }) => ({
-    currentUser: session.currentUser
+const msp = state => ({
+    currentUser: state.entities.users[state.session.id]
 });
 const mdp = dispatch => ({
     logout: () => dispatch(logout()),

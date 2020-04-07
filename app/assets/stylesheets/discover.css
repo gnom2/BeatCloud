@@ -1,12 +1,13 @@
 .discover {
     width: 100%;
+    background-color: #cfe0e8;
 }
 
-.discover-nav {
+.discover-main {
     margin: 0 auto;
     width: 1080px;
     height: 400px;
-    background-color: #343148;
+    background-color: white;
 }
 
 .discover-nav-content {
