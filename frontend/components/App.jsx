@@ -1,17 +1,17 @@
 import React from "react";
 
-import SignUp from "./session_form/signup_form_container";
-import LogIn from "./session_form/login_form_container";
 import Home from "./home/home_container";
-import { Route, Redirect, Switch, Link, HashRouter } from "react-router-dom";
+import Discover from './discover/discover_container'
+import ModalContainer from "./modal/modal_container";
+// import { Route, Redirect, Switch, Link, HashRouter } from "react-router-dom";
 
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
   <div>
-      <Route exact path="/" component={Home} />
-      <AuthRoute exact path="/login" component={LogIn} />
-      <AuthRoute exact path="/signup" component={SignUp} />
+      <ModalContainer />
+      <AuthRoute exact path="/" component={Home} />
+      <ProtectedRoute exact path="/discover" component={Discover} />
   </div>
 );
 

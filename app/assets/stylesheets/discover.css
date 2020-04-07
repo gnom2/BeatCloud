@@ -1,0 +1,24 @@
+.discover {
+    width: 100%;
+}
+
+.discover-nav {
+    margin: 0 auto;
+    width: 1080px;
+    height: 400px;
+    background-color: #343148;
+}
+
+.discover-nav-content {
+    display: flex;
+    border-top: 5px solid #BD3D3A;
+    justify-content: space-between;
+    padding-top: 5px;
+    margin: 0 auto;
+}
+
+.discover-nav-content > img {
+    margin-left: 20px;
+    height: 50px;
+    width: 300px;
+}

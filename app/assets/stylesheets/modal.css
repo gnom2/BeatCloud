@@ -1,0 +1,27 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transition: opacity 500ms ease-in;
+    -moz-transition: opacity 500ms ease-in;
+    transition: opacity 500ms ease-in;
+  }
+  
+  .modal-child {
+    position: relative;
+    margin: 0 auto;
+    top: 15%;
+    color: black;
+    background: white;
+    height: 400px;
+    width: 450px;
+    border-radius: 3px;
+  }
+  
+  .login-form-box {
+      background-color: red;
+      padding: 50px;
+  } 
