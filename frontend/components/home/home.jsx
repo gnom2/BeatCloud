@@ -1,4 +1,7 @@
 import React from "react";
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Home = ({ login, signup, openModal }) => {
 
@@ -6,10 +9,7 @@ const Home = ({ login, signup, openModal }) => {
     <div className="home">
       <header className="home-header">
         <nav className="home-nav">
-          <section
-            className="home-nav-content"
-            style={{ backgroundImage: `url(require(${window.navURL}))` }}
-          >
+          <section className="home-nav-content">
             <div className="nav-logo">
               <img src={window.logoURL} alt="" />
             </div>
@@ -23,6 +23,18 @@ const Home = ({ login, signup, openModal }) => {
               <span>For Creators</span>
             </div>
           </section>
+          <section className="home-nav-info">
+            <div id="nav-info">
+                <h2 id="nav-info-header">Discover more with BeatCloud Go+</h2>
+                <p id="nav-info-content">
+                    BeatCloud Go+ lets you listen offline, ad-free, with over 150 <br/>
+                    million tracks - and growing. 
+                </p>
+                <button className="nav-link-sc">SoundCloud</button>
+
+            </div>
+            
+          </section>
         </nav>
       </header>
       <div className="body-search-content">
@@ -32,7 +44,9 @@ const Home = ({ login, signup, openModal }) => {
             type="text"
             placeholder="Search for Artists, bands, tracks, podcasts"
           />
-          <button className="body-search-btn" />
+          <button className="body-search-btn">
+            <FontAwesomeIcon icon={faSearch}/>
+          </button>
         </form>
         <p>or</p>
         <button className="body-search-upload">Upload your own</button>
@@ -131,12 +145,32 @@ const Home = ({ login, signup, openModal }) => {
       </div>
       <div className="body-teaser-content">
         <div className="body-teaser">
-          <h1 className="teaser-header"></h1>
-          <p className="teaser-info"> </p>
+          <h1 className="teaser-header">
+            Calling all creators
+          </h1>
+          <p className="teaser-info"> 
+            Get on BeatCloud to connect with fans, <br/>
+            share your sounds, and grow your    <br/>
+            audience. What are you waiting for?
+          </p>
           <button className="teaser-btn">Find out more</button>
         </div>
       </div>
-      <div className="body-signup-content"></div>
+      <div className="body-signup-content">
+        <div id="signup-header">
+            Thanks for listening. Now join in.
+        </div>
+        <div id="signup-info">
+            Save tracks, follow artists and build playlists. All for free.
+        </div>
+        <button className="signup-btn" onClick={() => openModal("signup")}>Create account</button>
+        <div className="signup-signin">
+            <div id="signin-text">
+                Already have an account?
+            </div>
+            <button className="signin-btn" onClick={() => openModal("login")}>Sign In</button>
+        </div>
+      </div>
     </div>
   );
 };

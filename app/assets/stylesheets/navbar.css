@@ -64,6 +64,7 @@
      height: 24px;
      border-radius: 4px;
      width: 380px;
+     padding-left: 10px;
  }
 
  .nav-bar-right {
@@ -140,6 +141,15 @@
 
 #logout-icon {
     padding-left: 7px;
+
+    
+}
+
+
+.search-icon {
+    background: transparent;
+    position: relative;
+    right: 30px;
 }
 
 .nav-dropdown-menu > button:hover {

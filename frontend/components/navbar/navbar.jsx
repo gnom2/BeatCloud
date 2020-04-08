@@ -54,6 +54,9 @@ class NavBar extends React.Component {
                     <div className="nav-bar-middle">
 
                         <input type="search" placeholder="Search" results="0" />
+                        <button className="search-icon">
+                            <FontAwesomeIcon icon={faSearch} />
+                        </button>
                     </div>
                     <div className="nav-bar-right">
                         <div className="nav-bar-right-wrapper">
