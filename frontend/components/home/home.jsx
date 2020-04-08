@@ -30,8 +30,7 @@ const Home = ({ login, signup, openModal }) => {
                     BeatCloud Go+ lets you listen offline, ad-free, with over 150 <br/>
                     million tracks - and growing. 
                 </p>
-                <button className="nav-link-sc">SoundCloud</button>
-
+                <button className="nav-link-sc"><a id="nav-info-sc-link" href="https://www.soundcloud.com">SoundCloud</a></button> 
             </div>
             
           </section>
@@ -59,7 +58,7 @@ const Home = ({ login, signup, openModal }) => {
           <img src={window.track1aURL} />
           <span id="track-title">Armin van Buuren</span>
           <br />
-          <span id="track-artist">This Is What It Feels Like</span>
+          <span id="track-artist">This Is What It Feels..</span>
         </div>
         <div id="track-item">
           <img src={window.track2URL} />

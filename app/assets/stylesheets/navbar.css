@@ -46,6 +46,7 @@
      border-right: 1px solid #111;
      box-sizing: border-box;
      text-align: center;
+     cursor: pointer;
      font: 100 14px/1.5 Interstate,Lucida Grande,Arial,sans-serif;
  }
 
@@ -74,7 +75,6 @@
  .nav-bar-right-wrapper {
      display: flex;
      align-items: center;
-     
      height: 46px;
      width: 312px;
  }
@@ -82,11 +82,18 @@
  .nav-bar-right-wrapper > button {
     width: 25%;
     height: 100%;
+    cursor: pointer;
     background: transparent;
     color: lightgray;
     box-sizing: border-box;
     text-align: center;
     font: 100 14px/1.5 Interstate,Lucida Grande,Arial,sans-serif;
+}
+
+.nav-github-button > a {
+    text-decoration: none;
+    color: lightgray;
+    
 }
 
 
@@ -99,6 +106,7 @@
     color: lightgray;
     box-sizing: border-box;
     text-align: center;
+    cursor: pointer;
     font: 100 14px/1.5 Interstate,Lucida Grande,Arial,sans-serif;
 }
 
@@ -112,12 +120,22 @@
     color: #eee;
     outline: 0;
 }
+
 .nav-bar-right-wrapper > button:hover {
     color: #eee;
     outline: 0;
 }
 
-.nav-dropdown-menu {
+.nav-bar-profile-icon img,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* .nav-dropdown-menu {
 	position: fixed;
 	top: 46px;
 	right: 155px;
@@ -128,6 +146,16 @@
 	text-align: left;
 	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
 	font-weight: initial;
+} */
+
+.nav-dropdown-menu {
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 40px;
+    right: -50;
 }
 
 .nav-dropdown-menu > button {
@@ -150,6 +178,7 @@
     background: transparent;
     position: relative;
     right: 30px;
+    cursor: pointer;
 }
 
 .nav-dropdown-menu > button:hover {

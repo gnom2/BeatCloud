@@ -1,6 +1,6 @@
 .discover {
     width: 100%;
-    background-color: #cfe0e8;
+    background-color: whitesmoke;
 }
 
 .discover-main {
@@ -8,6 +8,12 @@
     width: 1080px;
     height: 400px;
     background-color: white;
+}
+
+.discover-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .discover-nav-content {
@@ -22,4 +28,117 @@
     margin-left: 20px;
     height: 50px;
     width: 300px;
+}
+
+.discover-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  background-color: whitesmoke;
+}
+
+.discover-main-content-container {
+    margin-top:46px;
+    display: block;
+    width: 65%;
+    height: 1000px;
+    background-color: #fff;
+}
+
+.discover-side-content-container {
+    margin-top:46px;
+    width: 34.9%;
+    height: 1000px;
+    background-color: #fff;
+    border-left: 1px solid #f0f0f0;
+}
+
+.side-top-content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.stats-title-format {
+    display: flex;
+    justify-content: space-between;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    color: #999;
+    line-height: 24px;
+}
+
+.title-format {
+    display: flex;
+    cursor: pointer;
+}
+
+.title-icon {
+    margin-right: 5px;
+}
+
+.side-top-info {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #f0f0f0;
+}
+
+.side-stats {
+    display: flex;
+    justify-content: space-between;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+    color: #999;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+.side-stats-total {
+    margin-top: 10px;
+    font-size: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #999;
+}
+
+.stats-title-middle {
+    display: flex;
+    justify-content: space-between;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    color: #999;
+    line-height: 24px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.side-middle-content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.side-middle-info {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #f0f0f0;
+}
+
+#left-stats, #right-stats{
+    margin-bottom: 10px;
+}
+
+#right-num{
+    margin-left: 30px;
+}
+
+#left-num {
+    color: #BD3D3A;
+}
+
+#left-num, #right-num{
+    font-size: 30px;
 }

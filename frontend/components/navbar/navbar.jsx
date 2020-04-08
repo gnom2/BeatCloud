@@ -60,11 +60,11 @@ class NavBar extends React.Component {
                     </div>
                     <div className="nav-bar-right">
                         <div className="nav-bar-right-wrapper">
-                            <button className="nav-github-button">Github</button>
+                            <button className="nav-github-button"><a href="http://www.github.com/gnom2/BeatCloud">Github</a></button>
                             <button className="nav-upload-button">Upload</button>
                             <button className="nav-profile-button">GNOMEE</button>
                             <div className="nav-bar-profile-icon">
-                                <img src="https://onthisting.com/pics/dots.png" alt="" onClick={this.handleDropdown} />
+                                <img className="dropbtn" src="https://onthisting.com/pics/dots.png" alt="" onClick={this.handleDropdown} />
                                 {this.state.dropdown ? dropdown() : null}
                             </div>
                         </div>
