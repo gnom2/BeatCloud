@@ -48,6 +48,7 @@
     background: #BD3D3A;
     padding: 5px 15px 5px 15px;
     color: white;
+    font-size: 14px;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     font-weight: 100;
     text-align: center;
@@ -60,4 +61,8 @@
     font-weight: 100;
     text-align: center;
     font-size: 14px;
+}
+
+.home-body {
+    
 }

@@ -20,7 +20,7 @@ const Home = ({ login, signup, openModal }) => {
             </header>
             <section className="home-body">
                 <section className="home-body-content">
-
+                    Discover
                 </section>
             </section>
         </div>

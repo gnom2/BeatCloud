@@ -73,12 +73,13 @@
  .nav-bar-right-wrapper {
      display: flex;
      align-items: center;
+     
      height: 46px;
      width: 312px;
  }
 
  .nav-bar-right-wrapper > button {
-    width: 33%;
+    width: 25%;
     height: 100%;
     background: transparent;
     color: lightgray;
@@ -87,12 +88,11 @@
     font: 100 14px/1.5 Interstate,Lucida Grande,Arial,sans-serif;
 }
 
- .nav-bar-profile-icon {
-     display: flex;
-     align-items: center;
- }
 
- .nav-bar-profile-icon > button {
+ .nav-bar-profile-icon {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
     height: 100%;
     background: transparent;
     color: lightgray;
@@ -102,6 +102,47 @@
 }
 
 .nav-bar-profile-icon > img {
-    height: 40px;
-    width: 40px;
+    height: 46px;
+    width: 46px;
+}
+
+
+.nav-bar-left-wrapper > button:hover {
+    color: #eee;
+    outline: 0;
+}
+.nav-bar-right-wrapper > button:hover {
+    color: #eee;
+    outline: 0;
+}
+
+.nav-dropdown-menu {
+	position: fixed;
+	top: 46px;
+	right: 155px;
+	background-color: black;
+	width: 170px;
+	z-index: 1;
+	color: darkgray;
+	text-align: left;
+	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
+	font-weight: initial;
+}
+
+.nav-dropdown-menu > button {
+    height: 100%;
+    width: 100%;
+    color: #ccc;
+    background-color: black;
+    font: 12px/1.4 Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    padding: 8px 10px;
+}
+
+#logout-icon {
+    padding-left: 7px;
+}
+
+.nav-dropdown-menu > button:hover {
+    background-color: darkgray;
+    color: black;
 }
