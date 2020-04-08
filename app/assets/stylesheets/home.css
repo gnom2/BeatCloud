@@ -242,6 +242,7 @@
 .body-mobile-content > img {
   width: 450px;
   padding-right: 60px;
+  margin-top: 40px;
 }
 
 .body-mobile-container .mobile-header {
