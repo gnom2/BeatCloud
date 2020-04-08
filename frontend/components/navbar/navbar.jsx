@@ -1,9 +1,9 @@
 import React from 'react';
-import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-class NavBar extends React.Component { 
+class NavBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,7 +15,7 @@ class NavBar extends React.Component {
     }
 
     handleDropdown() {
-        this.state.dropdown ? this.setState({dropdown: false}) : this.setState({ dropdown: true })
+        this.state.dropdown ? this.setState({ dropdown: false }) : this.setState({ dropdown: true })
     }
 
     handleLogout() {
@@ -34,8 +34,8 @@ class NavBar extends React.Component {
                             icon={faSignOutAlt}
                         />
                     </span>
-                    </button>
-            </div>   
+                </button>
+            </div>
         );
 
         return (
@@ -52,7 +52,8 @@ class NavBar extends React.Component {
                         </div>
                     </div>
                     <div className="nav-bar-middle">
-                        <input type="search" placeholder="Search" />
+
+                        <input type="search" placeholder="Search" results="0" />
                     </div>
                     <div className="nav-bar-right">
                         <div className="nav-bar-right-wrapper">

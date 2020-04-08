@@ -1,8 +1,14 @@
+
 .home {
     width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
 
-.home-nav {
+.home .home-nav {
     margin: 0 auto;
     width: 1080px;
     height: 400px;
@@ -61,4 +67,183 @@
     font-weight: 100;
     text-align: center;
     font-size: 14px;
+}
+
+
+
+/* .home-body {
+    width: 1080px;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    background-color: red;
+}
+
+.home-body-content {
+    margin: 0 auto;
+    margin-top: -56px;
+    width: 1080px;
+    background-color: white;
+
+} */
+
+.body-search-content {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 30px 0;
+    width: 1080px;
+    align-items: center;
+    background-color: #fff;
+}
+
+.body-search-content .body-search-input {
+    width: 500px;
+}
+
+.body-search-input > #search-bar {
+    background: #f2f2f2;
+    padding: 0 16px;
+    height: 40px;
+    width: 425px;
+    border-radius: 3px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    vertical-align: baseline;
+}
+
+.body-search-content > p {
+    margin-right: 20px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 14=6px;
+    vertical-align: baseline;
+}
+
+.body-search-content > .body-search-upload {
+    background: #BD3D3A;
+    padding: 0 16px;
+    height: 40px;
+    width: 160px;
+    border-radius: 3px;
+    color: #fff;
+    margin-left: 14px;
+    padding: 13px 13px;
+    height: 40px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: baseline;
+}
+
+.body-trending-header {
+    width: 1080px;
+    font-size: 21px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+    background-color: #fff;
+}
+
+.body-trending-content {
+    width: 1080px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
+.body-trending-content #track-item {
+    width: 140px;
+    height: 140px;
+    padding: 20px;
+}
+
+#track-item > img {
+    width: 100%;
+    height: 100%;
+}
+
+#track-item > #track-title {
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+}
+
+#track-item > #track-artist {
+    font-size: 13px;
+    overflow: hidden;
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    color: #999;
+    font-weight: 100;
+}
+
+.body-mobile-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.body-mobile-content > img {
+    width: 450px;
+    padding-right: 60px;
+}
+
+.body-mobile-container .mobile-header {
+    font-family: Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 36px;
+    margin-bottom: 17px;
+}
+
+.body-mobile-container .mobile-header:after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-image: linear-gradient(90deg,#7d01a1,#f30 50%,#f50);
+    margin-top: 15px;
+}
+
+.body-mobile-container .mobile-info {
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-size: 24px;
+    padding: 5px;
+    margin: 0 0 10px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#mobile-icons > img {
+    padding: 5px;
+}
+
+.body-teaser-content {
+    background-color: red;
+}
+
+.body-teaser-content > .body-teaser {
+    position: relative;
+    height: 350px;
+    width: 1080px;
+    background-color: #141414;
+    background-image: url('https://a-v2.sndcdn.com/assets/images/hp_creator_image-f3d92e09.jpg');
+    background-size: cover;
+    background-position: 100%;
+    color: #fff;
+}
+
+.body-signup-content {
+    background-color: green;
 }
