@@ -20,6 +20,9 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    if (this.props.formType === 'Create Account') {
+      this.props.signup(user);
+    } 
     this.props.login(user)
       .then(this.props.closeModal);
   }
