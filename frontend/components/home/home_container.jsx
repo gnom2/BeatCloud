@@ -4,7 +4,8 @@ import { login, signup } from '../../actions/session_actions';
 import Home from './home';
 
 const msp = state => ({
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    errors: state.entities.errors
 });
 const mdp = dispatch => ({
     login: user => dispatch(login(user)),

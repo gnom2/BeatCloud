@@ -4,7 +4,8 @@ import Modal from "./modal";
 
 const msp = state => {
     return {
-        modal: state.ui.modal
+        modal: state.ui.modal,
+        sessionErrors: state.errors.session
     };
 };
 

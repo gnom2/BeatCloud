@@ -2,7 +2,8 @@ import React from 'react';
 import LoginFormContainer from "../session_form/login_form_container";
 import SignupFormContainer from "../session_form/signup_form_container";
 
-function Modal({ modal, closeModal }) {
+function Modal({ modal, sessionErrors, closeModal }) {
+
     if (!modal) {
         return null;
     }
@@ -17,7 +18,6 @@ function Modal({ modal, closeModal }) {
         default:
             return null;
     }
-    debugger
     return (
         <div className="modal-background" onClick={closeModal}>
             <div className="modal-child" onClick={e => e.stopPropagation()}>

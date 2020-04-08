@@ -1,6 +1,8 @@
 import React from "react";
 
 class SessionForm extends React.Component {
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -8,6 +10,12 @@ class SessionForm extends React.Component {
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
+  }
+
+  componentWillUnmount() {
+      this.props.setErrors([]);
+  
   }
 
   update(field) {
@@ -28,6 +36,16 @@ class SessionForm extends React.Component {
         .then(this.props.closeModal);
     }
   }
+
+  handleDemoSubmit(e) {
+    e.preventDefault();
+    const user = Object.assign({
+        email: "demo@gmail.com", 
+        password: "123456"
+    });
+    this.props.login(user).then(this.props.closeModal);
+  }
+
 
   renderErrors() {
     return (
@@ -68,7 +86,7 @@ class SessionForm extends React.Component {
           <div className="session-form-separator">
             <span>or</span>
           </div>
-          <button className="session-form-btn" onClick={this.handleSubmit}>Continue as Demo User</button>
+          <button className="session-form-btn" onClick={this.handleDemoSubmit}>Continue as Demo User</button>
         </form>
         <a id="help-link" href="">Need help?</a>
         <div id="disclaimer-info">
