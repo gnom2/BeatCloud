@@ -6,7 +6,7 @@ const Home = ({ login, signup, openModal }) => {
         <div className="home">
             <header className="home-header">
                 <nav className="home-nav">
-                    <section className="home-nav-content">
+                    <section className="home-nav-content" style={{ backgroundImage: `url(require(${window.navURL}))` }}>
                         <div className="nav-logo">
                             <img src={window.logoURL} alt="" />
                         </div>
