@@ -24,9 +24,10 @@
 }
 
 .nav-logo > img {
-    margin-left: 20px;
-    height: 50px;
-    width: 300px;
+    margin-top: 10px;
+    margin-left: 40px;
+    height: 30px;
+    width: 145px;
 }
 
 .nav-login-form {
@@ -40,10 +41,11 @@
     margin-right: 10px;
     border: 0.5px solid white;
     background: transparent;
-    padding: 5px 15px 5px 15px;
+    padding: 8px 15px;
     color: white;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     font-weight: 100;
+    font-size: 12px;
     text-align: center;
     border-radius: 3px;
 }
@@ -52,9 +54,9 @@
     margin-right: 10px;
     border: 0.5px solid #BD3D3A;
     background: #BD3D3A;
-    padding: 5px 15px 5px 15px;
+    padding: 8px 15px;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     font-weight: 100;
     text-align: center;
@@ -66,7 +68,7 @@
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     font-weight: 100;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 

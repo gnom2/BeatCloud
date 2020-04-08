@@ -8,7 +8,7 @@ const Home = ({ login, signup, openModal }) => {
                 <nav className="home-nav">
                     <section className="home-nav-content">
                         <div className="nav-logo">
-                            <img src="https://i.imgur.com/UqRmG9K.png" alt="" />
+                            <img src={window.logoURL} alt="" />
                         </div>
                         <div className="nav-login-form">
                             <button id='login' onClick={() => openModal('login')}>Sign In</button>
