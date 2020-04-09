@@ -2,14 +2,15 @@ class Api::TracksController < ApplicationController
     def index
         @tracks = Track.all 
         if @tracks
-            render 'api/tracks'
+            render 'api/tracks/index'
         else
             render json: ["Tracks not found"], status: 404
         end
     end
 
     def show
-        @track = @track.find(params[:id])
+        @track = Track.find(params[:id])
+        @artist = User.find(@track.artist_id)
         if @track 
             render 'api/tracks/show'
         else
@@ -23,8 +24,18 @@ class Api::TracksController < ApplicationController
         if @track.save
             render '/api/tracks/show'
         else
-            render json: ['Upload has failed']
+            render json: @track.errors.full_messages, status: 422
         end  
+    end
+
+    def destroy
+        @track = Track.find(params[:id])
+        if @track
+            @track.destroy
+            render "api/tracks/show"
+        else
+            render json: ["Track not found"], status: 422
+        end
     end
 
     private
