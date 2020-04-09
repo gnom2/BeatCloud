@@ -126,6 +126,7 @@ const Home = ({ login, signup, openModal }) => {
           <br />
           <span id="track-artist">Blue Monday</span>
         </div>
+        <button className="btn-format">Explore trending playlists</button>
       </div>
       <div className="body-mobile-content">
         <img src={window.mobileURL} alt="" />
@@ -162,7 +163,7 @@ const Home = ({ login, signup, openModal }) => {
         <div id="signup-info">
             Save tracks, follow artists and build playlists. All for free.
         </div>
-        <button className="signup-btn" onClick={() => openModal("signup")}>Create account</button>
+        <button className="btn-format" onClick={() => openModal("signup")}>Create account</button>
         <div className="signup-signin">
             <div id="signin-text">
                 Already have an account?

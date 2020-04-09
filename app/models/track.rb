@@ -12,5 +12,7 @@ class Track < ApplicationRecord
     has_many :likes,
         foreign_key: :track_id,
         class_name: :Like 
-        
+
+    has_one_attached :photo
+    has_one_attached :track    
 end

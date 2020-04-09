@@ -9,7 +9,7 @@
 
 .home .home-nav {
   margin: 0 auto;
-  width: 1080px;
+  width: 1180px;
   height: 590px;
   background-size: cover;
   background-color: #343148;
@@ -51,6 +51,7 @@
   font-size: 12px;
   text-align: center;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .nav-login-form > #signup {
@@ -65,6 +66,7 @@
   font-weight: 100;
   text-align: center;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .nav-login-form > span {
@@ -75,6 +77,7 @@
   text-align: center;
   font-size: 12px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .home-nav-info {
@@ -126,7 +129,7 @@
   display: flex;
   justify-content: center;
   padding: 30px 0 30px 0;
-  width: 1080px;
+  width: 1180px;
   align-items: center;
   background-color: #fff;
 }
@@ -162,6 +165,7 @@
     background: transparent;
     position: relative;
     right: 30px;
+    cursor: pointer;
 }
 
 .body-search-content > .body-search-upload {
@@ -180,10 +184,11 @@
   text-align: center;
   font-size: 14px;
   vertical-align: baseline;
+  cursor: pointer;
 }
 
 .body-trending-header {
-  width: 1080px;
+  width: 1180px;
   font-size: 21px;
   text-align: center;
   padding-top: 10px;
@@ -191,10 +196,11 @@
     Garuda, Verdana, Tahoma, sans-serif;
   font-weight: 100;
   background-color: #fff;
+  
 }
 
 .body-trending-content {
-  width: 1080px;
+  width: 1180px;
   padding-top: 10px;
   padding-bottom: 40px;
   display: flex;
@@ -203,10 +209,16 @@
 }
 
 .body-trending-content #track-item {
-  width: 140px;
-  height: 140px;
-  padding: 20px;
+  width: 150px;
+  height: 150px;
+  padding: 23px;
   margin-top: 10px;
+  cursor: pointer;
+}
+
+.body-trending-content button {
+  margin: 0 auto;
+  margin-top: 60px;
 }
 
 #track-item > img {
@@ -276,6 +288,8 @@
 
 #mobile-icons > img {
   padding: 5px;
+  margin-left: 20px;
+  cursor: pointer;
 }
 
 .body-teaser-content {
@@ -285,7 +299,7 @@
 .body-teaser-content > .body-teaser {
   position: relative;
   height: 350px;
-  width: 1080px;
+  width: 1180px;
   background-color: #141414;
   background-image: url("https://a-v2.sndcdn.com/assets/images/hp_creator_image-f3d92e09.jpg");
   background-size: cover;
@@ -329,10 +343,11 @@
 }
 
 .body-signup-content {
-  width: 1080px;
+  width: 1180px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #fff;
 }
 
 #signup-header {
@@ -350,7 +365,7 @@
     color: #333;
 }
 
-.signup-btn {
+.btn-format {
     margin-top: 20px;
     border: 0.5px solid #bd3d3a;
     background: #bd3d3a;
