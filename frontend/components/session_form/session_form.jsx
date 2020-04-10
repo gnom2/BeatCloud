@@ -1,8 +1,6 @@
 import React from "react";
 
 class SessionForm extends React.Component {
-
-
   constructor(props) {
     super(props);
     this.state = {
@@ -14,8 +12,7 @@ class SessionForm extends React.Component {
   }
 
   componentWillUnmount() {
-      this.props.setErrors([]);
-  
+    this.props.setErrors([]);
   }
 
   update(field) {
@@ -28,24 +25,22 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    if (this.props.formType === 'Create Account') {
-      this.props.signup(user)
-        .then(this.props.closeModal);
+    if (this.props.formType === "Create Account") {
+      this.props.signup(user).then(this.props.closeModal);
     } else {
-      this.props.login(user)
-        .then(this.props.closeModal);
+      this.props.login(user).then(this.props.closeModal);
     }
   }
 
   handleDemoSubmit(e) {
     e.preventDefault();
     const user = Object.assign({
-        email: "demo@gmail.com", 
-        password: "123456"
+      email: "demo@aol.com",
+      password: "123456",
+      username: "GNOMEE",
     });
     this.props.login(user).then(this.props.closeModal);
   }
-
 
   renderErrors() {
     return (
@@ -58,11 +53,9 @@ class SessionForm extends React.Component {
   }
 
   render() {
-
     return (
       <div className="session-container">
         <form className="session-form">
-
           <label className="session-email">
             <input
               type="email"
@@ -79,23 +72,40 @@ class SessionForm extends React.Component {
               placeholder="Your Password"
             />
           </label>
-          <ul className="session-form-errors">
-            {this.renderErrors()}
-          </ul>
-          <button className="session-form-btn" onClick={this.handleSubmit}>{this.props.formType}</button>
+          <label className="session-username">
+            <input
+              type="text"
+              value={this.state.username}
+              onChange={this.update("username")}
+              placeholder="Your Artist Name/Username"
+            />
+          </label>
+          <ul className="session-form-errors">{this.renderErrors()}</ul>
+          <button className="session-form-btn" onClick={this.handleSubmit}>
+            {this.props.formType}
+          </button>
           <div className="session-form-separator">
             <span>or</span>
           </div>
-          <button className="session-form-btn" onClick={this.handleDemoSubmit}>Continue as Demo User</button>
+          <button className="session-form-btn" onClick={this.handleDemoSubmit}>
+            Continue as Demo User
+          </button>
         </form>
-        <a id="help-link" href="">Need help?</a>
+        <a id="help-link" href="">
+          Need help?
+        </a>
         <div id="disclaimer-info">
-          We may use your email and devices for updates and tips on BeatCloud's <br />
-          products and services, and for activities notifications. You can unsubscribe <br />
+          We may use your email and devices for updates and tips on BeatCloud's{" "}
+          <br />
+          products and services, and for activities notifications. You can
+          unsubscribe <br />
           for free at any time in your notification settings. <br />
           <br />
-          We may use information you provide us in order to show you targeted ads
-          as described in our <a id="privacy-link" href="">Privacy Policy</a>
+          We may use information you provide us in order to show you targeted
+          ads as described in our{" "}
+          <a id="privacy-link" href="">
+            Privacy Policy
+          </a>
         </div>
       </div>
     );

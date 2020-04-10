@@ -1,0 +1,52 @@
+.discover {
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.discover-main {
+  margin: 0 auto;
+  width: 1180px;
+  height: 400px;
+  background-color: white;
+}
+
+.discover-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.discover-nav-content {
+  display: flex;
+  border-top: 5px solid #bd3d3a;
+  justify-content: space-between;
+  padding-top: 5px;
+  margin: 0 auto;
+}
+
+.discover-nav-content > img {
+  margin-left: 20px;
+  height: 50px;
+  width: 300px;
+}
+
+.discover-main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+}
+
+.discover-main-content-container {
+  margin-top: 46px;
+  display: block;
+  width: 65%;
+  height: 1000px;
+  background-color: #fff;
+}
+
+.discover-sidebar {
+  margin-top: 46px;
+  background-color: #fff;
+  width: 34.9%;
+}

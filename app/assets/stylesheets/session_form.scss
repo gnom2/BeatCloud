@@ -1,0 +1,129 @@
+.session-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  height: 500px;
+  width: 450px;
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.session-form > .session-email {
+  margin-top: 70px;
+}
+
+.session-form input {
+  display: inline-block;
+  width: 400px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 7px 8px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 200;
+}
+
+.session-username {
+  margin-top: 10px;
+}
+
+.session-form-btn {
+  display: inline-block;
+  position: relative;
+  width: 418px;
+  height: 35px;
+  border: 1px solid #e5e5e5;
+  background-color: #bd3d3a;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  font-size: 12px;
+  vertical-align: baseline;
+}
+
+.session-form-separator {
+  display: block;
+  margin: 1em auto;
+  position: relative;
+  text-align: center;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.session-form-separator:before {
+  display: inline-block;
+  width: 43%;
+  border-top: 1px solid #333;
+  content: " ";
+  position: absolute;
+  width: 185px;
+  top: 0.7em;
+  left: 30px;
+}
+.session-form-separator:after {
+  display: inline-block;
+  width: 43%;
+  border-top: 1px solid #333;
+  content: " ";
+  position: absolute;
+  width: 185px;
+  top: 0.7em;
+  right: 30px;
+}
+
+.session-form-errors {
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  margin-top: 10px;
+}
+
+.session-form > .session-password {
+  margin-top: 10px;
+}
+
+.session-form > a {
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+.error-list {
+  margin-top: 40px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+#help-link {
+  margin-left: 350px;
+  font-family: Lucida Grande, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+#disclaimer-info {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 100;
+  color: #999;
+  font-family: Lucida Grande, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+}

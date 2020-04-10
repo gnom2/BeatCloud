@@ -81,39 +81,39 @@
 }
 
 .home-nav-info {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 #nav-info-header {
-    margin-top: 100px;
-    margin-bottom: 8px;
-    font-size: 38px;
-    font-weight: 100;
-    color: #fff;
+  margin-top: 100px;
+  margin-bottom: 8px;
+  font-size: 38px;
+  font-weight: 100;
+  color: #fff;
 }
 
 #nav-info-content {
-    font-size: 16px;
-    max-width: 530px;
-    font-weight: 100;
-    color: #fff;
-    margin-left: 30px;
+  font-size: 16px;
+  max-width: 530px;
+  font-weight: 100;
+  color: #fff;
+  margin-left: 30px;
 }
 
 #nav-info > .nav-link-sc {
-    margin-top: 20px;
-    border: 0.5px solid #bd3d3a;
-    background: #bd3d3a;
-    padding: 12px 24px;
-    color: white;
-    font-size: 16px;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-      Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
-    text-align: center;
-    border-radius: 3px;
+  margin-top: 20px;
+  border: 0.5px solid #bd3d3a;
+  background: #bd3d3a;
+  padding: 12px 24px;
+  color: white;
+  font-size: 16px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 3px;
 }
 
 #nav-info-sc-link {
@@ -162,10 +162,10 @@
 }
 
 .body-search-btn {
-    background: transparent;
-    position: relative;
-    right: 30px;
-    cursor: pointer;
+  background: transparent;
+  position: relative;
+  right: 30px;
+  cursor: pointer;
 }
 
 .body-search-content > .body-search-upload {
@@ -196,7 +196,6 @@
     Garuda, Verdana, Tahoma, sans-serif;
   font-weight: 100;
   background-color: #fff;
-  
 }
 
 .body-trending-content {
@@ -307,39 +306,39 @@
   color: #fff;
 }
 
-
-
 .body-teaser > .teaser-header {
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
-    font-size: 40px;
-    color: #fff;
-    padding-left: 60px;
-    padding-top: 60px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  color: #fff;
+  padding-left: 60px;
+  padding-top: 60px;
 }
 
 .body-teaser > .teaser-info {
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
-    font-size: 20px;
-    color: #fff;
-    padding-left: 60px;
-    padding-top: 10px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  color: #fff;
+  padding-left: 60px;
+  padding-top: 10px;
 }
 
 .body-teaser > .teaser-btn {
-    margin-top: 20px;
-    border: 0.5px solid #fff;
-    background: transparent;
-    padding: 12px 24px;
-    color: white;
-    font-size: 16px;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-      Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
-    text-align: center;
-    border-radius: 3px;
-    margin-left: 60px;
+  margin-top: 20px;
+  border: 0.5px solid #fff;
+  background: transparent;
+  padding: 12px 24px;
+  color: white;
+  font-size: 16px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 3px;
+  margin-left: 60px;
 }
 
 .body-signup-content {
@@ -351,55 +350,57 @@
 }
 
 #signup-header {
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
-    font-size: 38px;
-    color: #333;
-    padding-top: 90px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  font-size: 38px;
+  color: #333;
+  padding-top: 90px;
 }
 
 #signup-info {
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
-    font-size: 22px;
-    color: #333;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  font-size: 22px;
+  color: #333;
 }
 
 .btn-format {
-    margin-top: 20px;
-    border: 0.5px solid #bd3d3a;
-    background: #bd3d3a;
-    padding: 12px 24px;
-    color: white;
-    font-size: 16px;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-      Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
-    text-align: center;
-    border-radius: 3px;
+  margin-top: 20px;
+  border: 0.5px solid #bd3d3a;
+  background: #bd3d3a;
+  padding: 12px 24px;
+  color: white;
+  font-size: 16px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 3px;
 }
 
 .signup-signin {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
 }
 
 #signin-text {
-    padding-right: 15px;
+  padding-right: 15px;
 }
 
 .signin-btn {
-    border: 0.5px solid #e5e5e5;
-    background: transparent;
-    padding: 12px 24px;
-    color: black;
-    font-size: 16px;
-    font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-      Garuda, Verdana, Tahoma, sans-serif;
-    font-weight: 100;
-    text-align: center;
-    border-radius: 3px;
+  border: 0.5px solid #e5e5e5;
+  background: transparent;
+  padding: 12px 24px;
+  color: black;
+  font-size: 16px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 3px;
 }

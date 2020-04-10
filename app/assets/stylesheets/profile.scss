@@ -1,0 +1,146 @@
+.profile-main {
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.profile-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.profile-main-container {
+  margin: 0 auto;
+  width: 1180px;
+  height: 400px;
+  background-color: white;
+}
+
+.profile-main-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1180px;
+  height: 260px;
+  margin-top: 46px;
+  background-size: cover;
+  background-image: url("https://i1.sndcdn.com/visuals-000010958294-lwO6rW-t2480x520.jpg");
+}
+
+#profile-picture {
+  width: 20%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg);
+}
+
+.profile-main-menu {
+  height: 48px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.main-menu-list {
+  display: flex;
+  padding-top: 18px;
+  padding-left: 15px;
+}
+
+.main-menu-list li {
+  cursor: pointer;
+  display: block;
+  margin-left: 15px;
+  padding-right: 20px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.profile-menu-item a,
+a.visited {
+  text-decoration: none;
+  color: black;
+}
+
+.profile-menu-item a:hover {
+  border-bottom: 1px solid #bd3d3a;
+  color: #bd3d3a;
+}
+
+.profile-main-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+}
+
+.main-content-tracklist {
+  display: block;
+  width: 65%;
+  height: 1000px;
+  background-color: #fff;
+}
+
+.main-content-sidebar {
+  background-color: #fff;
+  width: 34.9%;
+}
+
+.main-content-sidebar-profile {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-left: 1px solid #f0f0f0;
+}
+
+.sidebar-stats {
+  margin-left: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.sidebar-stats span {
+  line-height: 0.9;
+  padding: 8px 0 3px;
+  font-size: 12px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  color: #999;
+  margin-right: 50px;
+}
+
+#stats-item span {
+  font-size: 20px;
+}
+
+#stats-item {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #f0f0f0;
+}
+
+.sidebar-description {
+  margin-left: 40px;
+  margin-top: 20px;
+  font-size: 12px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+}
+
+.sidebar-description > p {
+  text-align: left;
+  color: #333;
+}
+
+.sidebar-links {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 30px;
+  color: #999;
+}
+
+#sidebar-links-left {
+  margin-right: 5px;
+}

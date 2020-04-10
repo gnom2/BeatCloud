@@ -55,7 +55,7 @@
   margin-right: 10px;
   display: flex;
   align-items: center;
-  width: 460px;
+  width: 450px;
   height: 46px;
 }
 
@@ -64,7 +64,7 @@
   background: #e5e5e5;
   height: 24px;
   border-radius: 4px;
-  width: 380px;
+  width: 430px;
   padding-left: 10px;
 }
 
@@ -76,12 +76,13 @@
   display: flex;
   align-items: center;
   height: 46px;
-  width: 312px;
+  width: 340px;
 }
 
 .nav-bar-right-wrapper > button {
   width: 25%;
   height: 100%;
+  padding-right: 25px;
   cursor: pointer;
   background: transparent;
   color: lightgray;
@@ -98,7 +99,6 @@
 .nav-bar-profile-icon {
   display: flex;
   align-items: center;
-  padding-left: 10px;
   height: 100%;
   background: transparent;
   color: lightgray;
@@ -109,16 +109,12 @@
 }
 
 .nav-bar-profile-icon > img {
-  height: 46px;
-  width: 46px;
+  height: 40px;
+  width: 40px;
 }
 
+.nav-bar-right-wrapper > button:hover,
 .nav-bar-left-wrapper > button:hover {
-  color: #eee;
-  outline: 0;
-}
-
-.nav-bar-right-wrapper > button:hover {
   color: #eee;
   outline: 0;
 }
@@ -128,7 +124,6 @@
   display: inline-block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
@@ -179,4 +174,9 @@
 .nav-dropdown-menu > button:hover {
   background-color: darkgray;
   color: black;
+}
+
+.format-link {
+  text-decoration: none;
+  color: #ccc;
 }
