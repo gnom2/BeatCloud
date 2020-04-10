@@ -24,6 +24,7 @@
   height: 260px;
   margin-top: 46px;
   background-size: cover;
+  /* TEMP IMG */
   background-image: url("https://i1.sndcdn.com/visuals-000010958294-lwO6rW-t2480x520.jpg");
 }
 
@@ -31,6 +32,7 @@
   width: 20%;
   height: 100%;
   background-size: cover;
+  /* TEMP IMG */
   background-image: url(https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg);
 }
 
@@ -77,6 +79,15 @@ a.visited {
   width: 65%;
   height: 1000px;
   background-color: #fff;
+}
+
+.tracklist-header {
+  font-size: 23px;
+  font-weight: 100;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  padding: 25px 30px 0px;
+  margin-bottom: 10px;
 }
 
 .main-content-sidebar {

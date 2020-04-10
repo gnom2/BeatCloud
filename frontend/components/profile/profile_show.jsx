@@ -2,8 +2,19 @@ import React from "react";
 import NavBarContainer from "../navbar/navbar_container";
 import SidebarContainer from "../sidebar/sidebar_container";
 import ProfileMenu from "./profile_menu";
+import { formatUploadTime } from "../../util/track_util";
 
-import { faCaretSquareRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCaretSquareRight,
+  faPlayCircle,
+  faHeart,
+  faShareSquare,
+  faPencilAlt,
+  faEllipsisH,
+  faPlay,
+  faRetweet,
+  faDownload,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class ProfileShow extends React.Component {
@@ -20,11 +31,68 @@ class ProfileShow extends React.Component {
     const trackLis = this.props.tracks.map((track) => {
       return (
         <li key={track.id}>
-          {track.title} - {artist.username}
+          <div className="track-container">
+            <div className="track-album-cover">
+              <div className="album-image">
+                <a href=""></a>
+              </div>
+            </div>
+            <div className="track-main-wrapper">
+              <div className="track-top-wrapper">
+                <div className="track-play-btn-container">
+                  <div className="track-play-btn">
+                    <FontAwesomeIcon
+                      id="play-btn"
+                      icon={faPlayCircle}
+                    ></FontAwesomeIcon>
+                  </div>
+                </div>
+                <div className="track-text-container">
+                  <div className="track-text">
+                    <div className="track-artist-name">{artist.username}</div>
+                    <div className="track-track-title">{track.title}</div>
+                  </div>
+                  <div className="track-creation-time">
+                    {formatUploadTime(track.created_at)}
+                  </div>
+                </div>
+              </div>
+              <div className="track-waveform-wrapper"></div>
+              <div className="track-bottom-wrapper">
+                <div className="track-bottom-icons">
+                  <div>
+                    <FontAwesomeIcon icon={faHeart} />
+                  </div>
+                  <div>
+                    <FontAwesomeIcon icon={faShareSquare} />
+                  </div>
+                  <div>
+                    <FontAwesomeIcon icon={faPencilAlt} />
+                  </div>
+                  <div>
+                    <FontAwesomeIcon icon={faEllipsisH} />
+                  </div>
+                </div>
+                <div className="track-bottom-stats">
+                  <div>
+                    <FontAwesomeIcon id="bottom-icon" icon={faPlay} />
+                    <span>273</span>
+                  </div>
+                  <div>
+                    <FontAwesomeIcon id="bottom-icon" icon={faRetweet} />
+                    <span>17</span>
+                  </div>
+                  <div>
+                    <FontAwesomeIcon id="bottom-icon" icon={faDownload} />
+                    <span>6</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
       );
     });
-    debugger;
 
     return (
       <>
@@ -41,6 +109,7 @@ class ProfileShow extends React.Component {
             <ProfileMenu />
             <div className="profile-main-content">
               <div className="main-content-tracklist">
+                <div className="tracklist-header">Recent</div>
                 <ul>{trackLis}</ul>
               </div>
               <div className="main-content-sidebar">

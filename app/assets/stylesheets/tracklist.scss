@@ -1,0 +1,106 @@
+.track-container {
+  width: 92%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.track-album-cover {
+  /* TEMP IMG */
+  background-image: url("https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg");
+  background-size: cover;
+  border: 0.5px solid #e5e5e5;
+  width: 220px;
+  height: 160px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.album-image {
+}
+
+.album-image > a {
+}
+
+.track-main-wrapper {
+  width: 100%;
+}
+
+.track-top-wrapper {
+  display: flex;
+}
+
+.track-play-btn-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.track-play-btn > #play-btn {
+  width: 36px;
+  height: 36px;
+  color: #bd3d3a;
+}
+
+.track-text-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.track-text {
+}
+
+.track-artist-name {
+}
+
+.track-track-title {
+  font-size: 15px;
+  color: #333;
+}
+
+.track-creation-time {
+}
+
+.track-waveform-wrapper {
+  background-color: orange;
+  width: 100%;
+  height: 40%;
+}
+
+.track-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+  padding-top: 25px;
+}
+
+.track-bottom-icons {
+  display: flex;
+}
+
+.track-bottom-icons div {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  border: 0.5px solid #e5e5e5;
+  border-radius: 2px;
+  margin-right: 5px;
+  justify-content: center;
+  align-items: center;
+
+  color: rgb(87, 87, 87);
+}
+
+#bottom-icon {
+  padding-right: 3px;
+  padding-left: 10px;
+}
+
+.track-bottom-icons div:hover {
+  border: 0.5px solid rgb(107, 106, 106);
+  color: #333;
+}
+
+.track-bottom-stats {
+  display: flex;
+}
