@@ -19,8 +19,10 @@ class UploadForm extends React.Component {
     };
 
     this.update = this.update.bind(this);
-    this.handleUpload = this.handleUpload.bind(this);
+    this.handleTrackUpload = this.handleTrackUpload.bind(this);
+    this.handlePicUpload = this.handlePicUpload.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
   }
 
   update(field) {
@@ -34,34 +36,43 @@ class UploadForm extends React.Component {
   // NEED TO WORK ON CSS STYLING FOR BOTH UPLOAD1/UPLOAD2 PAGES
   // UPLOAD POPUP IS OPENING TWICE SOMETIMES, NEED TO SEE WHY
 
-  handleUpload(e) {
+  handleTrackUpload(e) {
     const file = e.target.files[0];
-    const fileReader = new FileReader();
+    const reader = new FileReader();
 
     if (file) {
-      fileReader.readAsDataURL(file);
-      if (file.type === "audio/mpeg") {
-        debugger;
-        fileReader.onloadend = () => {
-          this.setState({
-            title: file.name,
-            trackFile: file,
-            trackUrl: fileReader.result.data,
-            status: "loaded",
-          });
-        };
-      } else {
-        debugger;
-        fileReader.onloadend = () => {
-          this.setState({
-            title: file.name,
-            photoFile: file,
-            photoUrl: fileReader.result.data,
-          });
-        };
-      }
+      debugger;
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        this.setState({
+          title: file.name,
+          trackFile: file,
+          trackUrl: reader.result.data,
+          status: "loaded",
+        });
+      };
     } else {
+      debugger;
       this.setState({ trackFile: null, trackUrl: null });
+    }
+  }
+
+  handlePicUpload(e) {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    if (file) {
+      debugger;
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        this.setState({
+          photoFile: file,
+          photoUrl: reader.result.data,
+        });
+      };
+    } else {
+      debugger;
+      this.setState({ photoFile: null, photoUrl: null });
     }
   }
 
@@ -73,7 +84,7 @@ class UploadForm extends React.Component {
     formData.append("track[title]", title);
     formData.append("track[genre]", genre);
     formData.append("track[description]", description);
-    formData.append("track[artist_id]", this.props.currentUser.id);
+    formData.append("track[artist_id]", this.props.currentUserId);
     formData.append("track[track]", trackFile);
     formData.append("track[photo]", photoFile);
     this.props.createVideo(formData);
@@ -85,7 +96,16 @@ class UploadForm extends React.Component {
 
   handleCancel(e) {
     debugger;
-    this.setState({ status: "none" });
+    this.setState({
+      title: "",
+      genre: "",
+      description: "",
+      status: "none",
+      trackFile: null,
+      trackUrl: null,
+      photoFile: null,
+      photoUrl: null,
+    });
   }
 
   render() {
@@ -99,18 +119,20 @@ class UploadForm extends React.Component {
             <UploadMenu />
           </div>
           <div className="upload-main-content">
+            <div id="filler" />
             {this.state.status === "none" ? (
               <Upload
                 findFileInput={this.findFileInput}
-                handleUpload={this.handleUpload}
+                handleTrackUpload={this.handleTrackUpload}
               />
             ) : (
               <UploadDetail
                 title={this.state.title}
                 findFileInput={this.findFileInput}
-                handleUpload={this.handleUpload}
+                handlePicUpload={this.handlePicUpload}
                 update={this.update}
                 handleSubmit={this.handleSubmit}
+                handleCancel={this.handleCancel}
               />
             )}
           </div>

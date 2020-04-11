@@ -5,6 +5,7 @@ import {
   faBell,
   faEnvelope,
   faEllipsisH,
+  faUserFriends,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
@@ -13,17 +14,37 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dropdown: false,
+      dropdown1: false,
+      dropdown2: false,
     };
 
-    this.handleDropdown = this.handleDropdown.bind(this);
+    this.handleDropdown1 = this.handleDropdown1.bind(this);
+    this.handleDropdown2 = this.handleDropdown2.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
   }
 
-  handleDropdown() {
-    this.state.dropdown
-      ? this.setState({ dropdown: false })
-      : this.setState({ dropdown: true });
+  handleDropdown1() {
+    if (this.state.dropdown1) {
+      this.setState({ dropdown1: false });
+    } else {
+      if (this.state.dropdown2) {
+        this.setState({ dropdown1: true, dropdown2: false });
+      } else {
+        this.setState({ dropdown1: true });
+      }
+    }
+  }
+
+  handleDropdown2() {
+    if (this.state.dropdown2) {
+      this.setState({ dropdown2: false });
+    } else {
+      if (this.state.dropdown1) {
+        this.setState({ dropdown2: true, dropdown1: false });
+      } else {
+        this.setState({ dropdown2: true });
+      }
+    }
   }
 
   handleLogout() {
@@ -32,17 +53,44 @@ class NavBar extends React.Component {
 
   render() {
     const { currentUser, openModal } = this.props;
+    const dropBtn1 = this.state.dropdown1
+      ? "nav-bar-profile-icon-active"
+      : "nav-bar-profile-icon";
 
-    const dropdown = () => (
-      <div className="nav-dropdown-menu" onClick={this.handleDropdown}>
-        <button onClick={this.handleLogout}>
-          Sign Out
-          <span id="logout-icon">
-            <FontAwesomeIcon icon={faSignOutAlt} />
-          </span>
-        </button>
-      </div>
-    );
+    const dropBtn2 = this.state.dropdown2
+      ? "nav-profile-button-active"
+      : "nav-profile-button";
+
+    const dropdown1 = () => {
+      return (
+        <div className="nav-dropdown-menu" onClick={this.handleDropdown1}>
+          <button onClick={this.handleLogout}>
+            <span id="logout-icon">
+              <FontAwesomeIcon icon={faSignOutAlt} />
+            </span>
+            Sign Out
+          </button>
+        </div>
+      );
+    };
+
+    const dropdown2 = () => {
+      return (
+        <div className="nav-dropdown-menu" onClick={this.handleDropdown2}>
+          <div className="nav-profile-btn">
+            <span id="profile-icon">
+              <FontAwesomeIcon icon={faUserFriends} />
+            </span>
+            <Link
+              className="format-link"
+              to={`/users/${this.props.currentUser.id}`}
+            >
+              Profile
+            </Link>
+          </div>
+        </div>
+      );
+    };
 
     return (
       <header className="nav-bar">
@@ -81,17 +129,10 @@ class NavBar extends React.Component {
                   Upload
                 </Link>
               </button>
-              <button
-                className="nav-profile-button"
-                onClick={this.handleRedirect}
-              >
-                <Link
-                  className="format-link"
-                  to={`/users/${this.props.currentUser.id}`}
-                >
-                  {currentUser.username}
-                </Link>
-              </button>
+              <div className={dropBtn2} onClick={this.handleDropdown2}>
+                {currentUser.username}
+                {this.state.dropdown2 ? dropdown2() : null}
+              </div>
               <div className="nav-bar-icon-wrapper">
                 <button className="nav-bar-notification-icon">
                   <FontAwesomeIcon icon={faBell} />
@@ -99,13 +140,9 @@ class NavBar extends React.Component {
                 <button className="nav-bar-mail-icon">
                   <FontAwesomeIcon icon={faEnvelope} />
                 </button>
-                <div className="nav-bar-profile-icon">
-                  <FontAwesomeIcon
-                    className="dropbtn"
-                    icon={faEllipsisH}
-                    onClick={this.handleDropdown}
-                  />
-                  {this.state.dropdown ? dropdown() : null}
+                <div className={dropBtn1} onClick={this.handleDropdown1}>
+                  <FontAwesomeIcon icon={faEllipsisH} />
+                  {this.state.dropdown1 ? dropdown1() : null}
                 </div>
               </div>
             </div>

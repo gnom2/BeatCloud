@@ -14,3 +14,106 @@
   margin: 0 auto;
   width: 1180px;
 }
+
+.upload-main-body {
+  border: 1px solid #f0f0f0;
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px lightgray;
+  margin: 0 auto;
+}
+
+#filler {
+  height: 100px;
+}
+
+//-------UPLOAD------------
+
+.upload-main-body-header > h1 {
+  font-size: 22px;
+}
+
+.upload-main-body-upload-btn {
+  display: flex;
+  margin-top: 20px;
+  border: 0.5px solid #bd3d3a;
+  background: #bd3d3a;
+  padding: 12px 24px;
+  color: white;
+  font-size: 16px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.upload-main-body-upload-btn > input {
+  display: none;
+}
+
+.upload-main-body-info {
+  padding-top: 10px;
+  text-align: center;
+}
+
+//-------UPLOAD DETAIL---------
+
+.upload-main-body-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upload-main-body-album {
+  background-color: red;
+  width: 260px;
+  height: 260px;
+}
+
+.upload-main-body-album-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 220px;
+  background-color: transparent;
+}
+
+.upload-main-pic-upload-btn {
+  border: 1px solid #f0f0f0;
+  font-size: 14px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: #333333;
+  padding: 2px 11px 2px 10px;
+  border-radius: 3px;
+}
+
+#pic-icon {
+  margin-right: 5px;
+}
+
+.upload-main-pic-upload-btn > input {
+  display: none;
+}
+
+.upload-main-body-wrapper {
+}
+
+.upload-main-body-title {
+}
+.upload-main-body-title > h2 {
+}
+.upload-main-body-title > input {
+}
+.upload-main-body-title h2 span {
+}

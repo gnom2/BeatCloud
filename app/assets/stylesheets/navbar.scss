@@ -83,7 +83,7 @@
 .nav-bar-icon-wrapper button {
   width: 25%;
   height: 100%;
-  padding-right: 25px;
+  padding-right: 20px;
   cursor: pointer;
   background: transparent;
   color: lightgray;
@@ -92,15 +92,25 @@
   font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
 }
 
+.nav-bar-right-wrapper > button:hover,
+.nav-bar-left-wrapper > button:hover,
+.nav-bar-right-wrapper > div:hover {
+  color: #eee;
+  outline: 0;
+}
+
 .nav-github-button > a {
   text-decoration: none;
   color: lightgray;
 }
 
-.nav-bar-profile-icon {
+.nav-bar-profile-icon,
+.nav-bar-profile-icon-active {
   display: flex;
   align-items: center;
+  position: relative;
   height: 100%;
+  width: 100%;
   background: transparent;
   color: lightgray;
   box-sizing: border-box;
@@ -114,16 +124,15 @@
   width: 40px;
 }
 
+.nav-bar-profile-icon-active {
+  background: black;
+  padding-left: 10px;
+}
+
 .nav-bar-icon-wrapper {
   display: flex;
   align-items: center;
   height: 46px;
-}
-
-.nav-bar-right-wrapper > button:hover,
-.nav-bar-left-wrapper > button:hover {
-  color: #eee;
-  outline: 0;
 }
 
 .nav-bar-profile-icon img,
@@ -134,18 +143,25 @@
   text-decoration: none;
 }
 
-/* .nav-dropdown-menu {
-	position: fixed;
-	top: 46px;
-	right: 155px;
-	background-color: black;
-	width: 170px;
-	z-index: 1;
-	color: darkgray;
-	text-align: left;
-	box-shadow: -1px 4px 6px 1px rgba(0,0,0,0.09);
-	font-weight: initial;
-} */
+.nav-profile-button,
+.nav-profile-button-active {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  background: transparent;
+  color: lightgray;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
+}
+
+.nav-profile-button-active {
+  background-color: black;
+}
 
 .nav-dropdown-menu {
   position: absolute;
@@ -153,8 +169,8 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  margin-top: 40px;
-  right: -50;
+  margin-top: 39px;
+  right: 0;
 }
 
 .nav-dropdown-menu > button {
@@ -167,8 +183,33 @@
   padding: 8px 10px;
 }
 
+.nav-dropdown-menu > button:hover {
+  background-color: darkgray;
+  color: black;
+}
+
+.nav-dropdown-menu > .nav-profile-btn {
+  height: 100%;
+  width: 100%;
+  color: #ccc;
+  margin: 0 auto;
+  background-color: black;
+  font: 12px/1.4 Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda,
+    Verdana, Tahoma, sans-serif;
+  padding: 8px 10px;
+}
+
+.nav-dropdown-menu > .nav-profile-btn:hover {
+  background-color: darkgray;
+  color: black;
+}
+
 #logout-icon {
-  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#profile-icon {
+  padding-right: 7px;
 }
 
 .search-icon {
@@ -176,11 +217,6 @@
   position: relative;
   right: 30px;
   cursor: pointer;
-}
-
-.nav-dropdown-menu > button:hover {
-  background-color: darkgray;
-  color: black;
 }
 
 .format-link {

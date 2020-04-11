@@ -15,6 +15,8 @@ export const uploadTrack = (trackData) =>
     method: "POST",
     url: "/api/tracks",
     data: trackData,
+    contentType: false,
+    processData: false,
   });
 
 export const deleteTrack = (trackId) =>
