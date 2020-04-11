@@ -79,7 +79,8 @@
   width: 340px;
 }
 
-.nav-bar-right-wrapper > button {
+.nav-bar-right-wrapper button,
+.nav-bar-icon-wrapper button {
   width: 25%;
   height: 100%;
   padding-right: 25px;
@@ -111,6 +112,12 @@
 .nav-bar-profile-icon > img {
   height: 40px;
   width: 40px;
+}
+
+.nav-bar-icon-wrapper {
+  display: flex;
+  align-items: center;
+  height: 46px;
 }
 
 .nav-bar-right-wrapper > button:hover,
@@ -179,4 +186,18 @@
 .format-link {
   text-decoration: none;
   color: #ccc;
+}
+
+.format-link:hover {
+  color: #eee;
+}
+
+.nav-github-button a:hover {
+  color: #eee;
+}
+
+.nav-bar-notification-icon,
+.nav-bar-mail-icon,
+.nav-bar-profile-icon {
+  padding-left: 10px;
 }

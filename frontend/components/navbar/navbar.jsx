@@ -4,6 +4,7 @@ import {
   faSearch,
   faBell,
   faEnvelope,
+  faEllipsisH,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
@@ -75,7 +76,11 @@ class NavBar extends React.Component {
               <button className="nav-github-button">
                 <a href="http://www.github.com/gnom2/BeatCloud">Github</a>
               </button>
-              <button className="nav-upload-button">Upload</button>
+              <button className="nav-upload-button">
+                <Link className="format-link" to={`/upload`}>
+                  Upload
+                </Link>
+              </button>
               <button
                 className="nav-profile-button"
                 onClick={this.handleRedirect}
@@ -87,20 +92,21 @@ class NavBar extends React.Component {
                   {currentUser.username}
                 </Link>
               </button>
-              <button className="nav-bar-notification-icon">
-                <FontAwesomeIcon icon={faBell} />
-              </button>
-              <button className="nav-bar-mail-icon">
-                <FontAwesomeIcon icon={faEnvelope} />
-              </button>
-              <div className="nav-bar-profile-icon">
-                <img
-                  className="dropbtn"
-                  src="https://onthisting.com/pics/dots.png"
-                  alt=""
-                  onClick={this.handleDropdown}
-                />
-                {this.state.dropdown ? dropdown() : null}
+              <div className="nav-bar-icon-wrapper">
+                <button className="nav-bar-notification-icon">
+                  <FontAwesomeIcon icon={faBell} />
+                </button>
+                <button className="nav-bar-mail-icon">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </button>
+                <div className="nav-bar-profile-icon">
+                  <FontAwesomeIcon
+                    className="dropbtn"
+                    icon={faEllipsisH}
+                    onClick={this.handleDropdown}
+                  />
+                  {this.state.dropdown ? dropdown() : null}
+                </div>
               </div>
             </div>
           </div>

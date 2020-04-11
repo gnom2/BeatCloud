@@ -1,10 +1,8 @@
 import React from "react";
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Home = ({ login, signup, openModal }) => {
-
   return (
     <div className="home">
       <header className="home-header">
@@ -25,14 +23,18 @@ const Home = ({ login, signup, openModal }) => {
           </section>
           <section className="home-nav-info">
             <div id="nav-info">
-                <h2 id="nav-info-header">Discover more with BeatCloud Go+</h2>
-                <p id="nav-info-content">
-                    BeatCloud Go+ lets you listen offline, ad-free, with over 150 <br/>
-                    million tracks - and growing. 
-                </p>
-                <button className="nav-link-sc"><a id="nav-info-sc-link" href="https://www.soundcloud.com">SoundCloud</a></button> 
+              <h2 id="nav-info-header">Discover more with BeatCloud Go+</h2>
+              <p id="nav-info-content">
+                BeatCloud Go+ lets you listen offline, ad-free, with over 150{" "}
+                <br />
+                million tracks - and growing.
+              </p>
+              <button className="nav-link-sc">
+                <a id="nav-info-sc-link" href="https://www.soundcloud.com">
+                  SoundCloud
+                </a>
+              </button>
             </div>
-            
           </section>
         </nav>
       </header>
@@ -44,7 +46,7 @@ const Home = ({ login, signup, openModal }) => {
             placeholder="Search for Artists, bands, tracks, podcasts"
           />
           <button className="body-search-btn">
-            <FontAwesomeIcon icon={faSearch}/>
+            <FontAwesomeIcon icon={faSearch} />
           </button>
         </form>
         <p>or</p>
@@ -55,7 +57,7 @@ const Home = ({ login, signup, openModal }) => {
       </h2>
       <div className="body-trending-content">
         <div id="track-item">
-          <img src={window.track1aURL} />
+          <img src={window.track1URL} />
           <span id="track-title">Armin van Buuren</span>
           <br />
           <span id="track-artist">This Is What It Feels..</span>
@@ -145,30 +147,28 @@ const Home = ({ login, signup, openModal }) => {
       </div>
       <div className="body-teaser-content">
         <div className="body-teaser">
-          <h1 className="teaser-header">
-            Calling all creators
-          </h1>
-          <p className="teaser-info"> 
-            Get on BeatCloud to connect with fans, <br/>
-            share your sounds, and grow your    <br/>
+          <h1 className="teaser-header">Calling all creators</h1>
+          <p className="teaser-info">
+            Get on BeatCloud to connect with fans, <br />
+            share your sounds, and grow your <br />
             audience. What are you waiting for?
           </p>
           <button className="teaser-btn">Find out more</button>
         </div>
       </div>
       <div className="body-signup-content">
-        <div id="signup-header">
-            Thanks for listening. Now join in.
-        </div>
+        <div id="signup-header">Thanks for listening. Now join in.</div>
         <div id="signup-info">
-            Save tracks, follow artists and build playlists. All for free.
+          Save tracks, follow artists and build playlists. All for free.
         </div>
-        <button className="btn-format" onClick={() => openModal("signup")}>Create account</button>
+        <button className="btn-format" onClick={() => openModal("signup")}>
+          Create account
+        </button>
         <div className="signup-signin">
-            <div id="signin-text">
-                Already have an account?
-            </div>
-            <button className="signin-btn" onClick={() => openModal("login")}>Sign In</button>
+          <div id="signin-text">Already have an account?</div>
+          <button className="signin-btn" onClick={() => openModal("login")}>
+            Sign In
+          </button>
         </div>
       </div>
     </div>
