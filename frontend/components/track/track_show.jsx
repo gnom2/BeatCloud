@@ -48,11 +48,9 @@ class TrackShow extends React.Component {
                     <div className="track-show-text">
                       <div className="track-show-artist-name">
                         {artist.username}
-                        ARTIST
                       </div>
                       <div className="track-show-track-title">
                         {track.title}
-                        Title
                       </div>
                     </div>
                     <div className="track-show-creation-time">
@@ -64,39 +62,53 @@ class TrackShow extends React.Component {
               </div>
               <div className="track-show-right">
                 <div id="album-image">
-                  <a href=""></a>
+                  <img
+                    src="https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
             <div className="track-show-bottom-container">
               <div className="track-show-bottom-left">
                 <div className="track-show-bottom-left-stats">
-                  <div className="track-show-bottom-icons">
-                    <div>
-                      <FontAwesomeIcon icon={faHeart} />
-                    </div>
-                    <div>
-                      <FontAwesomeIcon icon={faShareSquare} />
-                    </div>
-                    <div>
-                      <FontAwesomeIcon icon={faPencilAlt} />
-                    </div>
-                    <div>
-                      <FontAwesomeIcon icon={faEllipsisH} />
+                  <div className="track-show-bottom-left-comment">
+                    <img
+                      src="https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg"
+                      alt=""
+                    />
+                    <div id="comment-box">
+                      <input type="text" placeholder="Write a comment" />
                     </div>
                   </div>
-                  <div className="track-show-bottom-stats">
-                    <div>
-                      <FontAwesomeIcon id="bottom-icon" icon={faPlay} />
-                      <span>273</span>
+                  <div className="track-show-bottom-stats-flex">
+                    <div className="track-show-bottom-icons">
+                      <div>
+                        <FontAwesomeIcon icon={faHeart} />
+                      </div>
+                      <div>
+                        <FontAwesomeIcon icon={faShareSquare} />
+                      </div>
+                      <div>
+                        <FontAwesomeIcon icon={faPencilAlt} />
+                      </div>
+                      <div>
+                        <FontAwesomeIcon icon={faEllipsisH} />
+                      </div>
                     </div>
-                    <div>
-                      <FontAwesomeIcon id="bottom-icon" icon={faHeart} />
-                      <span>24</span>
-                    </div>
-                    <div>
-                      <FontAwesomeIcon id="bottom-icon" icon={faDownload} />
-                      <span>6</span>
+                    <div className="track-show-bottom-stats">
+                      <div>
+                        <FontAwesomeIcon id="bottom-icon" icon={faPlay} />
+                        <span>273</span>
+                      </div>
+                      <div>
+                        <FontAwesomeIcon id="bottom-icon" icon={faHeart} />
+                        <span>24</span>
+                      </div>
+                      <div>
+                        <FontAwesomeIcon id="bottom-icon" icon={faDownload} />
+                        <span>6</span>
+                      </div>
                     </div>
                   </div>
                 </div>

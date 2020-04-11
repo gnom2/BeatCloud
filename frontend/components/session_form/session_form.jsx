@@ -53,6 +53,19 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    const signupForm = () => {
+      return (
+        <label className="session-username">
+          <input
+            type="text"
+            value={this.state.username}
+            onChange={this.update("username")}
+            placeholder="Your Artist Name/Username"
+          />
+        </label>
+      );
+    };
+    debugger;
     return (
       <div className="session-container">
         <form className="session-form">
@@ -72,14 +85,7 @@ class SessionForm extends React.Component {
               placeholder="Your Password"
             />
           </label>
-          <label className="session-username">
-            <input
-              type="text"
-              value={this.state.username}
-              onChange={this.update("username")}
-              placeholder="Your Artist Name/Username"
-            />
-          </label>
+          {this.props.formType === "Create Account" ? signupForm() : null}
           <ul className="session-form-errors">{this.renderErrors()}</ul>
           <button className="session-form-btn" onClick={this.handleSubmit}>
             {this.props.formType}
