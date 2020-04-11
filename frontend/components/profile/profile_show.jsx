@@ -3,6 +3,7 @@ import NavBarContainer from "../navbar/navbar_container";
 import SidebarContainer from "../sidebar/sidebar_container";
 import ProfileMenu from "./profile_menu";
 import { formatUploadTime } from "../../util/track_util";
+import { Link } from "react-router-dom";
 
 import {
   faCaretSquareRight,
@@ -49,8 +50,12 @@ class ProfileShow extends React.Component {
                 </div>
                 <div className="track-text-container">
                   <div className="track-text">
-                    <div className="track-artist-name">{artist.username}</div>
-                    <div className="track-track-title">{track.title}</div>
+                    <div className="track-artist-name">
+                      <Link to={`/users/${artist.id}`}>{artist.username}</Link>
+                    </div>
+                    <div className="track-track-title">
+                      <Link to={`/tracks/${track.id}`}>{track.title}</Link>
+                    </div>
                   </div>
                   <div className="track-creation-time">
                     {formatUploadTime(track.created_at)}

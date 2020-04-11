@@ -1,0 +1,134 @@
+.track-show-main-container {
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.track-show-main-content {
+  margin: 0 auto;
+  width: 1180px;
+  height: 400px;
+  background-color: white;
+}
+
+.track-show-track-wrapper {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+}
+
+.track-show-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-show-left-top {
+  display: flex;
+  margin-top: 40px;
+}
+
+.track-show-btn > #show-play-btn {
+  width: 60px;
+  height: 60px;
+  color: #bd3d3a;
+  margin-right: 20px;
+}
+
+.track-show-text-container {
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
+}
+
+.track-show-text {
+}
+
+.track-show-artist-name {
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 2px 7px 3px;
+  font-weight: 100;
+  color: #fff;
+  background-color: rgba(17, 16, 16, 0.712);
+}
+
+.track-show-track-title {
+  margin-top: 5px;
+  background-color: rgba(17, 16, 16, 0.712);
+  color: #fff;
+  font-size: 24px;
+  line-height: 37px;
+  padding: 4px 7px;
+}
+
+.track-show-creation-time {
+  color: #181818;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.track-show-waveform-wrapper {
+  background-color: orange;
+  width: 100%;
+  height: 200px;
+}
+
+.track-show-right {
+}
+
+#album-image {
+}
+
+//------- BOTTOM ----------
+
+.track-show-bottom-container {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  background-color: yellow;
+}
+
+.track-show-bottom-left {
+  display: flex;
+  height: 20%;
+  padding-top: 25px;
+  background-color: red;
+  width: 830px;
+}
+
+.track-show-bottom-left-stats {
+  display: flex;
+  justify-content: space-between;
+  width: 830px;
+}
+
+.track-show-bottom-icons div {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  border: 0.5px solid #e5e5e5;
+  border-radius: 2px;
+  margin-right: 5px;
+  justify-content: center;
+  align-items: center;
+
+  color: rgb(87, 87, 87);
+}
+
+.track-show-bottom-icons {
+  display: flex;
+  background-color: green;
+}
+
+.track-show-bottom-stats {
+  display: flex;
+}
+
+#bottom-icon {
+  padding-right: 3px;
+  padding-left: 10px;
+}
+
+.track-show-bottom-icons div:hover {
+  border: 0.5px solid rgb(107, 106, 106);
+  color: #333;
+}
