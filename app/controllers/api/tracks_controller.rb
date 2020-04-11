@@ -12,7 +12,7 @@ class Api::TracksController < ApplicationController
         @track = Track.find(params[:id])
         @artist = User.find(@track.artist_id)
         if @track 
-            render 'api/tracks/show'
+            render :show
         else
             render json: ["Track not found"], status: 404
         end
@@ -20,9 +20,9 @@ class Api::TracksController < ApplicationController
 
     def create
         @track = Track.new(track_params)
-
+        @artist = User.find(@track.artist_id)
         if @track.save
-            render '/api/tracks/show'
+            render `api/users/#{@artist.id}`
         else
             render json: @track.errors.full_messages, status: 422
         end  

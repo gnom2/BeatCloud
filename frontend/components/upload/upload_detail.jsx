@@ -10,6 +10,8 @@ const UploadDetail = ({
   handleCancel,
   update,
   title,
+  preview,
+  errors,
 }) => {
   return (
     <>
@@ -21,6 +23,7 @@ const UploadDetail = ({
                 className="upload-main-pic-upload-btn"
                 onClick={findFileInput}
               >
+                <img src={preview} alt="" />
                 <FontAwesomeIcon id="pic-icon" icon={faCamera} />
                 Upload image
                 <input type="file" id="file" onChange={handlePicUpload} />
@@ -102,6 +105,7 @@ const UploadDetail = ({
                   onChange={update("description")}
                 />
               </div>
+              <ul className="upload-form-errors"></ul>
             </div>
           </div>
         </div>

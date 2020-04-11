@@ -38,10 +38,9 @@ class UploadForm extends React.Component {
 
   handleTrackUpload(e) {
     const file = e.target.files[0];
-    const reader = new FileReader();
 
     if (file) {
-      debugger;
+      const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onloadend = () => {
         this.setState({
@@ -52,7 +51,6 @@ class UploadForm extends React.Component {
         });
       };
     } else {
-      debugger;
       this.setState({ trackFile: null, trackUrl: null });
     }
   }
@@ -87,7 +85,8 @@ class UploadForm extends React.Component {
     formData.append("track[artist_id]", this.props.currentUserId);
     formData.append("track[track]", trackFile);
     formData.append("track[photo]", photoFile);
-    this.props.createVideo(formData);
+    debugger;
+    this.props.uploadTrack(formData);
   }
 
   findFileInput() {
@@ -133,6 +132,8 @@ class UploadForm extends React.Component {
                 update={this.update}
                 handleSubmit={this.handleSubmit}
                 handleCancel={this.handleCancel}
+                preview={this.state.photoUrl}
+                errors={this.props.errors}
               />
             )}
           </div>

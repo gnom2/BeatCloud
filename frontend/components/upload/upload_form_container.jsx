@@ -5,7 +5,7 @@ import { currentUser } from "../../util/selectors";
 import { receiveErrors } from "../../actions/session_actions";
 
 const msp = (state) => ({
-  currentUserId: state.session.currentUserId,
+  currentUserId: state.session.id,
   currentUser: currentUser(state),
   errors: state.errors.session,
 });
