@@ -3,12 +3,6 @@ import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-class UploadDetails extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-}
-
 const UploadDetail = ({
   findFileInput,
   handlePicUpload,
@@ -19,7 +13,6 @@ const UploadDetail = ({
   preview,
   errors,
 }) => {
-  debugger;
   return (
     <>
       <div className="upload-main-body">

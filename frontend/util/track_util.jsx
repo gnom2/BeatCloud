@@ -1,3 +1,19 @@
+export const formatTrackTime = (seconds) => {
+  if (!seconds && seconds !== 0) {
+    return "";
+  }
+  let secs = Math.ceil(parseFloat(seconds));
+  let mins = Math.floor(secs / 60);
+  secs -= mins * 60;
+
+  if (secs < 10) {
+    secs = `0${secs}`;
+  } else {
+    secs = `${secs}`;
+  }
+  return `${mins}:${secs}`;
+};
+
 export const formatUploadTime = (time) => {
   let uploadTime = new Date(time);
   let currentTime = new Date();

@@ -3,6 +3,8 @@ import { formatUploadTime } from "../../util/track_util";
 import NavBarContainer from "../navbar/navbar_container";
 import SideBarContainer from "../sidebar/sidebar_container";
 import TrackButton from "../track/track_button_container";
+// import WaveFormContainer from "./waveform/waveform_container";
+
 import { Link } from "react-router-dom";
 import {
   faCaretSquareRight,

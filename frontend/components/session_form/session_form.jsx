@@ -42,15 +42,15 @@ class SessionForm extends React.Component {
     this.props.login(user).then(this.props.closeModal);
   }
 
-  renderErrors() {
-    return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>{error}</li>
-        ))}
-      </ul>
-    );
-  }
+  // renderErrors() {
+  //   return (
+  //     <ul>
+  //       {this.props.errors.map((error, i) => (
+  //         <li key={`error-${i}`}>{error}</li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
 
   render() {
     const signupForm = () => {
@@ -65,11 +65,19 @@ class SessionForm extends React.Component {
         </label>
       );
     };
+    const errorClass = this.props.errors.length
+      ? "session-form-errors-active"
+      : "session-form-errors";
+    const errorId = this.props.errors.length
+      ? "session-form-input-error-active"
+      : "session-form-input-error";
+
     return (
       <div className="session-container">
         <form className="session-form">
           <label className="session-email">
             <input
+              id={errorId}
               type="email"
               value={this.state.email}
               onChange={this.update("email")}
@@ -78,6 +86,7 @@ class SessionForm extends React.Component {
           </label>
           <label className="session-password">
             <input
+              id={errorId}
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
@@ -85,7 +94,9 @@ class SessionForm extends React.Component {
             />
           </label>
           {this.props.formType === "Create Account" ? signupForm() : null}
-          <ul className="session-form-errors">{this.renderErrors()}</ul>
+
+          <div className={errorClass}>{this.props.errors}</div>
+
           <button className="session-form-btn" onClick={this.handleSubmit}>
             {this.props.formType}
           </button>

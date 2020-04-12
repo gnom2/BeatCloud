@@ -43,6 +43,27 @@ class ProfileShow extends React.Component {
     }
   }
 
+  handlePicUpload(e) {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    debugger;
+    if (file) {
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        this.setState({
+          photoFile: file,
+          photoUrl: reader.result,
+        });
+      };
+    } else {
+      this.setState({ photoFile: null, photoUrl: null });
+    }
+  }
+
+  findFileInput() {
+    document.getElementById("file").click();
+  }
+
   render() {
     const artist = this.props.user;
     debugger;

@@ -17,19 +17,6 @@
   margin-top: 70px;
 }
 
-.session-form input {
-  display: inline-block;
-  width: 400px;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 7px 8px;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 200;
-}
-
 .session-username {
   margin-top: 10px;
 }
@@ -85,12 +72,38 @@
   right: 30px;
 }
 
-.session-form-errors {
+.session-form-errors-active {
   font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
     Garuda, Verdana, Tahoma, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 100;
   margin-top: 10px;
+  color: red;
+}
+
+#session-form-input-error-active {
+  display: inline-block;
+  width: 400px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 7px 8px;
+  border: 1px solid red;
+  border-radius: 5px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 200;
+}
+#session-form-input-error {
+  display: inline-block;
+  width: 400px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 7px 8px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 200;
 }
 
 .session-form > .session-password {
