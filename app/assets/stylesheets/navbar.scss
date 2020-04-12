@@ -94,7 +94,8 @@
 
 .nav-bar-right-wrapper > button:hover,
 .nav-bar-left-wrapper > button:hover,
-.nav-bar-right-wrapper > div:hover {
+.nav-bar-right-wrapper > div:hover,
+.nav-bar-icon-wrapper > *:hover {
   color: #eee;
   outline: 0;
 }
@@ -102,6 +103,7 @@
 .nav-github-button > a {
   text-decoration: none;
   color: lightgray;
+  margin-right: 7px;
 }
 
 .nav-bar-profile-icon,

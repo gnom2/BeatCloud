@@ -6,7 +6,6 @@
 
 .track-album-cover {
   /* TEMP IMG */
-  background-image: url("https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg");
   background-size: cover;
   border: 0.5px solid #e5e5e5;
   width: 220px;
@@ -15,8 +14,10 @@
   margin-bottom: 30px;
 }
 
-// .album-image {
-// }
+.album-image > img {
+  width: 165px;
+  height: 160px;
+}
 
 // .album-image > a {
 // }
@@ -32,10 +33,10 @@
 .track-play-btn-container {
   display: flex;
   align-items: center;
-  margin-right: 10px;
 }
 
-.track-play-btn > #play-btn {
+.track-play-btn > .track-show-btn > #show-play-btn,
+.track-play-btn > .track-show-btn > #show-pause-btn {
   width: 36px;
   height: 36px;
   color: #bd3d3a;

@@ -13,9 +13,9 @@ class UploadForm extends React.Component {
       description: "",
       status: "none",
       trackFile: null,
-      trackUrl: null,
+      trackUrl: "",
       photoFile: null,
-      photoUrl: null,
+      photoUrl: "",
     };
 
     this.update = this.update.bind(this);
@@ -46,9 +46,10 @@ class UploadForm extends React.Component {
         this.setState({
           title: file.name,
           trackFile: file,
-          trackUrl: reader.result.data,
+          trackUrl: reader.result,
           status: "loaded",
         });
+        debugger;
       };
     } else {
       this.setState({ trackFile: null, trackUrl: null });
@@ -58,18 +59,16 @@ class UploadForm extends React.Component {
   handlePicUpload(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
-
+    debugger;
     if (file) {
-      debugger;
       reader.readAsDataURL(file);
       reader.onloadend = () => {
         this.setState({
           photoFile: file,
-          photoUrl: reader.result.data,
+          photoUrl: reader.result,
         });
       };
     } else {
-      debugger;
       this.setState({ photoFile: null, photoUrl: null });
     }
   }
@@ -85,8 +84,9 @@ class UploadForm extends React.Component {
     formData.append("track[artist_id]", this.props.currentUserId);
     formData.append("track[track]", trackFile);
     formData.append("track[photo]", photoFile);
-    debugger;
-    this.props.uploadTrack(formData);
+    this.props.uploadTrack(formData).then(({ track }) => {
+      this.props.history.push(`/tracks/${track.track.id}`);
+    });
   }
 
   findFileInput() {
@@ -94,20 +94,20 @@ class UploadForm extends React.Component {
   }
 
   handleCancel(e) {
-    debugger;
     this.setState({
       title: "",
       genre: "",
       description: "",
       status: "none",
       trackFile: null,
-      trackUrl: null,
+      trackUrl: "",
       photoFile: null,
-      photoUrl: null,
+      photoUrl: "",
     });
   }
 
   render() {
+    debugger;
     return (
       <div className="upload-main-content-wrapper">
         <div className="upload-main-nav-bar">

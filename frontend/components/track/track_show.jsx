@@ -2,6 +2,7 @@ import React from "react";
 import { formatUploadTime } from "../../util/track_util";
 import NavBarContainer from "../navbar/navbar_container";
 import SideBarContainer from "../sidebar/sidebar_container";
+import TrackButton from "../track/track_button_container";
 import { Link } from "react-router-dom";
 import {
   faCaretSquareRight,
@@ -13,16 +14,34 @@ import {
   faPlay,
   faRetweet,
   faDownload,
+  faPauseCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class TrackShow extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchTrack(this.props.match.params.trackId);
+    this.setState({
+      playing: false,
+    });
+  }
+
+  handleClick() {
+    let audioEl = document.getElementById("audio-element");
+
+    if (this.props.playing) {
+      this.props.pauseTrack();
+      audioEl.pause();
+    } else {
+      this.props.receiveCurrentTrack(this.props.track);
+      this.props.playTrack();
+      audioEl.play();
+    }
   }
 
   render() {
@@ -38,10 +57,20 @@ class TrackShow extends React.Component {
                 <div className="track-show-left-top">
                   <div className="track-show-btn-container">
                     <div className="track-show-btn">
-                      <FontAwesomeIcon
-                        id="show-play-btn"
-                        icon={faPlayCircle}
-                      ></FontAwesomeIcon>
+                      <TrackButton track={track} />
+
+                      <div className="audioplayer-container">
+                        <audio
+                          id="audio-element"
+                          className="audioplayer"
+                          controlsList="nodownload"
+                          controls
+                          volume="0.5"
+                          onPause={() => this.pauseTrack()}
+                          onPlay={() => this.playTrack()}
+                          src={track.trackUrl}
+                        />
+                      </div>
                     </div>
                   </div>
                   <div className="track-show-text-container">
@@ -62,10 +91,7 @@ class TrackShow extends React.Component {
               </div>
               <div className="track-show-right">
                 <div id="album-image">
-                  <img
-                    src="https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg"
-                    alt=""
-                  />
+                  <img src={track.photoUrl} alt="" />
                 </div>
               </div>
             </div>

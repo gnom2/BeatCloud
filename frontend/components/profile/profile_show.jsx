@@ -1,6 +1,7 @@
 import React from "react";
 import NavBarContainer from "../navbar/navbar_container";
 import SidebarContainer from "../sidebar/sidebar_container";
+import TrackButton from "../track/track_button_container";
 import ProfileMenu from "./profile_menu";
 import { formatUploadTime } from "../../util/track_util";
 import { Link } from "react-router-dom";
@@ -8,6 +9,7 @@ import { Link } from "react-router-dom";
 import {
   faCaretSquareRight,
   faPlayCircle,
+  faPauseCircle,
   faHeart,
   faShareSquare,
   faPencilAlt,
@@ -21,82 +23,113 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class ProfileShow extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchTracks();
   }
 
+  handleClick() {
+    let audioEl = document.getElementById("audio-element");
+
+    if (this.props.playing) {
+      this.props.pauseTrack();
+      audioEl.pause();
+    } else {
+      this.props.receiveCurrentTrack(track);
+      this.props.playTrack();
+      audioEl.play();
+    }
+  }
+
   render() {
     const artist = this.props.user;
+    debugger;
     const trackLis = this.props.tracks.map((track) => {
-      return (
-        <li key={track.id}>
-          <div className="track-container">
-            <div className="track-album-cover">
-              <div className="album-image">
-                <a href=""></a>
+      if (track.artist_id === artist.id) {
+        return (
+          <li key={track.id}>
+            <div className="track-container">
+              <div className="track-album-cover">
+                <div className="album-image">
+                  <img src={track.photoUrl} alt="" />
+                </div>
+              </div>
+              <div className="track-main-wrapper">
+                <div className="track-top-wrapper">
+                  <div className="track-play-btn-container">
+                    <div className="track-play-btn">
+                      <TrackButton track={track} />
+
+                      <div className="audioplayer-container">
+                        <audio
+                          id="audio-element"
+                          className="audioplayer"
+                          controlsList="nodownload"
+                          controls
+                          volume="0.5"
+                          onPause={() => this.props.pauseTrack()}
+                          onPlay={() => this.props.playTrack()}
+                          src={track.trackUrl}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="track-text-container">
+                    <div className="track-text">
+                      <div className="track-artist-name">
+                        <Link to={`/users/${artist.id}`}>
+                          {artist.username}
+                        </Link>
+                      </div>
+                      <div className="track-track-title">
+                        <Link to={`/tracks/${track.id}`}>{track.title}</Link>
+                      </div>
+                    </div>
+                    <div className="track-creation-time">
+                      {formatUploadTime(track.created_at)}
+                    </div>
+                  </div>
+                </div>
+                <div className="track-waveform-wrapper"></div>
+                <div className="track-bottom-wrapper">
+                  <div className="track-bottom-icons">
+                    <div>
+                      <FontAwesomeIcon icon={faHeart} />
+                    </div>
+                    <div>
+                      <FontAwesomeIcon icon={faShareSquare} />
+                    </div>
+                    <div>
+                      <FontAwesomeIcon icon={faPencilAlt} />
+                    </div>
+                    <div>
+                      <FontAwesomeIcon icon={faEllipsisH} />
+                    </div>
+                  </div>
+                  <div className="track-bottom-stats">
+                    <div>
+                      <FontAwesomeIcon id="bottom-icon" icon={faPlay} />
+                      <span>273</span>
+                    </div>
+                    <div>
+                      <FontAwesomeIcon id="bottom-icon" icon={faRetweet} />
+                      <span>17</span>
+                    </div>
+                    <div>
+                      <FontAwesomeIcon id="bottom-icon" icon={faDownload} />
+                      <span>6</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="track-main-wrapper">
-              <div className="track-top-wrapper">
-                <div className="track-play-btn-container">
-                  <div className="track-play-btn">
-                    <FontAwesomeIcon
-                      id="play-btn"
-                      icon={faPlayCircle}
-                    ></FontAwesomeIcon>
-                  </div>
-                </div>
-                <div className="track-text-container">
-                  <div className="track-text">
-                    <div className="track-artist-name">
-                      <Link to={`/users/${artist.id}`}>{artist.username}</Link>
-                    </div>
-                    <div className="track-track-title">
-                      <Link to={`/tracks/${track.id}`}>{track.title}</Link>
-                    </div>
-                  </div>
-                  <div className="track-creation-time">
-                    {formatUploadTime(track.created_at)}
-                  </div>
-                </div>
-              </div>
-              <div className="track-waveform-wrapper"></div>
-              <div className="track-bottom-wrapper">
-                <div className="track-bottom-icons">
-                  <div>
-                    <FontAwesomeIcon icon={faHeart} />
-                  </div>
-                  <div>
-                    <FontAwesomeIcon icon={faShareSquare} />
-                  </div>
-                  <div>
-                    <FontAwesomeIcon icon={faPencilAlt} />
-                  </div>
-                  <div>
-                    <FontAwesomeIcon icon={faEllipsisH} />
-                  </div>
-                </div>
-                <div className="track-bottom-stats">
-                  <div>
-                    <FontAwesomeIcon id="bottom-icon" icon={faPlay} />
-                    <span>273</span>
-                  </div>
-                  <div>
-                    <FontAwesomeIcon id="bottom-icon" icon={faRetweet} />
-                    <span>17</span>
-                  </div>
-                  <div>
-                    <FontAwesomeIcon id="bottom-icon" icon={faDownload} />
-                    <span>6</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      );
+          </li>
+        );
+      } else {
+        return null;
+      }
     });
 
     return (

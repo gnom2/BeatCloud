@@ -26,7 +26,8 @@
   margin-top: 40px;
 }
 
-.track-show-btn > #show-play-btn {
+.track-show-btn > #show-play-btn,
+.track-show-btn > #show-pause-btn {
   width: 60px;
   height: 60px;
   color: #bd3d3a;
@@ -80,6 +81,10 @@
 #album-image img {
   width: 300px;
   height: 300px;
+}
+
+#audio-element {
+  display: none;
 }
 
 //------- BOTTOM ----------

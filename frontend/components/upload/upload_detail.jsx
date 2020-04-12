@@ -3,6 +3,12 @@ import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
+class UploadDetails extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+}
+
 const UploadDetail = ({
   findFileInput,
   handlePicUpload,
@@ -13,17 +19,18 @@ const UploadDetail = ({
   preview,
   errors,
 }) => {
+  debugger;
   return (
     <>
       <div className="upload-main-body">
         <div className="upload-main-body-container">
           <div className="upload-main-body-album">
             <div className="upload-main-body-album-preview">
+              <img src={preview} alt="" onClick={findFileInput} />
               <button
                 className="upload-main-pic-upload-btn"
                 onClick={findFileInput}
               >
-                <img src={preview} alt="" />
                 <FontAwesomeIcon id="pic-icon" icon={faCamera} />
                 Upload image
                 <input type="file" id="file" onChange={handlePicUpload} />
@@ -48,45 +55,19 @@ const UploadDetail = ({
                   <h2>Genre</h2>
                   <select name="genres" id="genres" defaultValue="none">
                     <option value="none">None</option>
-                    <option value="custom" onChange={update("genre")}>
-                      Custom
-                    </option>
-                    <option value="alt-rock" onChange={update("genre")}>
-                      Alternative Rock
-                    </option>
-                    <option value="ambient" onChange={update("genre")}>
-                      Ambient
-                    </option>
-                    <option value="classical" onChange={update("genre")}>
-                      Classical
-                    </option>
-                    <option value="country" onChange={update("genre")}>
-                      Country
-                    </option>
-                    <option value="edm" onChange={update("genre")}>
-                      Dance & EDM
-                    </option>
-                    <option value="dancehall" onChange={update("genre")}>
-                      Dancehall
-                    </option>
-                    <option value="deephouse" onChange={update("genre")}>
-                      Deep House
-                    </option>
-                    <option value="disco" onChange={update("genre")}>
-                      Disco
-                    </option>
-                    <option value="dnb" onChange={update("genre")}>
-                      Drum & Bass
-                    </option>
-                    <option value="dubstep" onChange={update("genre")}>
-                      Dubstep
-                    </option>
-                    <option value="electronic" onChange={update("genre")}>
-                      Electronic
-                    </option>
-                    <option value="folk" onChange={update("genre")}>
-                      Folk & Singer-Songwriter
-                    </option>
+                    <option value="custom">Custom</option>
+                    <option value="alt-rock">Alternative Rock</option>
+                    <option value="ambient">Ambient</option>
+                    <option value="classical">Classical</option>
+                    <option value="country">Country</option>
+                    <option value="edm">Dance & EDM</option>
+                    <option value="dancehall">Dancehall</option>
+                    <option value="deephouse">Deep House</option>
+                    <option value="disco">Disco</option>
+                    <option value="dnb">Drum & Bass</option>
+                    <option value="dubstep">Dubstep</option>
+                    <option value="electronic">Electronic</option>
+                    <option value="folk">Folk & Singer-Songwriter</option>
                   </select>
                 </div>
                 <div id="custom-genre">
@@ -109,7 +90,7 @@ const UploadDetail = ({
             </div>
           </div>
         </div>
-        <div className="upload-main-footer">
+        <div className="upload-main-detail-footer">
           <div className="upload-main-footer-info">
             <h2>
               <span>*</span>Required field
@@ -120,7 +101,7 @@ const UploadDetail = ({
               Cancel
             </button>
             <button
-              className="upload-main-body-upload-btn"
+              className="upload-main-body-upload-save-btn"
               onClick={handleSubmit}
             >
               Save
