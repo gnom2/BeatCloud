@@ -11,13 +11,13 @@ class TrackButton extends React.Component {
 
   handleClick() {
     let audioEl = document.getElementById("audio-element");
-    debugger;
+    
     if (this.props.playing) {
-      debugger;
+      
       this.props.pauseTrack();
       audioEl.pause();
     } else {
-      debugger;
+      
       this.props.receiveCurrentTrack(this.props.track);
       this.props.playTrack();
       audioEl.play();
@@ -25,7 +25,7 @@ class TrackButton extends React.Component {
   }
 
   render() {
-    debugger;
+    
     return (
       <div className="track-show-btn" onClick={(e) => e.stopPropagation()}>
         {this.props.playing &&

@@ -46,7 +46,7 @@ class ProfileShow extends React.Component {
   handlePicUpload(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
-    debugger;
+    
     if (file) {
       reader.readAsDataURL(file);
       reader.onloadend = () => {
@@ -66,7 +66,7 @@ class ProfileShow extends React.Component {
 
   render() {
     const artist = this.props.user;
-    debugger;
+    
     const trackLis = this.props.tracks.map((track) => {
       if (track.artist_id === artist.id) {
         return (

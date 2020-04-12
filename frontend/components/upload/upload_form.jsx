@@ -49,7 +49,7 @@ class UploadForm extends React.Component {
           trackUrl: reader.result,
           status: "loaded",
         });
-        debugger;
+        
       };
     } else {
       this.setState({ trackFile: null, trackUrl: null });
@@ -59,7 +59,7 @@ class UploadForm extends React.Component {
   handlePicUpload(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
-    debugger;
+    
     if (file) {
       reader.readAsDataURL(file);
       reader.onloadend = () => {
@@ -107,7 +107,7 @@ class UploadForm extends React.Component {
   }
 
   render() {
-    debugger;
+    
     return (
       <div className="upload-main-content-wrapper">
         <div className="upload-main-nav-bar">
