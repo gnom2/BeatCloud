@@ -60,25 +60,17 @@ class TrackShow extends React.Component {
                   <div className="track-show-btn-container">
                     <div className="track-show-btn">
                       <TrackButton track={track} />
-
-                      <div className="audioplayer-container">
-                        <audio
-                          id="audio-element"
-                          className="audioplayer"
-                          controlsList="nodownload"
-                          controls
-                          volume="0.5"
-                          onPause={() => this.pauseTrack()}
-                          onPlay={() => this.playTrack()}
-                          src={track.trackUrl}
-                        />
-                      </div>
                     </div>
                   </div>
                   <div className="track-show-text-container">
                     <div className="track-show-text">
                       <div className="track-show-artist-name">
-                        {artist.username}
+                        <Link
+                          className="format-link"
+                          to={`/users/${artist.id}`}
+                        >
+                          <span class="highlight">{artist.username}</span>
+                        </Link>
                       </div>
                       <div className="track-show-track-title">
                         {track.title}

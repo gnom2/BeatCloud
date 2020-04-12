@@ -53,10 +53,18 @@ class SessionForm extends React.Component {
   // }
 
   render() {
+    const errorClass = this.props.errors.length
+      ? "session-form-errors-active"
+      : "session-form-errors";
+    const errorId = this.props.errors.length
+      ? "session-form-input-error-active"
+      : "session-form-input-error";
+
     const signupForm = () => {
       return (
         <label className="session-username">
           <input
+            id={errorId}
             type="text"
             value={this.state.username}
             onChange={this.update("username")}
@@ -65,12 +73,6 @@ class SessionForm extends React.Component {
         </label>
       );
     };
-    const errorClass = this.props.errors.length
-      ? "session-form-errors-active"
-      : "session-form-errors";
-    const errorId = this.props.errors.length
-      ? "session-form-input-error-active"
-      : "session-form-input-error";
 
     return (
       <div className="session-container">

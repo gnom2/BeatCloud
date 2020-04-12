@@ -11,13 +11,11 @@ class TrackButton extends React.Component {
 
   handleClick() {
     let audioEl = document.getElementById("audio-element");
-    
+
     if (this.props.playing) {
-      
       this.props.pauseTrack();
       audioEl.pause();
     } else {
-      
       this.props.receiveCurrentTrack(this.props.track);
       this.props.playTrack();
       audioEl.play();
@@ -25,7 +23,6 @@ class TrackButton extends React.Component {
   }
 
   render() {
-    
     return (
       <div className="track-show-btn" onClick={(e) => e.stopPropagation()}>
         {this.props.playing &&
@@ -42,6 +39,17 @@ class TrackButton extends React.Component {
             onClick={this.handleClick}
           ></FontAwesomeIcon>
         )}
+
+        <div className="audioplayer-container">
+          <audio
+            id="audio-element"
+            className="audioplayer"
+            controlsList="nodownload"
+            controls
+            volume="0.5"
+            src={this.props.track.trackUrl}
+          />
+        </div>
       </div>
     );
   }

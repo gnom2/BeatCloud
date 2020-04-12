@@ -46,7 +46,7 @@ class ProfileShow extends React.Component {
   handlePicUpload(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
-    
+
     if (file) {
       reader.readAsDataURL(file);
       reader.onloadend = () => {
@@ -66,9 +66,10 @@ class ProfileShow extends React.Component {
 
   render() {
     const artist = this.props.user;
-    
+    let trackCount = 0;
     const trackLis = this.props.tracks.map((track) => {
       if (track.artist_id === artist.id) {
+        trackCount++;
         return (
           <li key={track.id}>
             <div className="track-container">
@@ -82,19 +83,6 @@ class ProfileShow extends React.Component {
                   <div className="track-play-btn-container">
                     <div className="track-play-btn">
                       <TrackButton track={track} />
-
-                      <div className="audioplayer-container">
-                        <audio
-                          id="audio-element"
-                          className="audioplayer"
-                          controlsList="nodownload"
-                          controls
-                          volume="0.5"
-                          onPause={() => this.props.pauseTrack()}
-                          onPlay={() => this.props.playTrack()}
-                          src={track.trackUrl}
-                        />
-                      </div>
                     </div>
                   </div>
                   <div className="track-text-container">
@@ -184,7 +172,7 @@ class ProfileShow extends React.Component {
                     </span>
                     <span id="stats-item">
                       Tracks
-                      <span>3</span>
+                      <span>{trackCount}</span>
                     </span>
                   </div>
                   <div className="sidebar-description">
