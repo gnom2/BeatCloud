@@ -7,6 +7,7 @@ import {
   faEllipsisH,
   faUserFriends,
 } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
@@ -76,7 +77,7 @@ class NavBar extends React.Component {
 
     const dropdown2 = () => {
       return (
-        <div className="nav-dropdown-menu" onClick={this.handleDropdown2}>
+        <div className="nav-dropdown-menu-alt" onClick={this.handleDropdown2}>
           <div className="nav-profile-btn">
             <span id="profile-icon">
               <FontAwesomeIcon icon={faUserFriends} />
@@ -87,6 +88,17 @@ class NavBar extends React.Component {
             >
               Profile
             </Link>
+          </div>
+          <div className="nav-linkedin-btn">
+            <span id="linkedin-icon">
+              <FontAwesomeIcon icon={faLinkedin} />
+            </span>
+            <a
+              className="format-link"
+              href="https://www.linkedin.com/in/jun-hyeok-scott-lee-18a62851/"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       );
@@ -130,7 +142,8 @@ class NavBar extends React.Component {
                 </Link>
               </button>
               <div className={dropBtn2} onClick={this.handleDropdown2}>
-                {currentUser.username}
+                <span>{currentUser.username}</span>
+
                 {this.state.dropdown2 ? dropdown2() : null}
               </div>
               <div className="nav-bar-icon-wrapper">

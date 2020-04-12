@@ -83,7 +83,8 @@
 .nav-bar-icon-wrapper button {
   width: 25%;
   height: 100%;
-  padding-right: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
   cursor: pointer;
   background: transparent;
   color: lightgray;
@@ -117,6 +118,8 @@
   color: lightgray;
   box-sizing: border-box;
   text-align: center;
+
+  padding-left: 10px;
   cursor: pointer;
   font: 100 14px/1.5 Interstate, Lucida Grande, Arial, sans-serif;
 }
@@ -152,7 +155,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-  padding-left: 10px;
   background: transparent;
   color: lightgray;
   box-sizing: border-box;
@@ -168,14 +170,26 @@
 .nav-dropdown-menu {
   position: absolute;
   background-color: #000;
-  min-width: 160px;
+  min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-top: 39px;
   right: 0;
 }
 
-.nav-dropdown-menu > button {
+.nav-dropdown-menu-alt {
+  position: absolute;
+  background-color: #000;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin-top: 55px;
+  margin-right: 30px;
+  right: 1;
+}
+
+.nav-dropdown-menu > button,
+.nav-dropdown-menu-alt > button {
   height: 100%;
   width: 100%;
   color: #ccc;
@@ -190,7 +204,7 @@
   color: black;
 }
 
-.nav-dropdown-menu > .nav-profile-btn {
+.nav-dropdown-menu-alt > div {
   height: 100%;
   width: 100%;
   color: #ccc;
@@ -201,7 +215,13 @@
   padding: 8px 10px;
 }
 
-.nav-dropdown-menu > .nav-profile-btn:hover {
+.nav-profile-button > span,
+.nav-profile-button-active > span {
+  padding-left: 10px;
+}
+
+.nav-dropdown-menu-alt > .nav-profile-btn:hover,
+.nav-dropdown-menu-alt > .nav-linkedin-btn:hover {
   background-color: darkgray;
   color: black;
 }
@@ -210,7 +230,8 @@
   padding-right: 7px;
 }
 
-#profile-icon {
+#profile-icon,
+#linkedin-icon {
   padding-right: 7px;
 }
 
@@ -235,7 +256,11 @@
 }
 
 .nav-bar-notification-icon,
-.nav-bar-mail-icon,
-.nav-bar-profile-icon {
-  padding-left: 15px;
+.nav-bar-profile-icon,
+.nav-bar-profile-icon-active {
+  margin-left: 5px;
+}
+
+.nav-bar-mail-icon {
+  margin-left: 14px;
 }
