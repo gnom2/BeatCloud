@@ -30,4 +30,3 @@ track3_photo = open('https://active-storage-beatcloud-seeds.s3.amazonaws.com/unf
 track3.photo.attach(io: track3_photo, filename: 'unforgettable.jpg')
 track3_track = open('https://active-storage-beatcloud-seeds.s3.amazonaws.com/unforgettable.mp3')
 track3.track.attach(io: track3_track, filename: 'unforgettable.mp3')
-
