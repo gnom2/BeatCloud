@@ -6,12 +6,13 @@ class TrackButton extends React.Component {
   constructor(props) {
     super(props);
 
+    this.audioRef = React.createRef();
     this.handlePause = this.handlePause.bind(this);
     this.handlePlay = this.handlePlay.bind(this);
   }
 
   handlePause(track) {
-    let audioEl = document.getElementById("audio-element");
+    // let this.audioRef.current = document.getElementById("audio-element");
     debugger;
     this.props.receiveCurrentTrack(track);
 
@@ -20,12 +21,12 @@ class TrackButton extends React.Component {
       this.props.track.id === this.props.currentTrackId
     ) {
       this.props.pauseTrack();
-      audioEl.pause();
+      this.audioRef.current.pause();
     }
   }
 
   handlePlay(track) {
-    let audioEl = document.getElementById("audio-element");
+    // let this.audioRef.current = document.getElementById("audio-element");
     debugger;
     if (
       this.props.playing &&
@@ -33,11 +34,11 @@ class TrackButton extends React.Component {
     ) {
       debugger;
       this.props.pauseTrack();
-      audioEl.pause();
+      this.audioRef.current.pause();
     }
     this.props.receiveCurrentTrack(track);
     this.props.playTrack();
-    audioEl.play();
+    this.audioRef.current.play();
   }
 
   render() {
@@ -61,6 +62,7 @@ class TrackButton extends React.Component {
         <div className="audioplayer-container">
           <audio
             id="audio-element"
+            ref={this.audioRef}
             className="audioplayer"
             controlsList="nodownload"
             controls

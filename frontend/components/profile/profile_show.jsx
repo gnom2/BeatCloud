@@ -90,7 +90,9 @@ class ProfileShow extends React.Component {
                   <div className="track-text-container">
                     <div className="track-text">
                       <div className="track-artist-name">
-                        <Link to={`/users/${artist.id}`}>{artist.email}</Link>
+                        <Link to={`/users/${artist.id}`}>
+                          {artist.username}
+                        </Link>
                       </div>
                       <div className="track-track-title">
                         <Link to={`/tracks/${track.id}`}>{track.title}</Link>
