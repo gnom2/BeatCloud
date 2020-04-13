@@ -81,31 +81,6 @@
   color: red;
 }
 
-#session-form-input-error-active {
-  display: inline-block;
-  width: 400px;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 7px 8px;
-  border: 1px solid red;
-  border-radius: 5px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 200;
-}
-#session-form-input-error {
-  display: inline-block;
-  width: 400px;
-  font-size: 14px;
-  line-height: 20px;
-  padding: 7px 8px;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 200;
-}
-
 .session-form > .session-password {
   margin-top: 10px;
 }
@@ -139,4 +114,103 @@
   font-family: Lucida Grande, Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 15px;
+}
+
+//-----------STAGE TWO-----------------------------------
+
+.session-detail-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.profile-picture-container {
+  background-color: transparent;
+  width: 160px;
+  height: 160px;
+  margin-right: 20px;
+}
+
+.profile-picture-preview {
+  background-color: transparent;
+  width: 160px;
+  height: 160px;
+  border: 1px solid #f0f0f0;
+}
+
+.profile-picture-preview > img {
+  width: 160px;
+  width: 160px;
+  background-size: cover;
+}
+
+.profile-picture-upload-btn {
+  border: 1px solid #f0f0f0;
+  font-size: 12px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: #333333;
+  padding: 2px 4x 2px 4px;
+  border-radius: 3px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-top: 125px;
+  z-index: 1000;
+}
+
+.profile-picture-upload-btn > input {
+  display: none;
+}
+
+.profile-info-container {
+}
+
+.profile-age {
+  margin-bottom: 10px;
+}
+
+.profile-age > h2 {
+}
+
+.profile-age > input {
+  border: 1px solid #f0f0f0;
+  padding: 2px 4px;
+}
+
+.profile-gender {
+  margin-bottom: 10px;
+}
+
+.profile-username > input {
+  border: 1px solid #f0f0f0;
+  padding: 2px 4px;
+}
+
+#session-form-input-error-active {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 5px 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+}
+
+#session-form-input-error {
+  display: inline-block;
+  width: 400px;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 5px 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
 }

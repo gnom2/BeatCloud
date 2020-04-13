@@ -6,20 +6,38 @@ class TrackButton extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleClick = this.handleClick.bind(this);
+    this.handlePause = this.handlePause.bind(this);
+    this.handlePlay = this.handlePlay.bind(this);
   }
 
-  handleClick() {
+  handlePause(track) {
     let audioEl = document.getElementById("audio-element");
+    debugger;
+    this.props.receiveCurrentTrack(track);
 
-    if (this.props.playing) {
+    if (
+      this.props.playing &&
+      this.props.track.id === this.props.currentTrackId
+    ) {
       this.props.pauseTrack();
       audioEl.pause();
-    } else {
-      this.props.receiveCurrentTrack(this.props.track);
-      this.props.playTrack();
-      audioEl.play();
     }
+  }
+
+  handlePlay(track) {
+    let audioEl = document.getElementById("audio-element");
+    debugger;
+    if (
+      this.props.playing &&
+      this.props.track.id !== this.props.currentTrackId
+    ) {
+      debugger;
+      this.props.pauseTrack();
+      audioEl.pause();
+    }
+    this.props.receiveCurrentTrack(track);
+    this.props.playTrack();
+    audioEl.play();
   }
 
   render() {
@@ -30,13 +48,13 @@ class TrackButton extends React.Component {
           <FontAwesomeIcon
             id="show-pause-btn"
             icon={faPauseCircle}
-            onClick={this.handleClick}
+            onClick={() => this.handlePause(this.props.track)}
           ></FontAwesomeIcon>
         ) : (
           <FontAwesomeIcon
             id="show-play-btn"
             icon={faPlayCircle}
-            onClick={this.handleClick}
+            onClick={() => this.handlePlay(this.props.track)}
           ></FontAwesomeIcon>
         )}
 

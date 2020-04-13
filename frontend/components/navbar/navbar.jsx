@@ -6,6 +6,7 @@ import {
   faEnvelope,
   faEllipsisH,
   faUserFriends,
+  faAngleDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -142,7 +143,11 @@ class NavBar extends React.Component {
                 </Link>
               </button>
               <div className={dropBtn2} onClick={this.handleDropdown2}>
-                <span>{currentUser.username}</span>
+                <span>
+                  <img src={currentUser.photoUrl} alt="" />
+                  {currentUser.username}
+                  <FontAwesomeIcon id="arrow-down" icon={faAngleDown} />
+                </span>
 
                 {this.state.dropdown2 ? dropdown2() : null}
               </div>

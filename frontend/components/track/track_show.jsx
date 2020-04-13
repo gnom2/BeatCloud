@@ -23,7 +23,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class TrackShow extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -33,18 +33,18 @@ class TrackShow extends React.Component {
     });
   }
 
-  handleClick() {
-    let audioEl = document.getElementById("audio-element");
+  // handleClick() {
+  //   let audioEl = document.getElementById("audio-element");
 
-    if (this.props.playing) {
-      this.props.pauseTrack();
-      audioEl.pause();
-    } else {
-      this.props.receiveCurrentTrack(this.props.track);
-      this.props.playTrack();
-      audioEl.play();
-    }
-  }
+  //   if (this.props.playing) {
+  //     this.props.pauseTrack();
+  //     audioEl.pause();
+  //   } else {
+  //     this.props.receiveCurrentTrack(this.props.track);
+  //     this.props.playTrack();
+  //     audioEl.play();
+  //   }
+  // }
 
   render() {
     const { track, artist, currentUser } = this.props;
@@ -69,7 +69,7 @@ class TrackShow extends React.Component {
                           className="format-link"
                           to={`/users/${artist.id}`}
                         >
-                          <span class="highlight">{artist.username}</span>
+                          <span className="highlight">{artist.username}</span>
                         </Link>
                       </div>
                       <div className="track-show-track-title">

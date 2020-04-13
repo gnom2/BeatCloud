@@ -23,24 +23,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class ProfileShow extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      currentTrack: "",
+    };
   }
 
   componentDidMount() {
-    this.props.fetchTracks();
-  }
-
-  handleClick() {
-    let audioEl = document.getElementById("audio-element");
-
-    if (this.props.playing) {
-      this.props.pauseTrack();
-      audioEl.pause();
-    } else {
-      this.props.receiveCurrentTrack(track);
-      this.props.playTrack();
-      audioEl.play();
-    }
+    this.props.fetchTracks().then(() => {
+      if (this.props.trackPlayer.playing) {
+        this.setState({
+          currentTrack: this.props.tracks[this.props.currentTrackId],
+        });
+      } else {
+        this.setState({
+          currentTrack: "",
+        });
+      }
+    });
   }
 
   handlePicUpload(e) {
@@ -82,15 +81,16 @@ class ProfileShow extends React.Component {
                 <div className="track-top-wrapper">
                   <div className="track-play-btn-container">
                     <div className="track-play-btn">
-                      <TrackButton track={track} />
+                      <TrackButton
+                        track={track}
+                        currentTrack={this.state.currentTrack}
+                      />
                     </div>
                   </div>
                   <div className="track-text-container">
                     <div className="track-text">
                       <div className="track-artist-name">
-                        <Link to={`/users/${artist.id}`}>
-                          {artist.username}
-                        </Link>
+                        <Link to={`/users/${artist.id}`}>{artist.email}</Link>
                       </div>
                       <div className="track-track-title">
                         <Link to={`/tracks/${track.id}`}>{track.title}</Link>
@@ -150,7 +150,9 @@ class ProfileShow extends React.Component {
 
           <div className="profile-main-container">
             <div className="profile-main-banner">
-              <div id="profile-picture"></div>
+              <div id="profile-picture">
+                <img src={artist.photoUrl} alt="" />
+              </div>
               <div id="profile-banner"></div>
             </div>
             <ProfileMenu />
@@ -164,11 +166,15 @@ class ProfileShow extends React.Component {
                   <div className="sidebar-stats">
                     <span id="stats-item">
                       Followers
-                      <span>834</span>
+                      <span>
+                        {artist.email === "demo@aol.com" ? "834" : "0"}
+                      </span>
                     </span>
                     <span id="stats-item">
                       Following
-                      <span>421</span>
+                      <span>
+                        {artist.email === "demo@aol.com" ? "421" : "0"}
+                      </span>
                     </span>
                     <span id="stats-item">
                       Tracks

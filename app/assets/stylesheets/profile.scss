@@ -32,7 +32,12 @@
   height: 100%;
   background-size: cover;
   /* TEMP IMG */
-  background-image: url("https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg");
+  // background-image: url("https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg");
+}
+
+#profile-picture > img {
+  width: 260px;
+  height: 260px;
 }
 
 .profile-main-menu {
@@ -102,10 +107,10 @@ a.visited {
 }
 
 .sidebar-stats {
-  margin-left: 60px;
+  margin-left: 40px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .sidebar-stats span {

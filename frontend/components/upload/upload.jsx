@@ -18,8 +18,8 @@ const Upload = ({ findFileInput, handleTrackUpload }) => {
         </button>
         <div className="upload-main-body-info">
           <p>
-            Provide FLAC, WAV, ALAC, or AIFF <br />
-            for highest audio quality.
+            Please provide MP3 in order to upload. <br />
+            More file types to be supported later.
           </p>
         </div>
         <div className="upload-main-footer">

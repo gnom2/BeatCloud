@@ -52,7 +52,6 @@
 
 .nav-bar-middle {
   margin-left: 10px;
-  margin-right: 10px;
   display: flex;
   align-items: center;
   width: 450px;
@@ -104,7 +103,6 @@
 .nav-github-button > a {
   text-decoration: none;
   color: lightgray;
-  margin-right: 7px;
 }
 
 .nav-bar-profile-icon,
@@ -217,7 +215,23 @@
 
 .nav-profile-button > span,
 .nav-profile-button-active > span {
+  display: flex;
+  justify-content: space-evenly;
   padding-left: 10px;
+  padding-top: 5px;
+}
+
+.nav-profile-button > span > img,
+.nav-profile-button-active > span > img {
+  margin-right: 7px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+#arrow-down {
+  margin: 5px;
+  padding-left: 5px;
 }
 
 .nav-dropdown-menu-alt > .nav-profile-btn:hover,
@@ -262,5 +276,6 @@
 }
 
 .nav-bar-mail-icon {
-  margin-left: 14px;
+  margin-left: 10px;
+  margin-right: 6px;
 }

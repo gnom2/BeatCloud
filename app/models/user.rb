@@ -17,6 +17,9 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Like
 
+        
+    has_one_attached :photo
+
     attr_reader :password 
 
     after_initialize :ensure_session_token

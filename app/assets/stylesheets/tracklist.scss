@@ -33,6 +33,7 @@
 .track-play-btn-container {
   display: flex;
   align-items: center;
+  width: 10%;
 }
 
 .track-play-btn > .track-show-btn > #show-play-btn,
@@ -41,6 +42,7 @@
   height: 36px;
   color: #bd3d3a;
   background-color: white;
+  cursor: pointer;
 }
 
 .track-text-container {
@@ -52,10 +54,12 @@
 // .track-text {
 // }
 
-// .track-artist-name {
-// }
+.track-artist-name > *:hover,
+.track-track-title > *:hover {
+  color: #bbbbbb;
+}
 
-.track-track-title {
+.track-track-title > * {
   font-size: 15px;
   color: #333;
 }

@@ -16,7 +16,7 @@ const msp = (state, ownProps) => {
     userId,
     user,
     tracks: Object.values(state.entities.tracks),
-    playing: state.ui.trackPlayer.playing,
+    trackPlayer: state.ui.trackPlayer,
     currentTrackId: state.ui.trackPlayer.track_id,
   };
 };
