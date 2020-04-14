@@ -40,6 +40,20 @@
   height: 260px;
 }
 
+#profile-banner {
+}
+
+#profile-banner > h2 {
+  margin-top: 20px;
+  background-color: rgba(17, 16, 16, 0.712);
+  color: #fff;
+  font-size: 24px;
+  line-height: 37px;
+  margin-right: 780px;
+  margin-bottom: 130px;
+  padding: 4px 7px;
+}
+
 .profile-main-menu {
   height: 48px;
   border-bottom: 1px solid #f2f2f2;
@@ -157,4 +171,9 @@ a.visited {
 
 #sidebar-links-left {
   margin-right: 5px;
+}
+
+#stats-item > span:hover {
+  color: #bd3d3a;
+  cursor: pointer;
 }

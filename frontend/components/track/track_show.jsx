@@ -2,6 +2,8 @@ import React from "react";
 import { formatUploadTime } from "../../util/track_util";
 import NavBarContainer from "../navbar/navbar_container";
 import SideBarContainer from "../sidebar/sidebar_container";
+import CommentFormContainer from "../comments/comment_form_container";
+import CommentItemContainer from "../comments/comment_item_container";
 import TrackButton from "../track/track_button_container";
 // import WaveFormContainer from "./waveform/waveform_container";
 
@@ -23,28 +25,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class TrackShow extends React.Component {
   constructor(props) {
     super(props);
-    // this.handleClick = this.handleClick.bind(this);
+    debugger;
+    this.props.fetchComments(this.props.match.params.trackId);
   }
+
+  // componentWillMount() {
+  //   this.props.fetchComments(this.props.match.params.trackId);
+  // }
 
   componentDidMount() {
     this.props.fetchTrack(this.props.match.params.trackId);
+
+    debugger;
     this.setState({
       playing: false,
     });
   }
 
-  // handleClick() {
-  //   let audioEl = document.getElementById("audio-element");
-
-  //   if (this.props.playing) {
-  //     this.props.pauseTrack();
-  //     audioEl.pause();
-  //   } else {
-  //     this.props.receiveCurrentTrack(this.props.track);
-  //     this.props.playTrack();
-  //     audioEl.play();
-  //   }
-  // }
+  componentWillReceiveProps() {
+    this.setState({ state: this.state });
+  }
 
   render() {
     const { track, artist, currentUser } = this.props;
@@ -92,15 +92,7 @@ class TrackShow extends React.Component {
             <div className="track-show-bottom-container">
               <div className="track-show-bottom-left">
                 <div className="track-show-bottom-left-stats">
-                  <div className="track-show-bottom-left-comment">
-                    <img
-                      src="https://i1.sndcdn.com/avatars-000638743965-twchqj-t500x500.jpg"
-                      alt=""
-                    />
-                    <div id="comment-box">
-                      <input type="text" placeholder="Write a comment" />
-                    </div>
-                  </div>
+                  <CommentFormContainer track={track} />
                   <div className="track-show-bottom-stats-flex">
                     <div className="track-show-bottom-icons">
                       <div>
@@ -138,7 +130,10 @@ class TrackShow extends React.Component {
                     <div id="track-show-profile-info"></div>
                   </div>
                   <div className="track-show-bottom-profile-right">
-                    <div id="track-show-description"> </div>
+                    <div id="track-show-description">{track.description}</div>
+                    <div className="track-show-comment-container">
+                      <CommentItemContainer track={track} />
+                    </div>
                   </div>
                 </div>
               </div>

@@ -3,6 +3,7 @@ import TrackShow from "./track_show";
 import { fetchUser } from "../../actions/user_actions";
 import { fetchTrack } from "../../actions/track_actions";
 import { currentUser } from "../../util/selectors";
+import { fetchComments } from "../../actions/comment_actions";
 import {
   receiveCurrentTrack,
   pauseTrack,
@@ -25,6 +26,7 @@ const mdp = (dispatch) => ({
   fetchTrack: (trackId) => dispatch(fetchTrack(trackId)),
   fetchUser: (account_id) => dispatch(fetchUser(account_id)),
   receiveCurrentTrack: (track) => dispatch(receiveCurrentTrack(track)),
+  fetchComments: (trackId) => dispatch(fetchComments(trackId)),
   playTrack: () => dispatch(playTrack()),
   pauseTrack: () => dispatch(pauseTrack()),
 });

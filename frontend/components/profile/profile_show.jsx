@@ -155,7 +155,10 @@ class ProfileShow extends React.Component {
               <div id="profile-picture">
                 <img src={artist.photoUrl} alt="" />
               </div>
-              <div id="profile-banner"></div>
+              <div id="profile-banner">
+                <h2>{artist.username}</h2>
+                <span></span>
+              </div>
             </div>
             <ProfileMenu />
             <div className="profile-main-content">
