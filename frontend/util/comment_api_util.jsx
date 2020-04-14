@@ -8,7 +8,7 @@ export const postComment = (comment) => {
 
 export const fetchComments = (track_id) => {
   return $.ajax({
-    url: "/api/comments",
+    url: `/api/comments`,
     method: "GET",
     data: { track_id },
   });
@@ -16,6 +16,6 @@ export const fetchComments = (track_id) => {
 
 export const deleteComment = (id) =>
   $.ajax({
-    url: "/api/comments/" + id,
+    url: `/api/comments/${id}`,
     method: "DELETE",
   });

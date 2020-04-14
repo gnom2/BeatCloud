@@ -1,12 +1,12 @@
 json.track do
   json.partial! "api/tracks/track", track: @track
   end
-  
+
 json.artist do
   json.set! @artist.id do 
     json.id @artist.id
     json.username @artist.username
-    json.photoUrl @artist.photoUrl 
+    json.photoUrl url_for(@artist.photo) if @artist.photo.attached?
   end
 end
 

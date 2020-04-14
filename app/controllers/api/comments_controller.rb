@@ -1,13 +1,13 @@
 class Api::CommentsController < ApplicationController
     def index
-        debugger
-        @comments = Comment.all
+        
+        @comments = Comment.all.order(created_at: :desc)
         # @comments = Comment.includes(:track, :author).where(track_id: params[:comment][:trackId]).order(created_at: :asc)
     end
 
     def show 
-        debugger
-        @comment = Comment.find(params[:id])
+        
+        @comments = Comment.where(track_id: params[:id])
         render :show
     end
 

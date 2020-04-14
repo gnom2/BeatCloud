@@ -26,6 +26,7 @@ import {
   faCommentAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faReddit } from "@fortawesome/free-brands-svg-icons";
 
 class TrackShow extends React.Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class TrackShow extends React.Component {
       track_id: this.props.match.params.trackId,
       author_id: this.props.currentUser.id,
     };
-    debugger;
+    // debugger;
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
@@ -52,8 +53,8 @@ class TrackShow extends React.Component {
   // }
 
   componentDidMount() {
-    debugger;
-    this.props.fetchTrack(this.state.track_id);
+    // debugger;
+    this.props.fetchTrack(this.props.match.params.trackId);
     this.props.requestComments(this.props.match.params.trackId);
     // this.props.requestComments();
     // ;
@@ -64,13 +65,13 @@ class TrackShow extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
+    // debugger;
 
     this.props.createComment(this.state).then(this.setState({ body: "" }));
   }
 
   handleDelete(e) {
-    debugger;
+    // debugger;
     this.props
       .deleteComment(e.currentTarget.value)
       .then(this.setState({ body: "" }));
@@ -85,9 +86,62 @@ class TrackShow extends React.Component {
 
   render() {
     const { track, artist, currentUser, comments } = this.props;
-    let commentCount = Object.keys(comments).length;
-    const commentIds = Object.keys(comments);
+
+    let commentLi;
+    let commentCount = 0;
+
     debugger;
+    if (Object.keys(comments).length !== 0) {
+      // debugger;
+      commentLi = Object.keys(comments).map((key) => {
+        if (comments[key].track_id === track.id) {
+          commentCount++;
+          return (
+            <div key={key} className="comment-item">
+              <div className="comment-profile-icon">
+                <Link
+                  className="format-link"
+                  to={`/users/${comments[key].author_id}`}
+                >
+                  <img
+                    className="commenter-img"
+                    src={this.props.users[comments[key].author_id].photoUrl}
+                  ></img>
+                </Link>
+              </div>
+
+              <div className="comment-content">
+                <div className="comment-content-top">
+                  <Link
+                    className="format-link"
+                    to={`/users/${comments[key].author_id}`}
+                  >
+                    <span>
+                      {this.props.users[comments[key].author_id].username}
+                    </span>
+                  </Link>
+                  <span>{formatUploadTime(comments[key].created_at)}</span>
+                </div>
+
+                <div className="comment-content-body">
+                  <span>{comments[key].body}</span>
+                  <button
+                    className="trash-button"
+                    value={comments[key].id}
+                    onClick={this.handleDelete}
+                  >
+                    <FontAwesomeIcon icon={faTrash} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          );
+        } else {
+          return;
+        }
+      });
+    }
+    // debugger;
     return (
       <>
         <NavBarContainer />
@@ -227,54 +281,7 @@ class TrackShow extends React.Component {
                         <span>comment</span>
                       </div>
 
-                      {commentIds.map((key) => (
-                        <div key={key} className="comment-item">
-                          <div className="comment-profile-icon">
-                            <Link
-                              className="format-link"
-                              to={`/users/${comments[key].author_id}`}
-                            >
-                              <img
-                                className="commenter-img"
-                                src={
-                                  this.props.users[comments[key].author_id]
-                                    .photoUrl
-                                }
-                              ></img>
-                            </Link>
-                          </div>
-
-                          <div className="comment-content">
-                            <div className="comment-content-top">
-                              <Link
-                                className="format-link"
-                                to={`/users/${comments[key].author_id}`}
-                              >
-                                <span>
-                                  {
-                                    this.props.users[comments[key].author_id]
-                                      .username
-                                  }
-                                </span>
-                              </Link>
-                              <span>
-                                {formatUploadTime(comments[key].created_at)}
-                              </span>
-                            </div>
-
-                            <div className="comment-content-body">
-                              <span>{comments[key].body}</span>
-                              <button
-                                className="trash-button"
-                                value={comments[key].id}
-                                onClick={this.handleDelete}
-                              >
-                                <FontAwesomeIcon icon={faTrash} />
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
+                      {commentLi ? commentLi : null}
                     </div>
                   </div>
                 </div>

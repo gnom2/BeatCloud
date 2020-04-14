@@ -11,9 +11,9 @@ class Api::TracksController < ApplicationController
     def show
         @track = Track.find(params[:id])
         @artist = User.find(@track.artist_id)
-        @comments = Comment.find_by(track_id: @track.id)
+        @comments = Comment.where(track_id: @track.id)
+        
         if @track 
-            debugger
             render 'api/tracks/show'
         else
             render json: ["Track not found"], status: 404

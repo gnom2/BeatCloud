@@ -1,17 +1,24 @@
+import merge from "lodash/merge";
+
 import {
   RECEIVE_TRACKS,
   RECEIVE_TRACK,
   REMOVE_TRACK,
 } from "../actions/track_actions";
 
+import { RECEIVE_ALL_COMMENTS } from "../actions/comment_actions";
+
 const tracksReducer = (state = {}, action) => {
   Object.freeze(state);
-  debugger;
+  // debugger;
   switch (action.type) {
+    case RECEIVE_ALL_COMMENTS:
+      // debugger;
+      return merge({}, state, action.comments.comments);
     case RECEIVE_TRACKS:
       return action.tracks;
     case RECEIVE_TRACK:
-      debugger;
+      // debugger;
       return Object.assign({}, state, {
         [action.track.track.id]: action.track.track,
       });

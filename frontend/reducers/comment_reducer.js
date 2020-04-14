@@ -6,11 +6,15 @@ import {
   REMOVE_COMMENT,
 } from "../actions/comment_actions";
 
+import { RECEIVE_TRACK } from "../actions/track_actions";
+
 const commentsReducer = (state = {}, action) => {
   Object.freeze(state);
   let newState;
   debugger;
   switch (action.type) {
+    // case RECEIVE_TRACK:
+    //   return merge({}, state, action.track.comments);
     case RECEIVE_ALL_COMMENTS:
       debugger;
       return merge({}, state, action.comments.comments);
@@ -20,8 +24,9 @@ const commentsReducer = (state = {}, action) => {
       return newState;
     case REMOVE_COMMENT:
       debugger;
-      delete state[action.commentId];
-      return state;
+      newState = merge({}, state);
+      delete newState[action.commentId];
+      return newState;
     default:
       return state;
   }
