@@ -1,7 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import CommentItem from "./comment_item";
-import { fetchComments, deleteComment } from "../../actions/comment_actions";
+import {
+  fetchTrackComments,
+  deleteComment,
+} from "../../actions/comment_actions";
 import { fetchTrack } from "../../actions/track_actions";
 
 const msp = (state) => {
@@ -15,7 +18,7 @@ const msp = (state) => {
 
 const mdp = (dispatch) => ({
   fetchTrack: (trackId) => dispatch(fetchTrack(trackId)),
-  fetchComments: (trackId) => dispatch(fetchComments(trackId)),
+  fetchTrackComments: (trackId) => dispatch(fetchTrackComments(trackId)),
   deleteComment: (commentId) => dispatch(deleteComment(commentId)),
 });
 

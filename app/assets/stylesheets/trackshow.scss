@@ -1,24 +1,28 @@
 .track-show-main-container {
   width: 100%;
+  height: 1000px;
   background-color: whitesmoke;
 }
 
 .track-show-main-content {
   margin: 0 auto;
   width: 1180px;
-  height: 400px;
+  height: 1000px;
   background-color: white;
 }
 
 .track-show-track-wrapper {
   margin: 0 auto;
-  width: 95%;
+  width: 100%;
   display: flex;
+  background-image: linear-gradient(#c2d4dd, #ffffff);
+  padding-bottom: 15px;
 }
 
 .track-show-left {
   display: flex;
   flex-direction: column;
+  margin-left: 25px;
 }
 
 .track-show-left-top {
@@ -32,6 +36,8 @@
   height: 60px;
   color: #bd3d3a;
   margin-right: 20px;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .track-show-text-container {
@@ -44,6 +50,7 @@
 }
 
 .track-show-artist-name {
+  cursor: pointer;
 }
 
 .highlight {
@@ -56,7 +63,7 @@
 }
 
 .track-show-track-title {
-  margin-top: 5px;
+  margin-top: 10px;
   background-color: rgba(17, 16, 16, 0.712);
   color: #fff;
   font-size: 24px;
@@ -72,7 +79,7 @@
 }
 
 .track-show-waveform-wrapper {
-  margin-top: 5px;
+  margin-top: 20px;
   border: 1px dotted black;
   width: 98%;
   height: 200px;
@@ -85,6 +92,7 @@
   margin-top: 40px;
   width: 300px;
   height: 300px;
+  cursor: pointer;
 }
 
 #audio-element {
@@ -114,8 +122,9 @@
 }
 
 .track-show-bottom-left-comment {
+  margin-top: 10px;
   display: flex;
-  width: 98%;
+  width: 97.5%;
   height: 40px;
   align-items: center;
   justify-content: center;
@@ -124,11 +133,12 @@
   background-color: #f2f2f2;
 }
 
-.track-show-bottom-left-comment img {
+.track-show-bottom-left-comment > * > img {
   width: 40px;
   height: 40px;
   background-size: cover;
-  margin-right: 10px;
+  margin-right: 15px;
+  margin-top: 5px;
 }
 
 .track-show-bottom-left-comment #comment-box {
@@ -146,9 +156,12 @@
 }
 
 .track-show-bottom-stats-flex {
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  width: 830px;
+  width: 98%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .track-show-bottom-icons div {
@@ -170,8 +183,11 @@
 
 .track-show-bottom-stats {
   display: flex;
-
   padding-right: 15px;
+}
+
+.track-show-bottom-stats > div {
+  color: #999;
 }
 
 #bottom-icon {
@@ -182,4 +198,130 @@
 .track-show-bottom-icons div:hover {
   border: 0.5px solid rgb(107, 106, 106);
   color: #333;
+}
+
+//--------------------BOTTOM PROFILE---------------------------
+
+#track-show-profile-picture > * > img {
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  width: 115px;
+  height: 115px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.track-show-bottom-profile {
+  display: flex;
+  width: 100%;
+}
+
+.track-show-bottom-profile-left {
+  margin-top: 20px;
+  height: 300px;
+  width: 120px;
+}
+
+#track-show-profile-info > h2 {
+  font-size: 13px;
+  margin-top: 5px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  color: #333;
+}
+
+#track-show-profile-info > div {
+  width: 60%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#track-show-profile-info > div > span {
+  color: #999;
+  font-size: 11px;
+}
+
+#track-show-profile-info > div > span > span {
+  color: #999;
+  padding-left: 3px;
+}
+
+#track-show-description {
+  margin-bottom: 15px;
+}
+
+.track-show-bottom-profile-right {
+  height: 100%;
+  width: 84%;
+}
+
+.track-show-comment-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
+  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
+    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-left: 15px;
+  color: #999;
+}
+
+.track-show-comment-header > span {
+  padding-right: 4px;
+}
+
+.comment-item {
+  width: 100%;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: #999;
+  display: flex;
+}
+
+.comment-profile-icon {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.commenter-img {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #e5e5e5;
+}
+
+.comment-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-content-top {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.comment-content-top > span:last-child {
+  font-size: 10px;
+}
+
+.comment-content-body {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+}
+
+.trash-button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.trash-button:hover {
+  color: #999;
 }

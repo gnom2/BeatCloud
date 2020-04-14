@@ -6,20 +6,22 @@ class CommentForm extends React.Component {
     this.state = {
       body: "",
       track_id: this.props.track.id,
-      author_id: this.props.currentUser.id
+      author_id: this.props.currentUser.id,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
 
-  componentDidMount() {
-    if (this.props.track.id) {
-      this.props.fetchComments(this.props.track.id);
-    }
-  }
+  // componentDidMount() {
+  //   debugger;
+  //   if (this.props.track.id) {
+  //     this.props.fetchTrackComments(this.props.track.id);
+  //   }
+  // }
 
   componentWillReceiveProps(nextProps) {
+    debugger;
     if (nextProps.track.id !== this.props.track.id) {
       this.setState({ track_id: nextProps.track.id });
     }
@@ -27,7 +29,7 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
+    debugger;
     this.props.createComment(this.state).then(this.setState({ body: "" }));
   }
 

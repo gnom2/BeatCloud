@@ -1,9 +1,12 @@
-
-json.array! @comments do |comment|
-    json.extract! comment, :id, :author_id, :track_id, :body, :created_at
-    json.author do 
-        json.id comment.author.id
-        json.username comment.author.username
-        json.photoUrl comment.author.photo.photoUrl if comment.author.photo.attached?
+json.comments do
+    @comments.each do |comment|
+      json.set! comment.id do
+        json.id comment.id
+        json.body comment.body
+        json.author_id comment.author_id
+        json.track_id comment.track_id
+        json.created_at comment.created_at
+      end
     end
-end
+  end
+  

@@ -147,6 +147,8 @@
 
 .nav-profile-button,
 .nav-profile-button-active {
+  margin-left: 4px;
+  margin-right: 4px;
   display: flex;
   align-items: center;
   position: relative;
@@ -177,7 +179,7 @@
 .nav-dropdown-menu-alt {
   position: absolute;
   background-color: #000;
-  min-width: 124px;
+  min-width: 115.5px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-top: 55px;
@@ -258,6 +260,7 @@
 .format-link {
   text-decoration: none;
   color: #ccc;
+  cursor: pointer;
 }
 
 .format-link:hover {

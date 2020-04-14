@@ -1,20 +1,30 @@
+import merge from "lodash/merge";
+
 import {
-  RECEIVE_COMMENTS,
+  RECEIVE_ALL_COMMENTS,
   RECEIVE_COMMENT,
   REMOVE_COMMENT,
 } from "../actions/comment_actions";
 
-const CommentReducer = (state = [], action) => {
+const commentsReducer = (state = {}, action) => {
   Object.freeze(state);
-
+  let newState;
+  debugger;
   switch (action.type) {
-    case RECEIVE_COMMENTS:
-      return action.comments;
+    case RECEIVE_ALL_COMMENTS:
+      debugger;
+      return merge({}, state, action.comments.comments);
     case RECEIVE_COMMENT:
-      return state.concat(action.comment);
+      debugger;
+      newState = merge({}, state, action.comment);
+      return newState;
+    case REMOVE_COMMENT:
+      debugger;
+      delete state[action.commentId];
+      return state;
     default:
       return state;
   }
 };
 
-export default CommentReducer;
+export default commentsReducer;

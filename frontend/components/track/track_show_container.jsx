@@ -1,9 +1,13 @@
 import { connect } from "react-redux";
 import TrackShow from "./track_show";
-import { fetchUser } from "../../actions/user_actions";
+// import { fetchUser } from "../../actions/user_actions";
 import { fetchTrack } from "../../actions/track_actions";
 import { currentUser } from "../../util/selectors";
-import { fetchComments } from "../../actions/comment_actions";
+import {
+  requestComments,
+  createComment,
+  deleteComment,
+} from "../../actions/comment_actions";
 import {
   receiveCurrentTrack,
   pauseTrack,
@@ -17,6 +21,9 @@ const msp = (state, ownProps) => {
   return {
     track,
     artist,
+    users: state.entities.users,
+    tracks: state.entities.tracks,
+    comments: state.entities.comments,
     currentUser: currentUser(state),
     playing: state.ui.trackPlayer.playing,
   };
@@ -24,11 +31,12 @@ const msp = (state, ownProps) => {
 
 const mdp = (dispatch) => ({
   fetchTrack: (trackId) => dispatch(fetchTrack(trackId)),
-  fetchUser: (account_id) => dispatch(fetchUser(account_id)),
   receiveCurrentTrack: (track) => dispatch(receiveCurrentTrack(track)),
-  fetchComments: (trackId) => dispatch(fetchComments(trackId)),
+  requestComments: () => dispatch(requestComments()),
+  createComment: (comment) => dispatch(createComment(comment)),
   playTrack: () => dispatch(playTrack()),
   pauseTrack: () => dispatch(pauseTrack()),
+  deleteComment: (commentId) => dispatch(deleteComment(commentId)),
 });
 
-export default connect(msp, mdp)(TrackShow);
+export default withRouter(connect(msp, mdp)(TrackShow));

@@ -1,18 +1,22 @@
 class Api::CommentsController < ApplicationController
     def index
+        debugger
+        @comments = Comment.all
+        # @comments = Comment.includes(:track, :author).where(track_id: params[:comment][:trackId]).order(created_at: :asc)
+    end
 
-        @comments = Comment.includes(:track, :author).where(track_id: params[:comment][:trackId]).order(created_at: :desc)
-
+    def show 
+        debugger
+        @comment = Comment.find(params[:id])
+        render :show
     end
 
     def create
         @comment = Comment.new(comment_params)
         @comment.author = current_user 
 
-        if @comment.save! 
-
-            @comments = Comment.includes(:track, :author).where(track_id: params[:comment][:track_id])
-            render :index
+        if @comment.save
+            render :show
         else
             render json: { errors: @comment.errors.full_messages }, status: 422
         end
@@ -20,10 +24,11 @@ class Api::CommentsController < ApplicationController
 
     def destroy 
         @comment = Comment.find(params[:id])
+
         if @comment.destroy
-            render json: {}
+          render :show
         else
-            render json: { errors: @comment.errors.full_messages}, status: 422
+          render json: @comment.errors.full_messages, status: 422
         end
     end
 

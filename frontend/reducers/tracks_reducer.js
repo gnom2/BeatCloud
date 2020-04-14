@@ -6,10 +6,12 @@ import {
 
 const tracksReducer = (state = {}, action) => {
   Object.freeze(state);
+  debugger;
   switch (action.type) {
     case RECEIVE_TRACKS:
       return action.tracks;
     case RECEIVE_TRACK:
+      debugger;
       return Object.assign({}, state, {
         [action.track.track.id]: action.track.track,
       });

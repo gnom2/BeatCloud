@@ -1,23 +1,21 @@
-export const fetchComments = (trackId) =>
-  $.ajax({
-    method: "GET",
+export const postComment = (comment) => {
+  return $.ajax({
     url: "/api/comments",
-    data: {
-      trackId,
-    },
-  });
-
-export const createComment = (comment) =>
-  $.ajax({
     method: "POST",
-    url: "/api/comments",
-    data: {
-      comment,
-    },
+    data: { comment },
   });
+};
 
-export const deleteComment = (commentId) =>
+export const fetchComments = (track_id) => {
+  return $.ajax({
+    url: "/api/comments",
+    method: "GET",
+    data: { track_id },
+  });
+};
+
+export const deleteComment = (id) =>
   $.ajax({
+    url: "/api/comments/" + id,
     method: "DELETE",
-    url: `/api/comments/${commentId}`,
   });
