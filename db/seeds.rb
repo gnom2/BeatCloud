@@ -10,6 +10,8 @@ User.destroy_all
 Track.destroy_all
 
 demo = User.create({email: "demo@aol.com", password: "123456", username: "GNOMEE", age: "28", gender:"male"})
+demo_photo = open('https://active-storage-beatcloud-seeds.s3.amazonaws.com/profileart.png')
+demo.photo.attach(io: demo_photo, filename: 'profileart.png')
 scott = User.create({email: "scott@aol.com", password: "hunter12", username: "Scotty2Potty", age: "30", gender:"male"})
 sera = User.create({email: "sera@aol.com", password: "password123", username: "PrincessSera", age: "24", gender:"female"})
 

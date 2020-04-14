@@ -80,10 +80,9 @@
 
 .nav-bar-right-wrapper button,
 .nav-bar-icon-wrapper button {
-  width: 25%;
+  width: 14%;
   height: 100%;
   padding-right: 10px;
-  padding-left: 10px;
   cursor: pointer;
   background: transparent;
   color: lightgray;
@@ -178,7 +177,7 @@
 .nav-dropdown-menu-alt {
   position: absolute;
   background-color: #000;
-  min-width: 108px;
+  min-width: 124px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   margin-top: 55px;
@@ -269,13 +268,20 @@
   color: #eee;
 }
 
-.nav-bar-notification-icon,
 .nav-bar-profile-icon,
 .nav-bar-profile-icon-active {
   margin-left: 5px;
 }
 
+.nav-bar-notification-icon {
+  margin-right: 10px;
+}
+
 .nav-bar-mail-icon {
   margin-left: 10px;
   margin-right: 6px;
+}
+
+.nav-upload-button {
+  padding-left: 5px;
 }
