@@ -37,10 +37,20 @@ class App extends React.Component {
         <div className="main-content">
           <ModalContainer />
 
-          <Route exact path="/tracks/:trackId" component={TrackShow} />
+          <Route
+            exact
+            path="/tracks/:trackId"
+            audioPlayer={this.audioPlayer}
+            component={TrackShow}
+          />
           <AuthRoute exact path="/" component={Home} />
           <ProtectedRoute exact path="/upload" component={Upload} />
-          <ProtectedRoute exact path="/users/:userId" component={Profile} />
+          <ProtectedRoute
+            exact
+            path="/users/:userId"
+            audioPlayer={this.audioPlayer}
+            component={Profile}
+          />
           <ProtectedRoute exact path="/discover" component={Discover} />
         </div>
         <TrackPlayerContainer audioPlayer={this.audioPlayer} />

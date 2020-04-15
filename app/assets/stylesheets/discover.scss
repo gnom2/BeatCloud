@@ -17,6 +17,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
 }
 
 .discover-nav-content {
@@ -45,6 +46,178 @@
   display: block;
   width: 65%;
   background-color: #fff;
+}
+
+.discover-main-weekly-module {
+  width: 92%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid #e5e5e5;
+}
+
+.discover-main-weekly-module h2 {
+  font-size: 23px;
+  font-weight: 100;
+}
+
+.discover-main-weekly-module h3 {
+  font-size: 14px;
+  color: #999;
+}
+
+.discover-weekly-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  height: 220px;
+  // background: linear-gradient(
+  //   135deg,
+  //   rgb(185, 163, 150) 0%,
+  //   rgb(116, 111, 121) 100%
+  // );
+  background-image: url("https://wallpaperaccess.com/full/639668.png");
+  background-size: cover;
+}
+
+.discover-weekly-album-cover {
+  background-image: url("https://www.news.quirktastic.co/wp-content/uploads/2019/09/lofi-180x180.gif");
+  background-size: cover;
+  width: 180px;
+  height: 180px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.discover-weekly-album-cover:hover {
+  opacity: 1;
+}
+
+.discover-weekly-album-cover > * {
+  margin-left: 20px;
+  opacity: 0.95;
+}
+
+.discover-weekly-album-cover > *:hover {
+  opacity: 1;
+}
+
+.discover-weekly-track-scroller {
+  width: 69%;
+  height: 82%;
+  background: linear-gradient(rgb(202, 144, 189), rgb(236, 142, 158));
+  opacity: 0.92;
+  border: 0.2px solid rgb(225, 189, 233);
+}
+
+#weekly-track-item {
+  display: flex;
+  width: 97%;
+  // padding-left: 8px;
+  // padding-bottom: 12px;
+  // padding-top: 12px;
+  padding: 12px 10px 12px 8px;
+  border-bottom: 0.5px solid rgba(239, 200, 248, 0.639);
+  font-size: 13px;
+  color: #fff;
+  white-space: pre;
+  font-weight: 100;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.weekly-track-info {
+  display: flex;
+}
+
+#weekly-track-item:hover,
+.weekly-track-icons:hover {
+  background: rgba(255, 255, 255, 0.098);
+  opacity: 1;
+}
+
+#weekly-track-list {
+  width: 100%;
+  height: 180px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#weekly-track-list::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+#weekly-track-list::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+#weekly-track-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(94, 61, 83, 0.344);
+}
+
+.weekly-track-icons div {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  border: 0.5px solid #e5e5e5;
+  border-radius: 2px;
+  margin-right: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(87, 87, 87);
+}
+
+.weekly-track-icons div:hover {
+  border: 0.5px solid rgb(100, 100, 100);
+}
+
+.weekly-track-icons {
+  display: flex;
+  opacity: 0;
+}
+
+.discover-weekly-footer {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+}
+
+.discover-weekly-footer img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.discover-weekly-footer-content {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-left: 8px;
+}
+
+#discover-weekly-playlist-btn {
+  font-size: 12px;
+  border: 1px solid #e5e5e5;
+  padding: 2px 6px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#discover-weekly-playlist-btn:hover {
+  border: 1px solid rgb(85, 85, 85);
 }
 
 .discover-sidebar {

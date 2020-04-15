@@ -16,11 +16,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class TrackPlayer extends React.Component {
   constructor(props) {
     super(props);
-    debugger;
+    debugg/er;
     this.state = {
       duration: "",
       timeElapsed: 0,
-      playing: this.props.playing,
+      playing: props.playing,
       volume: 1.0,
       trackLoaded: false,
       trackPlayer: this.props.trackPlayer,
@@ -36,11 +36,10 @@ class TrackPlayer extends React.Component {
 
   handleMetaData(e) {
     e.preventDefault();
-    let audioPlayer = document.getElementById("audio-element");
-
+    debu/gger;
     this.setState({
       trackLoaded: true,
-      duration: audioPlayer.current.duration,
+      duration: 0,
       playing: this.props.playing,
       trackPlayer: this.props.trackPlayer,
     });
@@ -49,6 +48,7 @@ class TrackPlayer extends React.Component {
   handlePlayPause() {
     let audioPlayer = document.getElementById("audio-element");
 
+    debug/ger;
     if (this.props.playing) {
       this.props.pauseTrack();
       audioPlayer.pause();
@@ -59,7 +59,7 @@ class TrackPlayer extends React.Component {
   }
 
   restartTrack() {
-    let audioPlayer = document.getElementById("audio-element");
+    // let audioPlayer = document.getElementById("audio-element");
 
     this.setState(
       {
@@ -67,7 +67,7 @@ class TrackPlayer extends React.Component {
         playing: this.props.playing,
       },
       () => {
-        audioPlayer.current.currentTime = 0;
+        this.props.audioPlayer.current.currentTime = 0;
         this.scrollbar.current.value = 0;
         this.props.updatePlaypoint(0);
         this.props.restartTrack();
@@ -92,12 +92,29 @@ class TrackPlayer extends React.Component {
   }
 
   render() {
-    const { currentUser, trackPlayer, playing, audioPlayer } = this.props;
-    debugger;
-    let trackUrl = this.props.trackPlayer
-      ? this.props.trackPlayer.trackUrl
-      : "";
-    debugger;
+    const {
+      currentUser,
+      trackPlayer,
+      playing,
+      audioPlayer,
+      weeklyTrack,
+      users,
+    } = this.props;
+    // debugger;
+    // let trackUrl = this.props.trackPlayer
+    //   ? this.props.trackPlayer.trackUrl
+    //   : "";
+
+    let trackUrl;
+    if (trackPlayer) {
+      trackUrl = trackPlayer.trackUrl;
+    } else if (weeklyTrack) {
+      trackUrl = weeklyTrack;
+    } else {
+      trackUrl = "";
+    }
+
+    // debugger;
     return (
       <>
         <audio
@@ -122,7 +139,7 @@ class TrackPlayer extends React.Component {
                 </button>
 
                 <button className="track-play-pause-btn">
-                  {this.props.playing ? (
+                  {!this.props.playing ? (
                     <FontAwesomeIcon
                       icon={faPlay}
                       onClick={this.handlePlayPause}
@@ -176,7 +193,7 @@ class TrackPlayer extends React.Component {
                 <div className="track-details-info">
                   <Link to={`/users/${trackPlayer.artist_id}`}>
                     <p className="track-details-artist-name">
-                      {trackPlayer.artist}
+                      {users[trackPlayer.artist_id].username}
                     </p>
                   </Link>
                   <Link

@@ -83,6 +83,7 @@ class ProfileShow extends React.Component {
                     <div className="track-play-btn">
                       <TrackButton
                         track={track}
+                        audioPlayer={this.props.audioPlayer}
                         currentTrack={this.state.currentTrack}
                       />
                     </div>

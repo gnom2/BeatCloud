@@ -13,7 +13,7 @@ class TrackButton extends React.Component {
 
   handlePause(track) {
     let audioPlayer = document.getElementById("audio-element");
-    debugger;
+    // debugger;
     this.props.receiveCurrentTrack(track);
 
     if (
@@ -28,7 +28,7 @@ class TrackButton extends React.Component {
 
   handlePlay(track) {
     let audioPlayer = document.getElementById("audio-element");
-    debugger;
+    // debugger;
     if (
       this.props.playing &&
       this.props.track.id !== this.props.currentTrackId
@@ -40,12 +40,13 @@ class TrackButton extends React.Component {
     }
     this.props.receiveCurrentTrack(track);
     this.props.playTrack();
+    audioPlayer.setAttribute("autoPlay", "");
     audioPlayer.play();
     // this.audioRef.current.play();
   }
 
   render() {
-    debugger;
+    // debugger;
     return (
       <div className="track-show-btn" onClick={(e) => e.stopPropagation()}>
         {this.props.playing &&
