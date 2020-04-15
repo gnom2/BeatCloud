@@ -60,7 +60,7 @@ class TrackPlayer extends React.Component {
 
   restartTrack() {
     let audioPlayer = document.getElementById("audio-element");
-    debugger;
+
     this.setState(
       {
         timeElapsed: 0,
