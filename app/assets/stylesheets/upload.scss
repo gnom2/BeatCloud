@@ -6,7 +6,7 @@
 .upload-main-container {
   margin: 0 auto;
   width: 1180px;
-  height: 400px;
+  height: 700px;
   background-color: white;
 }
 
@@ -18,7 +18,7 @@
 .upload-main-body {
   border: 1px solid #f0f0f0;
   width: 800px;
-  height: 400px;
+  height: 450px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -92,6 +92,7 @@
   width: 260px;
   height: 260px;
   background-size: cover;
+  position: absolute;
 }
 
 .upload-main-pic-upload-btn {
@@ -104,11 +105,13 @@
   color: #333333;
   padding: 2px 11px 2px 10px;
   border-radius: 3px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.5);
   margin-bottom: 10px;
   margin-left: 60px;
   margin-top: 225px;
   z-index: 1000;
+  position: relative;
+  outline: none;
 }
 
 #pic-icon {
@@ -188,4 +191,13 @@
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+}
+
+.upload-detail-nav {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.upload-detail-nav * {
+  font-size: 18px;
 }

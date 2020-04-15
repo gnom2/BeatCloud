@@ -1,3 +1,9 @@
+button,
+div,
+img {
+  transition: all 300ms ease;
+}
+
 .home {
   width: 100%;
   background-color: whitesmoke;
@@ -53,6 +59,11 @@
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
+}
+
+#login:hover {
+  // transform: scale(1.1);
+  -webkit-filter: blur(0.8px);
 }
 
 .nav-login-form > #signup {
@@ -221,9 +232,43 @@
   margin-top: 60px;
 }
 
-#track-item > img {
+#track-item img {
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+}
+
+.track-item-album {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 5px;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.track-item-album:hover {
+  opacity: 1;
+  // -webkit-transform: scale(1.05);
+  // -ms-transform: scale(1.05);
+  transform: scale(1.03);
+}
+
+#track-item-btn {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-left: 17px;
   width: 100%;
   height: 100%;
+  z-index: 3;
+  opacity: 0;
+}
+
+#track-item-btn:hover {
+  opacity: 1;
 }
 
 #track-item > #track-title {
@@ -406,4 +451,41 @@
   font-weight: 100;
   text-align: center;
   border-radius: 3px;
+}
+
+.album1 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track1.png");
+}
+.album2 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track2.png");
+}
+.album3 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track3.png");
+}
+.album4 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track4.png");
+}
+.album5 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track5.png");
+}
+.album6 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track6.png");
+}
+.album7 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track7.png");
+}
+.album8 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track8.png");
+}
+.album9 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track9.png");
+}
+.album10 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track10.png");
+}
+.album11 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track11.png");
+}
+.album12 {
+  background-image: url("https://active-storage-beatcloud-seeds.s3.amazonaws.com/track12.png");
 }

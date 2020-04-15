@@ -59,9 +59,11 @@ const Home = ({ login, signup, openModal }) => {
       </h2>
       <div className="body-trending-content">
         <div id="track-item">
-          <div>
-            <TrackButtonContainer />
-            <img src={window.track1URL} />
+          {/* <img src={window.track1URL} /> */}
+          <div className="track-item-album album1">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
           </div>
 
           <span id="track-title">Armin van Buuren</span>
@@ -69,67 +71,122 @@ const Home = ({ login, signup, openModal }) => {
           <span id="track-artist">This Is What It Feels..</span>
         </div>
         <div id="track-item">
-          <img src={window.track2URL} />
+          {/* <img src={window.track2URL} /> */}
+          <div className="track-item-album album2">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Above & Beyond & S..</span>
           <br />
           <span id="track-artist">See The End</span>
         </div>
         <div id="track-item">
-          <img src={window.track3URL} />
+          {/* <img src={window.track3URL} /> */}
+          <div className="track-item-album album3">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Culture Shock</span>
           <br />
           <span id="track-artist">Bunker</span>
         </div>
         <div id="track-item">
-          <img src={window.track4URL} />
+          {/* <img src={window.track4URL} /> */}
+          <div className="track-item-album album4">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Feint</span>
           <br />
           <span id="track-artist">We Won't Be Alone</span>
         </div>
         <div id="track-item">
-          <img src={window.track5URL} />
+          {/* <img src={window.track5URL} /> */}
+          <div className="track-item-album album5">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Gareth Emery</span>
           <br />
           <span id="track-artist">You'll Be Ok</span>
         </div>
         <div id="track-item">
-          <img src={window.track6URL} />
+          {/* <img src={window.track6URL} /> */}
+          <div className="track-item-album album6">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Skrillex</span>
           <br />
           <span id="track-artist">Mumbai Power</span>
         </div>
         <div id="track-item">
-          <img src={window.track7URL} />
+          {/* <img src={window.track7URL} /> */}
+          <div className="track-item-album album7">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Eliminate</span>
           <br />
           <span id="track-artist">Mula</span>
         </div>
         <div id="track-item">
-          <img src={window.track8URL} />
+          {/* <img src={window.track8URL} /> */}
+          <div className="track-item-album album8">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Fred V & Grafix</span>
           <br />
           <span id="track-artist">Altitude</span>
         </div>
         <div id="track-item">
-          <img src={window.track9URL} />
+          {/* <img src={window.track9URL} /> */}
+          <div className="track-item-album album9">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Sub Focus</span>
           <br />
           <span id="track-artist">Solar System</span>
         </div>
         <div id="track-item">
-          <img src={window.track10URL} />
+          {/* <img src={window.track10URL} /> */}
+          <div className="track-item-album album10">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Porter Robinson</span>
           <br />
           <span id="track-artist">Divinity (REZZ Remix)</span>
         </div>
         <div id="track-item">
-          <img src={window.track11URL} />
+          {/* <img src={window.track11URL} /> */}
+          <div className="track-item-album album11">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">No Mana</span>
           <br />
           <span id="track-artist">Bottle Service</span>
         </div>
         <div id="track-item">
-          <img src={window.track12URL} />
+          {/* <img src={window.track12URL} /> */}
+          <div className="track-item-album album12">
+            <div id="track-item-btn">
+              <TrackButtonContainer />
+            </div>
+          </div>
           <span id="track-title">Above & Beyond</span>
           <br />
           <span id="track-artist">Blue Monday</span>

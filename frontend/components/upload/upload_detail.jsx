@@ -2,6 +2,7 @@ import React from "react";
 import { faCamera } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import UploadMenu2 from "./upload_menu2";
 
 const UploadDetail = ({
   findFileInput,
@@ -16,6 +17,9 @@ const UploadDetail = ({
   return (
     <>
       <div className="upload-main-body">
+        <div className="upload-detail-nav">
+          <UploadMenu2 />
+        </div>
         <div className="upload-main-body-container">
           <div className="upload-main-body-album">
             <div className="upload-main-body-album-preview">

@@ -23,6 +23,7 @@ class Api::TracksController < ApplicationController
     def create
         @track = Track.new(track_params)
         @artist = User.find(@track.artist_id)
+        @comments = Comment.where(track_id: @track.id)
         if @track.save
             render 'api/tracks/show'
         else
