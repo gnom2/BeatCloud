@@ -36,10 +36,11 @@ class TrackPlayer extends React.Component {
 
   handleMetaData(e) {
     e.preventDefault();
+    let audioPlayer = document.getElementById("audio-element");
 
     this.setState({
       trackLoaded: true,
-      duration: 0,
+      duration: audioPlayer.duration,
       playing: this.props.playing,
       trackPlayer: this.props.trackPlayer,
     });
@@ -58,15 +59,15 @@ class TrackPlayer extends React.Component {
   }
 
   restartTrack() {
-    // let audioPlayer = document.getElementById("audio-element");
-
+    let audioPlayer = document.getElementById("audio-element");
+    debugger;
     this.setState(
       {
         timeElapsed: 0,
         playing: this.props.playing,
       },
       () => {
-        this.props.audioPlayer.current.currentTime = 0;
+        audioPlayer.currentTime = 0;
         this.scrollbar.current.value = 0;
         this.props.updatePlaypoint(0);
         this.props.restartTrack();
@@ -81,7 +82,7 @@ class TrackPlayer extends React.Component {
         timeElapsed: 0,
       },
       () => {
-        this.props.audioPlayer.current.currentTime = 0;
+        this.props.audioPlayer.currentTime = 0;
         this.scrollbar.current.value = 0;
         this.props.updatePlaypoint(0);
         this.props.pauseTrack();

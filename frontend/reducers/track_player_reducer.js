@@ -3,6 +3,7 @@ import {
   PLAY_TRACK,
   PAUSE_TRACK,
   RESTART_TRACK,
+  UPDATE_PLAYPOINT,
 } from "../actions/track_player_actions";
 
 let defaultState = {
