@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class TrackPlayer extends React.Component {
   constructor(props) {
     super(props);
-    debugg/er;
+
     this.state = {
       duration: "",
       timeElapsed: 0,
@@ -36,7 +36,7 @@ class TrackPlayer extends React.Component {
 
   handleMetaData(e) {
     e.preventDefault();
-    debu/gger;
+
     this.setState({
       trackLoaded: true,
       duration: 0,
@@ -48,7 +48,6 @@ class TrackPlayer extends React.Component {
   handlePlayPause() {
     let audioPlayer = document.getElementById("audio-element");
 
-    debug/ger;
     if (this.props.playing) {
       this.props.pauseTrack();
       audioPlayer.pause();

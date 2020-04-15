@@ -21,9 +21,13 @@
   margin-left: 80px;
 }
 
+.track-player-buttons {
+}
+
 .track-player-buttons button {
   padding-right: 10px;
   padding-left: 10px;
+  background-color: transparent;
 }
 
 .track-prev-btn {
@@ -58,19 +62,22 @@
 
 .audio-playbar {
   width: 600px;
+  margin-right: 5px;
 }
 
 .track-volume-btn {
+  margin-left: 5px;
 }
 
 .track-details-container {
   display: flex;
   width: 20%;
   margin-left: 20px;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .track-details-profile-pic {
+  margin-left: 10px;
 }
 
 .track-details-info {
