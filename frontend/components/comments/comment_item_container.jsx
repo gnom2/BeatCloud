@@ -8,7 +8,7 @@ import {
 import { fetchTrack } from "../../actions/track_actions";
 
 const msp = (state) => {
-  debugger;
+  // debugger;
   return {
     comments: state.entities.comments,
     currentUser: state.entities.users[state.session.id],

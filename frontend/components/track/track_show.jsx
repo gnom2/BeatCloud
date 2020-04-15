@@ -90,7 +90,6 @@ class TrackShow extends React.Component {
     let commentLi;
     let commentCount = 0;
 
-    debugger;
     if (Object.keys(comments).length !== 0) {
       // debugger;
       commentLi = Object.keys(comments).map((key) => {

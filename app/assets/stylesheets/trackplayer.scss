@@ -1,0 +1,86 @@
+.track-player-main-container {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  z-index: 10;
+  margin: 0 auto;
+  border-top: 1px solid #e5e5e5;
+  background-color: #f2f2f2;
+}
+
+.track-player-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+
+  margin-left: 80px;
+}
+
+.track-player-buttons button {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.track-prev-btn {
+}
+
+.track-play-pause-btn {
+}
+
+.track-skip-btn {
+}
+
+.track-shuffle-btn {
+}
+
+.track-repeat-btn {
+}
+
+.track-playbar {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+
+.track-playbar p {
+  margin-right: 5px;
+}
+
+.audio-playbar {
+  width: 600px;
+}
+
+.track-volume-btn {
+}
+
+.track-details-container {
+  display: flex;
+  width: 20%;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.track-details-profile-pic {
+}
+
+.track-details-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.track-details-profile-pic img {
+  width: 40px;
+  height: 40px;
+}
+
+.track-details-artist-name {
+}
+
+.track-details-track-name {
+}

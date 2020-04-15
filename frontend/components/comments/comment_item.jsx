@@ -12,7 +12,7 @@ class CommentItem extends React.Component {
   }
 
   handleDelete(e) {
-    debugger;
+    // debugger;
     this.props.deleteComment(parseInt(e.currentTarget.value));
   }
 

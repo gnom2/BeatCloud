@@ -21,7 +21,7 @@ class CommentForm extends React.Component {
   // }
 
   componentWillReceiveProps(nextProps) {
-    debugger;
+    // debugger;
     if (nextProps.track.id !== this.props.track.id) {
       this.setState({ track_id: nextProps.track.id });
     }
@@ -29,7 +29,7 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
+    // debugger;
     this.props.createComment(this.state).then(this.setState({ body: "" }));
   }
 
