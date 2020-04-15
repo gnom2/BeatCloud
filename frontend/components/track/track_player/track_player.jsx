@@ -29,6 +29,8 @@ class TrackPlayer extends React.Component {
     this.handleMetaData = this.handleMetaData.bind(this);
     this.handlePlayPause = this.handlePlayPause.bind(this);
     this.restartTrack = this.restartTrack.bind(this);
+    this.updatePlayTime = this.updatePlayTime.bind(this);
+    this.changePlaypoint = this.changePlaypoint.bind(this);
     this.skipTrack = this.skipTrack.bind(this);
     this.scrollbar = React.createRef();
     this.volumebar = React.createRef();
@@ -75,18 +77,63 @@ class TrackPlayer extends React.Component {
     );
   }
 
+  changePlaypoint(e) {
+    e.persist();
+    let audioPlayer = document.getElementById("audio-element");
+
+    this.setState({ timeElapsed: e.target.value }, () => {
+      audioPlayer.currentTime = e.target.value;
+    });
+  }
+
+  updatePlayTime() {
+    let audioPlayer = document.getElementById("audio-element");
+
+    setInterval(() => {
+      this.scrollbar.current.value = audioPlayer.currentTime;
+      this.setState({
+        timeElapsed: audioPlayer.currentTime - 0.5,
+      });
+      this.props.updatePlaypoint(this.state.timeElapsed);
+    }, 50);
+  }
+
   skipTrack() {
+    let audioPlayer = document.getElementById("audio-element");
+    // const { tracks } = this.props;
+    // let nextTrack;
+    // let result;
+    // let that = this;
+    // const trackLi = Object.keys(tracks).map((key) => {
+    //   if (!nextTrack) {
+    //     debugger;
+    //     nextTrack = tracks[key];
+    //     if (that.props.trackPlayer.id !== key) {
+    //       debugger;
+    //       if (!result) {
+    //         debugger;
+    //         result = tracks[key];
+    //       }
+    //     }
+    //   }
+    //   return tracks[key];
+    // });
+    debugger;
     this.setState(
       {
         playing: false,
         timeElapsed: 0,
       },
       () => {
-        this.props.audioPlayer.currentTime = 0;
+        debugger;
+        audioPlayer.currentTime = 0;
         this.scrollbar.current.value = 0;
         this.props.updatePlaypoint(0);
         this.props.pauseTrack();
-        this.props.audioPlayer.current.pause();
+        audioPlayer.pause();
+
+        // audioPlayer.src = result.trackUrl;
+        // audioPlayer.play();
       }
     );
   }
@@ -99,6 +146,7 @@ class TrackPlayer extends React.Component {
       audioPlayer,
       weeklyTrack,
       users,
+      tracks,
     } = this.props;
     // debugger;
     // let trackUrl = this.props.trackPlayer
@@ -126,6 +174,7 @@ class TrackPlayer extends React.Component {
           volume="0.5"
           src={trackUrl}
           onLoadedMetadata={this.handleMetaData}
+          onPlaying={this.updatePlayTime}
         />
         {trackPlayer && (
           <div className="track-player-main-container">

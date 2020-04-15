@@ -19,6 +19,7 @@ const msp = (state, ownProps) => {
     playing: state.ui.trackPlayer.playing,
     audioPlayer: ownProps.audioPlayer,
     weeklyTrack: ownProps.trackUrl,
+    tracks: state.entities.tracks,
   };
 };
 

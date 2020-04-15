@@ -1,6 +1,8 @@
 import React from "react";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import TrackButtonContainer from "../track/track_button_container";
+import TrackButton from "../track/track_button";
 
 const Home = ({ login, signup, openModal }) => {
   return (
@@ -57,7 +59,11 @@ const Home = ({ login, signup, openModal }) => {
       </h2>
       <div className="body-trending-content">
         <div id="track-item">
-          <img src={window.track1URL} />
+          <div>
+            <TrackButtonContainer />
+            <img src={window.track1URL} />
+          </div>
+
           <span id="track-title">Armin van Buuren</span>
           <br />
           <span id="track-artist">This Is What It Feels..</span>
