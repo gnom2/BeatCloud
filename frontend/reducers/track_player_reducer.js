@@ -16,7 +16,6 @@ const trackPlayerReducer = (oldState = defaultState, action) => {
   let newState = Object.assign({}, oldState);
   switch (action.type) {
     case RECEIVE_CURRENT_TRACK:
-      debugger;
       newState.track_id = action.track.id;
       return newState;
     case PLAY_TRACK:

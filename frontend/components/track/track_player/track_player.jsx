@@ -88,14 +88,16 @@ class TrackPlayer extends React.Component {
 
   updatePlayTime() {
     let audioPlayer = document.getElementById("audio-element");
-
-    setInterval(() => {
-      this.scrollbar.current.value = audioPlayer.currentTime;
-      this.setState({
-        timeElapsed: audioPlayer.currentTime - 0.5,
-      });
-      this.props.updatePlaypoint(this.state.timeElapsed);
-    }, 50);
+    // debugger;
+    if (audioPlayer.paused === false) {
+      setInterval(() => {
+        this.scrollbar.current.value = audioPlayer.currentTime;
+        this.setState({
+          timeElapsed: audioPlayer.currentTime,
+        });
+        this.props.updatePlaypoint(this.state.timeElapsed);
+      }, 50);
+    }
   }
 
   skipTrack() {
@@ -118,14 +120,14 @@ class TrackPlayer extends React.Component {
     //   }
     //   return tracks[key];
     // });
-    debugger;
+    // debugger;
     this.setState(
       {
         playing: false,
         timeElapsed: 0,
       },
       () => {
-        debugger;
+        // debugger;
         audioPlayer.currentTime = 0;
         this.scrollbar.current.value = 0;
         this.props.updatePlaypoint(0);
@@ -162,7 +164,7 @@ class TrackPlayer extends React.Component {
       trackUrl = "";
     }
 
-    debugger;
+    // debugger;
     return (
       <>
         <audio

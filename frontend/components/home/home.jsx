@@ -55,7 +55,7 @@ class Home extends React.Component {
     ];
 
     const trackLi = this.props.tracks.map((track, i) => {
-      debugger;
+      // debugger;
       return (
         <div key={track.id} id="track-item">
           <div className={`track-item-album album${i + 1}`}>
