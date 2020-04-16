@@ -162,7 +162,7 @@ class TrackPlayer extends React.Component {
       trackUrl = "";
     }
 
-    // debugger;
+    debugger;
     return (
       <>
         <audio
