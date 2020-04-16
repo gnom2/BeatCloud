@@ -120,14 +120,14 @@ class TrackPlayer extends React.Component {
     //   }
     //   return tracks[key];
     // });
-    debugger;
+    // debugger;
     this.setState(
       {
         playing: false,
         timeElapsed: 0,
       },
       () => {
-        debugger;
+        // debugger;
 
         audioPlayer.currentTime = 0;
         this.scrollbar.current.value = 0;
