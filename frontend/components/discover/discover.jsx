@@ -17,6 +17,27 @@ import TrackButton from "../track/track_button";
 class Discover extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handlePlay = this.handlePlay.bind(this);
+  }
+
+  handlePlay(track) {
+    let audioPlayer = document.getElementById("audio-element");
+    // debugger;
+    if (
+      this.props.playing &&
+      this.props.track.id !== this.props.currentTrackId
+    ) {
+      // debugger;
+      this.props.pauseTrack();
+      // this.audioRef.current.pause();
+      audioPlayer.pause();
+    }
+    this.props.receiveCurrentTrack(track);
+    this.props.playTrack();
+    audioPlayer.setAttribute("autoPlay", "");
+    audioPlayer.play();
+    // this.audioRef.current.play();
   }
 
   render() {
@@ -71,6 +92,63 @@ class Discover extends React.Component {
         trackUrl: "",
       },
     ];
+
+    let playlistLi = [
+      {
+        photoUrl:
+          "https://active-storage-beatcloud-seeds.s3.amazonaws.com/playlists/art1.png",
+        title: "Work From Home ...",
+      },
+      {
+        photoUrl:
+          "https://active-storage-beatcloud-seeds.s3.amazonaws.com/playlists/art2.png",
+        title: "The Latest Uploads ...",
+      },
+      {
+        photoUrl:
+          "https://active-storage-beatcloud-seeds.s3.amazonaws.com/playlists/art3.png",
+        title: "Introspective Rap",
+      },
+      {
+        photoUrl:
+          "https://active-storage-beatcloud-seeds.s3.amazonaws.com/playlists/art4.png",
+        title: "Good Morning Groove",
+      },
+      {
+        photoUrl:
+          "https://active-storage-beatcloud-seeds.s3.amazonaws.com/playlists/art5.png",
+        title: "Chill Bedroom Pop",
+      },
+      {
+        photoUrl:
+          "https://active-storage-beatcloud-seeds.s3.amazonaws.com/playlists/art6.png",
+        title: "Anti-Anxiety Ambient",
+      },
+      {
+        photoUrl:
+          "https://active-storage-beatcloud-seeds.s3.amazonaws.com/playlists/art7.png",
+        title: "Sublime Beats ",
+      },
+      {
+        photoUrl:
+          "https://active-storage-beatcloud-seeds.s3.amazonaws.com/playlists/art8.png",
+        title: "Soul for Self-Care",
+      },
+      {
+        photoUrl:
+          "https://active-storage-beatcloud-seeds.s3.amazonaws.com/playlists/art9.png",
+        title: "Indoor Indie",
+      },
+    ];
+
+    let carouselLi = playlistLi.map((playlist, i) => {
+      return (
+        <li key={i} id="playlist-carousel-item">
+          <img src={playlist.photoUrl} alt="" />
+          <div>{playlist.title}</div>
+        </li>
+      );
+    });
 
     let scrollLi = trackLi.map((track, idx) => {
       return (
@@ -135,6 +213,13 @@ class Discover extends React.Component {
                   </button>
                 </div>
               </div>
+            </div>
+
+            <div className="discover-playlists-container">
+              <h2>Stay Home</h2>
+              <h3>Tunes for isolation and self-care</h3>
+
+              <ul id="playlist-carousel">{carouselLi}</ul>
             </div>
           </section>
           <div className="discover-sidebar">

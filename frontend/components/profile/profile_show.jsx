@@ -190,8 +190,8 @@ class ProfileShow extends React.Component {
                   <div className="sidebar-description">
                     <p>
                       Welcome to Demo user's profile page. <br />
-                      Tracks uploaded by users will be shown here. <br />
-                      Hopefully by this week!
+                      User's description would go here. <br />
+                      Aiming to have waveforms by next week.
                     </p>
                   </div>
                   <div className="sidebar-links">
@@ -205,7 +205,7 @@ class ProfileShow extends React.Component {
                     </div>
                   </div>
                 </div>
-                <SidebarContainer />
+                <SidebarContainer trackCount={trackCount} />
               </div>
             </div>
           </div>
