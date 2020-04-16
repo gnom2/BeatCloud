@@ -14,15 +14,18 @@
 .stats-title-format {
   display: flex;
   justify-content: space-between;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-size: 14px;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   color: #999;
   line-height: 24px;
 }
 
 .title-format {
+  font-family: Interstate;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   display: flex;
   cursor: pointer;
 }
@@ -40,8 +43,7 @@
 .side-stats {
   display: flex;
   justify-content: space-between;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Interstate;
   font-size: 13px;
   font-weight: 100;
   color: #999;
@@ -60,8 +62,7 @@
 .stats-title-middle {
   display: flex;
   justify-content: space-between;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Interstate;
   font-size: 14px;
   font-weight: 100;
   color: #999;
@@ -84,15 +85,24 @@
 
 #left-stats,
 #right-stats {
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   margin-bottom: 10px;
 }
 
 #right-num {
   margin-left: 30px;
+  font-family: Interstate;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 #left-num {
   color: #bd3d3a;
+  font-family: Interstate;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 #left-num,

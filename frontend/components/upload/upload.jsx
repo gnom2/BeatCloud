@@ -2,7 +2,7 @@ import React from "react";
 
 const Upload = ({ findFileInput, handleTrackUpload }) => {
   return (
-    <>
+    <div className="upload-main-container">
       <div className="upload-main-body">
         <div className="upload-main-body-header">
           <h1>Choose a track to upload to BeatCloud</h1>
@@ -30,7 +30,29 @@ const Upload = ({ findFileInput, handleTrackUpload }) => {
           </div>
         </div>
       </div>
-    </>
+      <div className="upload-footer">
+        <div id="upload-footer-top">
+          <a href="">
+            Supported file types and sizes - Upload troubleshooting tips -
+            Copyright FAQs
+          </a>
+          <p>
+            By uploading, you confirm that your sounds comply with our{" "}
+            <a href="">Terms of Use</a> and you don't infringe anyone else's
+            rights.
+          </p>
+        </div>
+        <div id="upload-footer-bottom">
+          <p>
+            Legal - Privacy - Cookies - Imprint - Creator Resources - Blog -
+            Charts - Popular searches
+          </p>
+          <p>
+            <a href="">Language:</a> English
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 

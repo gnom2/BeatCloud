@@ -45,9 +45,9 @@
   padding: 12px 24px;
   color: white;
   font-size: 16px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   text-align: center;
   border-radius: 3px;
   outline: none;
@@ -98,9 +98,9 @@
 .upload-main-pic-upload-btn {
   border: 1px solid #f0f0f0;
   font-size: 14px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   text-align: center;
   color: #333333;
   padding: 2px 11px 2px 10px;
@@ -169,9 +169,9 @@
 .track-cancel-btn {
   height: 26px;
   font-size: 12px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   background-color: transparent;
   cursor: pointer;
   margin-right: 10px;
@@ -184,9 +184,9 @@
   padding: 2px 4px;
   color: white;
   font-size: 12px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   text-align: center;
   border-radius: 3px;
   outline: none;
@@ -200,4 +200,25 @@
 
 .upload-detail-nav * {
   font-size: 18px;
+}
+
+.upload-footer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  letter-spacing: 0.3px;
+  line-height: 22px;
+}
+
+#upload-footer-top p {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+#upload-footer-bottom {
+  padding-top: 8px;
+  margin-right: 170px;
 }

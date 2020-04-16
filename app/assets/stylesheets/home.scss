@@ -4,6 +4,23 @@ img {
   transition: all 300ms ease;
 }
 
+@import url(//db.onlinewebfonts.com/c/67c875133a76f1dc00e6beab89cd7329?family=Interstate);
+
+@font-face {
+  font-family: "Interstate";
+  src: url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.eot");
+  src: url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/67c875133a76f1dc00e6beab89cd7329.svg#Interstate")
+      format("svg");
+}
+
 .home {
   width: 100%;
   background-color: whitesmoke;
@@ -52,10 +69,9 @@ img {
   background: transparent;
   padding: 8px 15px;
   color: white;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Arial;
   font-weight: 100;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
@@ -72,10 +88,10 @@ img {
   background: #bd3d3a;
   padding: 8px 15px;
   color: white;
-  font-size: 12px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+
+  font-family: Arial;
   font-weight: 100;
+  font-size: 14px;
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
@@ -83,8 +99,7 @@ img {
 
 .nav-login-form > span {
   color: white;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Interstate;
   font-weight: 100;
   text-align: center;
   font-size: 12px;
@@ -102,7 +117,8 @@ img {
   margin-top: 100px;
   margin-bottom: 8px;
   font-size: 38px;
-  font-weight: 100;
+  font-weight: 600;
+  font-family: Interstate;
   color: #fff;
 }
 
@@ -121,9 +137,8 @@ img {
   padding: 12px 24px;
   color: white;
   font-size: 16px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 300;
   text-align: center;
   border-radius: 3px;
 }
@@ -131,7 +146,9 @@ img {
 #nav-info-sc-link {
   text-decoration: none;
   color: #fff;
-  font-weight: 100;
+  font-weight: 600;
+  font-family: Interstate;
+  letter-spacing: 1px;
   width: 100%;
   height: 100%;
   padding: 12px 24px;
@@ -156,17 +173,16 @@ img {
   height: 40px;
   width: 425px;
   border-radius: 3px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-weight: 600;
+  font-family: Interstate;
+  letter-spacing: 0.7px;
   font-size: 14px;
   vertical-align: baseline;
 }
 
 .body-search-content > p {
   margin-right: 20px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Interstate;
   font-weight: 100;
   text-align: center;
   font-size: 14px;
@@ -190,9 +206,9 @@ img {
   margin-left: 14px;
   padding: 13px 13px;
   height: 40px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-weight: 600;
+  font-family: Interstate;
+  letter-spacing: 0.7px;
   text-align: center;
   font-size: 14px;
   vertical-align: baseline;
@@ -204,9 +220,9 @@ img {
   font-size: 21px;
   text-align: center;
   padding-top: 10px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-weight: 600;
+  font-family: Interstate;
+  letter-spacing: 0.7px;
   background-color: #fff;
 }
 
@@ -275,18 +291,19 @@ img {
   font-size: 14px;
   overflow: hidden;
   white-space: nowrap;
+  font-weight: 600;
   font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
     Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  letter-spacing: 0.7px;
 }
 
 #track-item > #track-artist {
   font-size: 13px;
   overflow: hidden;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  font-weight: 600;
+  font-family: Interstate;
+  letter-spacing: 0.7px;
   color: #999;
-  font-weight: 100;
 }
 
 .body-mobile-content {
@@ -320,8 +337,9 @@ img {
 }
 
 .body-mobile-container .mobile-info {
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   font-size: 24px;
   padding: 5px;
   margin: 0 0 10px;
@@ -355,9 +373,9 @@ img {
 }
 
 .body-teaser > .teaser-header {
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   font-size: 40px;
   color: #fff;
   padding-left: 60px;
@@ -365,9 +383,9 @@ img {
 }
 
 .body-teaser > .teaser-info {
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   font-size: 20px;
   color: #fff;
   padding-left: 60px;
@@ -381,8 +399,7 @@ img {
   padding: 12px 24px;
   color: white;
   font-size: 16px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Interstate;
   font-weight: 100;
   text-align: center;
   border-radius: 3px;
@@ -398,18 +415,18 @@ img {
 }
 
 #signup-header {
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   font-size: 38px;
   color: #333;
   padding-top: 90px;
 }
 
 #signup-info {
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   font-size: 22px;
   color: #333;
 }
@@ -421,9 +438,9 @@ img {
   padding: 12px 24px;
   color: white;
   font-size: 16px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
-  font-weight: 100;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.7px;
   text-align: center;
   border-radius: 3px;
 }
@@ -446,8 +463,7 @@ img {
   padding: 12px 24px;
   color: black;
   font-size: 16px;
-  font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans,
-    Garuda, Verdana, Tahoma, sans-serif;
+  font-family: Interstate;
   font-weight: 100;
   text-align: center;
   border-radius: 3px;
