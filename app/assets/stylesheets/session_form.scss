@@ -138,6 +138,7 @@
   width: 160px;
   width: 160px;
   background-size: cover;
+  position: absolute;
 }
 
 .profile-picture-upload-btn {
@@ -149,11 +150,13 @@
   color: #333333;
   padding: 2px 4x 2px 4px;
   border-radius: 3px;
-  background-color: transparent;
+  background-color: rgba(202, 202, 202, 0.5);
   margin-bottom: 10px;
   margin-left: 30px;
   margin-top: 125px;
   z-index: 1000;
+  position: relative;
+  outline: none;
 }
 
 .profile-picture-upload-btn > input {
@@ -168,20 +171,35 @@
 }
 
 .profile-age > h2 {
+  font-family: Interstate;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 15px;
 }
 
 .profile-age > input {
   border: 1px solid #f0f0f0;
-  padding: 2px 4px;
+  padding: 2px 6px;
+  border-radius: 3px;
 }
 
 .profile-gender {
   margin-bottom: 10px;
 }
 
+.profile-username {
+  font-family: Interstate;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  line-height: 15px;
+}
+
 .profile-username > input {
   border: 1px solid #f0f0f0;
-  padding: 2px 4px;
+  padding: 2px 6px;
+  border-radius: 3px;
 }
 
 #session-form-input-error-active {
@@ -189,10 +207,12 @@
   font-size: 16px;
   line-height: 20px;
   padding: 5px 10px;
+  width: 400px;
   border: 1px solid red;
   border-radius: 5px;
   font-family: Interstate;
-  font-weight: 100;
+  letter-spacing: 0.3px;
+  font-weight: 600;
 }
 
 #session-form-input-error {
@@ -204,5 +224,6 @@
   border: 1px solid lightgray;
   border-radius: 5px;
   font-family: Interstate;
-  font-weight: 100;
+  font-weight: 600;
+  letter-spacing: 0.3px;
 }

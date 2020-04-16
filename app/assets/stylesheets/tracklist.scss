@@ -106,6 +106,10 @@
 .track-bottom-icons div:hover {
   border: 0.5px solid rgb(107, 106, 106);
   color: #333;
+
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
 }
 
 .track-bottom-stats {

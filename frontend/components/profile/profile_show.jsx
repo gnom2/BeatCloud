@@ -26,6 +26,9 @@ class ProfileShow extends React.Component {
     this.state = {
       currentTrack: "",
     };
+
+    this.handlePicUpload = this.handlePicUpload.bind(this);
+    this.findFileInput = this.findFileInput.bind(this);
   }
 
   componentDidMount() {
@@ -66,6 +69,8 @@ class ProfileShow extends React.Component {
   render() {
     const artist = this.props.user;
     let trackCount = 0;
+    let profileBanner =
+      "https://i1.sndcdn.com/visuals-000010958294-lwO6rW-t2480x520.jpg";
     const trackLis = this.props.tracks.map((track) => {
       if (track.artist_id === artist.id) {
         trackCount++;
@@ -123,15 +128,15 @@ class ProfileShow extends React.Component {
                   <div className="track-bottom-stats">
                     <div>
                       <FontAwesomeIcon id="bottom-icon" icon={faPlay} />
-                      <span>273</span>
+                      <span>{Math.floor(Math.random() * 300)}</span>
                     </div>
                     <div>
                       <FontAwesomeIcon id="bottom-icon" icon={faRetweet} />
-                      <span>17</span>
+                      <span>{Math.floor(Math.random() * 30)}</span>
                     </div>
                     <div>
                       <FontAwesomeIcon id="bottom-icon" icon={faDownload} />
-                      <span>6</span>
+                      <span>{Math.floor(Math.random() * 10)}</span>
                     </div>
                   </div>
                 </div>
@@ -156,9 +161,10 @@ class ProfileShow extends React.Component {
               <div id="profile-picture">
                 <img src={artist.photoUrl} alt="" />
               </div>
-              <div id="profile-banner">
+              <div id="profile-banner" onClick={this.fildFileInput}>
                 <h2>{artist.username}</h2>
-                <span></span>
+                {/* <img src={profileBanner} alt="" /> */}
+                <input type="file" id="file" onChange={this.handlePicUpload} />
               </div>
             </div>
             <ProfileMenu />

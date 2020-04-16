@@ -252,19 +252,7 @@ class SessionForm extends React.Component {
                 value={this.state.userParams.age || ""}
               />
             </div>
-            <div className="profile-gender">
-              <h2>Gender</h2>
-              <select
-                name="gender"
-                id="gender"
-                value={this.state.gender || ""}
-                onChange={this.update("gender")}
-              >
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="neither">Prefer not to reveal</option>
-              </select>
-            </div>
+            {/* <div className="profile-gender"></div> */}
             <label className="profile-username">
               Username <br />
               <input

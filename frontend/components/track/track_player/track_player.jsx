@@ -120,14 +120,15 @@ class TrackPlayer extends React.Component {
     //   }
     //   return tracks[key];
     // });
-    // debugger;
+    debugger;
     this.setState(
       {
         playing: false,
         timeElapsed: 0,
       },
       () => {
-        // debugger;
+        debugger;
+
         audioPlayer.currentTime = 0;
         this.scrollbar.current.value = 0;
         this.props.updatePlaypoint(0);
@@ -150,10 +151,6 @@ class TrackPlayer extends React.Component {
       users,
       tracks,
     } = this.props;
-    // debugger;
-    // let trackUrl = this.props.trackPlayer
-    //   ? this.props.trackPlayer.trackUrl
-    //   : "";
 
     let trackUrl;
     if (trackPlayer) {
@@ -164,7 +161,6 @@ class TrackPlayer extends React.Component {
       trackUrl = "";
     }
 
-    // debugger;
     return (
       <>
         <audio

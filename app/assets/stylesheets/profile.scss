@@ -44,7 +44,7 @@
   height: 260px;
 }
 
-#profile-banner {
+#profile-banner img {
 }
 
 #profile-banner > h2 {
@@ -85,6 +85,11 @@ a.visited {
 }
 
 .profile-menu-item a:hover {
+  border-bottom: 1px solid #bd3d3a;
+  color: #bd3d3a;
+}
+
+#list-item-1 {
   border-bottom: 1px solid #bd3d3a;
   color: #bd3d3a;
 }
@@ -145,16 +150,6 @@ a.visited {
   margin-right: 50px;
 }
 
-#stats-item span {
-  font-size: 20px;
-}
-
-#stats-item {
-  display: flex;
-  flex-direction: column;
-  border-right: 1px solid #f0f0f0;
-}
-
 .sidebar-description {
   margin-left: 40px;
   margin-top: 20px;
@@ -182,5 +177,20 @@ a.visited {
 
 #stats-item > span:hover {
   color: #bd3d3a;
+  transition: all 0.3s ease 0s;
   cursor: pointer;
+}
+
+#stats-item span {
+  font-size: 20px;
+}
+
+#stats-item {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #f0f0f0;
+}
+
+#file {
+  display: none;
 }
