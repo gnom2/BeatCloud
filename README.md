@@ -41,3 +41,13 @@
 ![](https://media.giphy.com/media/Kf07lXBqPlJYCr49FP/giphy.gif)
 
 ![](https://media.giphy.com/media/JPyZ2qVCqRqXxyUoZ8/giphy.gif)
+
+------------------------------------------------
+
+## Upcoming Features
+
+#### Track Waveform
+- Waveform is under development to show the visualization of the audio for each track.
+
+#### Likes & Follows
+- Users will soon be able to like tracks and follow other artists.
