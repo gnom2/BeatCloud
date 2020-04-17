@@ -82,29 +82,30 @@
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
   position: absolute;
-  top: -55px;
+  border: 0.5px solid #e5e5e5;
+  top: -85px;
   left: -70px;
   width: 130px;
   z-index: 4;
   padding: 10px;
   display: flex;
   // justify-content: center;
-  background: rgb(131, 128, 128);
-  border-radius: 10px;
+  background: whitesmoke;
+  border-radius: 2px;
   animation-name: volume-fade-in;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
 }
 
 @keyframes volume-fade-in {
   from {
-    left: 5px;
-    top: -25px;
-    width: 30px;
+    left: -70px;
+    top: -35px;
+    width: 130px;
     opacity: 0;
   }
   to {
     left: -70px;
-    top: -55px;
+    top: -85px;
     width: 130px;
     opacity: 1;
   }
