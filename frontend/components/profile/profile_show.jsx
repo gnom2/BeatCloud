@@ -77,10 +77,11 @@ class ProfileShow extends React.Component {
 
   render() {
     const artist = this.props.user;
+
     let trackCount = 0;
     let profileBanner =
       "https://i1.sndcdn.com/visuals-000010958294-lwO6rW-t2480x520.jpg";
-    const trackLis = this.props.tracks.map((track) => {
+    const trackLis = this.props.tracks.map((track, i) => {
       if (track.artist_id === artist.id) {
         trackCount++;
         return (
@@ -99,7 +100,6 @@ class ProfileShow extends React.Component {
                         track={track}
                         audioPlayer={this.props.audioPlayer}
                         currentTrack={this.state.currentTrack}
-                        onClick={this.clickCounter}
                       />
                     </div>
                   </div>
@@ -138,7 +138,7 @@ class ProfileShow extends React.Component {
                   <div className="track-bottom-stats">
                     <div>
                       <FontAwesomeIcon id="bottom-icon" icon={faPlay} />
-                      <span>{Math.floor(Math.random() * 300)}</span>
+                      <span>{Math.floor(Math.random() * 100)}</span>
                     </div>
                     <div>
                       <FontAwesomeIcon id="bottom-icon" icon={faRetweet} />

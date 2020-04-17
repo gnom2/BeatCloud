@@ -4,8 +4,8 @@
 
 // const msp = (state, ownProps) => ({
 //   track: ownProps.track,
+//   audioPlayer: ownProps.audioPlayer,
 //   trackPlayer: state.ui.trackPlayer,
-//   // audioPlayer: ownProps.audioPlayer,
 //   barHeight: ownProps.barHeight,
 // });
 

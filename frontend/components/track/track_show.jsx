@@ -56,6 +56,7 @@ class TrackShow extends React.Component {
     // debugger;
     this.props.fetchTrack(this.props.match.params.trackId);
     this.props.requestComments(this.props.match.params.trackId);
+
     // this.props.requestComments();
     // ;
     // this.setState({

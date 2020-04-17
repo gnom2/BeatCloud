@@ -131,14 +131,15 @@
   font-size: 14px;
   letter-spacing: 0.3px;
   line-height: 15px;
+  margin-bottom: 5px;
 }
 .upload-main-body-title > input {
   border: 1px solid #f0f0f0;
-  padding: 2px 4px;
+  padding: 3px 6px;
   font-family: Interstate;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
   line-height: 15px;
 }
 .upload-main-body-title h2 span {
@@ -147,20 +148,45 @@
 
 .main-genre-radio {
   margin-bottom: 10px;
+  font-family: Interstate;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+#genres {
+  border-color: #e5e5e5;
+  font-family: Interstate;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  padding: 3px 6px;
 }
 
 #custom-genre {
   margin-bottom: 10px;
+  font-family: Interstate;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+#custom-genre input {
+  border: 1px solid #e5e5e5;
+  padding: 3px 6px;
 }
 
 .upload-main-description {
   font-family: Interstate;
   font-weight: 600;
   font-size: 14px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
   line-height: 15px;
 }
 
+.upload-main-description h2 {
+  margin-bottom: 5px;
+}
 .upload-main-footer {
   display: flex;
   justify-content: space-between;
