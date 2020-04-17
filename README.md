@@ -4,9 +4,18 @@
  both aspiring artists to host their own music and listeners to follow their favorite artists. 
  BeatCloud is intended to replicate SoundCloud, maintaining its minimalistic design while giving it a more artistic twist.
  
- ### Technology
+ ![](https://media.giphy.com/media/UpKAaktjDG2q7dFWTb/giphy.gif)
  
-![](https://media.giphy.com/media/UpKAaktjDG2q7dFWTb/giphy.gif)
+ ## Notable Technology
+ - `Backend` - Ruby on Rails 
+ - `Frontend` - React-Redux / jBuilder / AJAX
+ - `PostgreSQL` - Database
+ - `AWS S3` - Cloud DB Hosting
+ - `Heroku` - Domain hosting
+ 
+ ### Color Scheme
+ 
+ ![](https://i.imgur.com/XOchdsP.png)
 
 ---------------------------------------------
 ## Highlighted Features
