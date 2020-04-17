@@ -36,5 +36,8 @@
 #### Users can upload their own tracks into their profile.
 - The demo user already has some tracks, and you can add on more tracks to the demo user by using the upload function.
 - Track can be uploaded with a picture. Once uploaded, user will be redirected to the track page where they can play their new track!
+- Once uploaded, any users can comment on that track's show page.
 
 ![](https://media.giphy.com/media/Kf07lXBqPlJYCr49FP/giphy.gif)
+
+![](https://media.giphy.com/media/JPyZ2qVCqRqXxyUoZ8/giphy.gif)
