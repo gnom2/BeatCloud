@@ -20,8 +20,15 @@
 ---------------------------------------------
 ## Highlighted Features
 
-BeatCloud users can browse the website while listening to music uninterrupted.
-
+##### BeatCloud users can browse through the website while listening to music uninterrupted.
+- There are tracks on the home page that the user can play without logging in.
+- Tracks will continue to play throughout the signup/signin process.
 
 ![](https://media.giphy.com/media/IhmzCfOowezeg5Twlw/giphy.gif)
 
+##### Users can sign in as a demo user and check out the features of an artist.
+- Demo user can see the statistics of their artist page upon signin.
+- Weekly trending tracks are listed in a scrolling box.
+- Stay Home playlists are listed in a carousel.
+
+![](https://media.giphy.com/media/hT0lyAEP7oUqAdjgEd/giphy.gif)
