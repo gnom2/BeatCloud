@@ -10,6 +10,7 @@ import {
   faRandom,
   faRedo,
   faVolumeUp,
+  faVolumeMute,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -22,6 +23,8 @@ class TrackPlayer extends React.Component {
       timeElapsed: 0,
       playing: props.playing,
       volume: 1.0,
+      mutedVolume: 0,
+      volumeActive: false,
       trackLoaded: false,
       trackPlayer: this.props.trackPlayer,
     };
@@ -31,6 +34,9 @@ class TrackPlayer extends React.Component {
     this.restartTrack = this.restartTrack.bind(this);
     this.updatePlayTime = this.updatePlayTime.bind(this);
     this.changePlaypoint = this.changePlaypoint.bind(this);
+    this.toggleMute = this.toggleMute.bind(this);
+    this.changeVol = this.changeVol.bind(this);
+
     this.skipTrack = this.skipTrack.bind(this);
     this.scrollbar = React.createRef();
     this.volumebar = React.createRef();
@@ -50,7 +56,7 @@ class TrackPlayer extends React.Component {
 
   handlePlayPause() {
     let audioPlayer = document.getElementById("audio-element");
-
+    clearInterval(this.intervalId);
     if (this.props.playing) {
       this.props.pauseTrack();
       audioPlayer.pause();
@@ -89,8 +95,9 @@ class TrackPlayer extends React.Component {
   updatePlayTime() {
     let audioPlayer = document.getElementById("audio-element");
     // debugger;
+    // save setInterval to a variable ( this object )
     if (audioPlayer.paused === false) {
-      setInterval(() => {
+      this.intervalId = setInterval(() => {
         this.scrollbar.current.value = audioPlayer.currentTime;
         this.setState({
           timeElapsed: audioPlayer.currentTime,
@@ -98,6 +105,46 @@ class TrackPlayer extends React.Component {
         this.props.updatePlaypoint(this.state.timeElapsed);
       }, 50);
     }
+  }
+
+  toggleMute() {
+    let vol = this.state.volume;
+    let audioPlayer = document.getElementById("audio-element");
+
+    debugger;
+    if (vol !== 0.0) {
+      this.setState(
+        {
+          mutedVolume: vol,
+          volume: 0.0,
+        },
+        () => {
+          audioPlayer.volume = this.state.volume;
+          this.volumebar.current.value = 0;
+        }
+      );
+    } else {
+      this.setState(
+        {
+          volume: this.state.mutedVolume,
+        },
+        () => {
+          audioPlayer.volume = this.state.volume;
+          this.volumebar.current.value = this.state.volume * 1000;
+        }
+      );
+    }
+  }
+
+  changeVol(e) {
+    e.persist();
+    let audioPlayer = document.getElementById("audio-element");
+
+    debugger;
+    this.setState({ volume: e.target.value / 1000.0 }, () => {
+      this.volumebar.current.value = e.target.value;
+      audioPlayer.volume = e.target.value / 1000.0;
+    });
   }
 
   skipTrack() {
@@ -225,8 +272,46 @@ class TrackPlayer extends React.Component {
                 />
                 <p>{formatTrackTime(this.state.duration)}</p>
               </div>
-              <div className="track-volume-btn">
-                <FontAwesomeIcon icon={faVolumeUp} />
+              <div
+                className="track-volume-btn"
+                onMouseEnter={() => this.setState({ volumeActive: true })}
+                onMouseLeave={() => this.setState({ volumeActive: false })}
+              >
+                {this.state.volumeActive && (
+                  <div
+                    className="volume-bar-wrapper"
+                    onMouseEnter={() => this.setState({ volumeActive: true })}
+                    onMouseLeave={() => this.setState({ volumeActive: false })}
+                  >
+                    <input
+                      type="range"
+                      id="volume-bar"
+                      ref={this.volumebar}
+                      min="0"
+                      max="1000"
+                      defaultValue={this.state.volume * 1000}
+                      onChange={(e) => this.changeVol(e)}
+                    />
+                  </div>
+                )}
+                {this.state.volume === 0.0 ? (
+                  <FontAwesomeIcon
+                    icon={faVolumeMute}
+                    className="volume-control-btn"
+                    onClick={this.toggleMute}
+                    onMouseEnter={() => this.setState({ volumeActive: true })}
+                    onMouseLeave={() => this.setState({ volumeActive: false })}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faVolumeUp}
+                    className="volume-control-btn"
+                    onClick={this.toggleMute}
+                    onMouseEnter={() => this.setState({ volumeActive: true })}
+                    onMouseLeave={() => this.setState({ volumeActive: false })}
+                  />
+                )}
+                {/* <FontAwesomeIcon icon={faVolumeUp} /> */}
               </div>
               <div className="track-details-container">
                 <div className="track-details-profile-pic">

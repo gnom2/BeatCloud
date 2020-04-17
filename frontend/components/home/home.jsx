@@ -181,6 +181,13 @@ class Home extends React.Component {
             </button>
           </div>
         </div>
+        <div className="home-footer">
+          <a href="http://www.github.com/gnom2/BeatCloud">Github</a>
+          <a href="https://www.linkedin.com/in/jun-hyeok-scott-lee-18a62851/">
+            LinkedIn
+          </a>
+          <a id="sc-link" href="http://www.soundcloud.com/gnomeee">by Jun Lee</a>
+        </div>
       </div>
     );
   }

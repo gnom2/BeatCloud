@@ -25,10 +25,12 @@ class ProfileShow extends React.Component {
     super(props);
     this.state = {
       currentTrack: "",
+      playCount: 0,
     };
 
     this.handlePicUpload = this.handlePicUpload.bind(this);
     this.findFileInput = this.findFileInput.bind(this);
+    this.clickCounter = this.clickCounter.bind(this);
   }
 
   componentDidMount() {
@@ -42,6 +44,13 @@ class ProfileShow extends React.Component {
           currentTrack: "",
         });
       }
+    });
+  }
+
+  clickCounter() {
+    let newCount = this.state.playCount + 1;
+    this.setState({
+      playCount: newCount,
     });
   }
 
@@ -90,6 +99,7 @@ class ProfileShow extends React.Component {
                         track={track}
                         audioPlayer={this.props.audioPlayer}
                         currentTrack={this.state.currentTrack}
+                        onClick={this.clickCounter}
                       />
                     </div>
                   </div>
@@ -148,6 +158,7 @@ class ProfileShow extends React.Component {
         return null;
       }
     });
+    debugger;
 
     return (
       <>
@@ -211,7 +222,11 @@ class ProfileShow extends React.Component {
                     </div>
                   </div>
                 </div>
-                <SidebarContainer trackCount={trackCount} />
+                <SidebarContainer
+                  trackCount={trackCount}
+                  artist={artist}
+                  playCount={this.state.playCount}
+                />
               </div>
             </div>
           </div>

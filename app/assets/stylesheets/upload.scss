@@ -126,10 +126,20 @@
   margin-bottom: 10px;
 }
 .upload-main-body-title > h2 {
+  font-family: Interstate;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 15px;
 }
 .upload-main-body-title > input {
   border: 1px solid #f0f0f0;
   padding: 2px 4px;
+  font-family: Interstate;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 15px;
 }
 .upload-main-body-title h2 span {
   color: red;
@@ -141,6 +151,14 @@
 
 #custom-genre {
   margin-bottom: 10px;
+}
+
+.upload-main-description {
+  font-family: Interstate;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  line-height: 15px;
 }
 
 .upload-main-footer {

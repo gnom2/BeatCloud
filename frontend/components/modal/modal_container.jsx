@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { closeModal } from "../../actions/modal_actions";
+import { receiveErrors } from "../../actions/session_actions";
 import Modal from "./modal";
 
 const msp = (state) => {
@@ -12,6 +13,7 @@ const msp = (state) => {
 const mdp = (dispatch) => {
   return {
     closeModal: () => dispatch(closeModal()),
+    setErrors: (errors) => dispatch(receiveErrors(errors)),
   };
 };
 

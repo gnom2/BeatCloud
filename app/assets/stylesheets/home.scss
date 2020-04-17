@@ -82,6 +82,41 @@ img {
   -webkit-filter: blur(0.8px);
 }
 
+#login,
+.signin-btn {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+#login:before,
+.signin-btn:before {
+  content: "";
+  position: absolute;
+  border: #e1e1e1 solid 0.5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: top, right, bottom, left;
+  transition-property: top, right, bottom, left;
+}
+#login:hover:before,
+#login:focus:before,
+#login:active:before,
+.signin-btn:hover:before,
+.signin-btn:focus:before,
+.signin-btn:active:before {
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+}
+
 .nav-login-form > #signup {
   margin-right: 10px;
   border: 0.5px solid #bd3d3a;
@@ -460,13 +495,66 @@ img {
 .signin-btn {
   border: 0.5px solid #e5e5e5;
   background: transparent;
-  padding: 12px 24px;
+  padding: 8px 24px;
   color: black;
   font-size: 16px;
   font-family: Interstate;
-  font-weight: 100;
+  font-weight: 600;
   text-align: center;
   border-radius: 3px;
+}
+
+.home-footer {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+  width: 1180px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.home-footer a {
+  margin-right: 30px;
+  font-size: 20px;
+  font-family: Interstate;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: black;
+
+  display: inline-block;
+  position: relative;
+}
+
+// .home-footer a:hover {
+
+// }
+
+#sc-link {
+  margin-top: 7px;
+  font-size: 13px;
+}
+
+.home-footer a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.home-footer a:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .album1 {

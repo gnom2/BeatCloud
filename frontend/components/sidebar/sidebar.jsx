@@ -66,7 +66,7 @@ class Sidebar extends React.Component {
         </div>
       );
     });
-
+    debugger;
     return (
       <section className="side-content-container">
         <div className="side-top-content">
@@ -83,16 +83,27 @@ class Sidebar extends React.Component {
             <div className="side-stats">
               <div id="side-stats-left">
                 <h3 id="left-stats">Plays last 24 hours</h3>
-                <span id="left-num">352</span>
+                <span id="left-num">
+                  {this.props.currentUser.email === "demo@aol.com"
+                    ? 352
+                    : this.props.playCount
+                    ? this.props.playCount
+                    : 0}
+                </span>
               </div>
               <div id="side-stats-right">
                 <h3 id="right-stats">Plays last 7 days</h3>
-                <span id="right-num">1953</span>
+                <span id="right-num">
+                  {this.props.currentUser.email === "demo@aol.com" ? 1953 : 0}
+                </span>
               </div>
             </div>
 
             <div className="side-stats-total">
-              <h3>103.5K plays in total</h3>
+              <h3>
+                {this.props.currentUser.email === "demo@aol.com" ? "103k " : 0}
+                plays in total
+              </h3>
             </div>
           </div>
         </div>
