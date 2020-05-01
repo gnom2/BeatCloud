@@ -1,24 +1,53 @@
-# README
+   ![](https://i.imgur.com/0C6NlVu.jpg)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ [**BeatCloud**](https://www.google.com) is an online music sharing platform for 
+ both aspiring artists to host their own music and listeners to follow their favorite artists. 
+ BeatCloud is intended to replicate SoundCloud, maintaining its minimalistic design while giving it a more artistic twist.
+ 
+ ![](https://media.giphy.com/media/UpKAaktjDG2q7dFWTb/giphy.gif)
+ 
+ ## Notable Technology
+ - `Backend` - Ruby on Rails 
+ - `Frontend` - React-Redux / jBuilder / AJAX
+ - `PostgreSQL` - Database
+ - `AWS S3` - Cloud DB Hosting
+ - `Heroku` - Domain hosting
+ 
+ ### Color Scheme
+ 
+ ![](https://i.imgur.com/XOchdsP.png)
 
-Things you may want to cover:
+---------------------------------------------
+## Highlighted Features
 
-* Ruby version
+#### BeatCloud users can browse through the website while listening to music uninterrupted.
+- There are tracks on the home page that the user can play without logging in.
+- Tracks will continue to play throughout the signup/signin process.
 
-* System dependencies
+![](https://media.giphy.com/media/IhmzCfOowezeg5Twlw/giphy.gif)
 
-* Configuration
+#### Users can sign in as a demo user and check out the features of an artist.
+- Demo user can see the statistics of their artist page upon signin.
+- Weekly trending tracks are listed in a scrolling box.
+- Stay Home playlists are listed in a carousel.
 
-* Database creation
+![](https://media.giphy.com/media/hT0lyAEP7oUqAdjgEd/giphy.gif)
 
-* Database initialization
+#### Users can upload their own tracks into their profile.
+- The demo user already has some tracks, and you can add on more tracks to the demo user by using the upload function.
+- Track can be uploaded with a picture. Once uploaded, user will be redirected to the track page where they can play their new track!
+- Once uploaded, any users can comment on that track's show page.
 
-* How to run the test suite
+![](https://media.giphy.com/media/Kf07lXBqPlJYCr49FP/giphy.gif)
 
-* Services (job queues, cache servers, search engines, etc.)
+![](https://media.giphy.com/media/JPyZ2qVCqRqXxyUoZ8/giphy.gif)
 
-* Deployment instructions
+------------------------------------------------
 
-* ...
+## Upcoming Features
+
+#### Track Waveform
+- Waveform is under development to show the visualization of the audio for each track.
+
+#### Likes & Follows
+- Users will soon be able to like tracks and follow other artists.
