@@ -94,8 +94,7 @@ class TrackPlayer extends React.Component {
 
   updatePlayTime() {
     let audioPlayer = document.getElementById("audio-element");
-    // debugger;
-    // save setInterval to a variable ( this object )
+
     if (audioPlayer.paused === false) {
       this.intervalId = setInterval(() => {
         this.scrollbar.current.value = audioPlayer.currentTime;
@@ -111,7 +110,6 @@ class TrackPlayer extends React.Component {
     let vol = this.state.volume;
     let audioPlayer = document.getElementById("audio-element");
 
-    debugger;
     if (vol !== 0.0) {
       this.setState(
         {
@@ -140,7 +138,6 @@ class TrackPlayer extends React.Component {
     e.persist();
     let audioPlayer = document.getElementById("audio-element");
 
-    debugger;
     this.setState({ volume: e.target.value / 1000.0 }, () => {
       this.volumebar.current.value = e.target.value;
       audioPlayer.volume = e.target.value / 1000.0;
@@ -149,32 +146,14 @@ class TrackPlayer extends React.Component {
 
   skipTrack() {
     let audioPlayer = document.getElementById("audio-element");
-    // const { tracks } = this.props;
-    // let nextTrack;
-    // let result;
-    // let that = this;
-    // const trackLi = Object.keys(tracks).map((key) => {
-    //   if (!nextTrack) {
-    //     debugger;
-    //     nextTrack = tracks[key];
-    //     if (that.props.trackPlayer.id !== key) {
-    //       debugger;
-    //       if (!result) {
-    //         debugger;
-    //         result = tracks[key];
-    //       }
-    //     }
-    //   }
-    //   return tracks[key];
-    // });
-    // debugger;
+  
     this.setState(
       {
         playing: false,
         timeElapsed: 0,
       },
       () => {
-        // debugger;
+      
 
         audioPlayer.currentTime = 0;
         this.scrollbar.current.value = 0;
@@ -182,8 +161,6 @@ class TrackPlayer extends React.Component {
         this.props.pauseTrack();
         audioPlayer.pause();
 
-        // audioPlayer.src = result.trackUrl;
-        // audioPlayer.play();
       }
     );
   }

@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
   }
 
   componentWillUnmount() {
-    debugger;
+
     this.props.setErrors([]);
   }
 
@@ -82,7 +82,7 @@ class SessionForm extends React.Component {
   handlePicUpload(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
-    // debugger;
+
     if (file) {
       reader.readAsDataURL(file);
       reader.onloadend = () => {
@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
           },
         });
       };
-      // debugger;
+     
     } else {
       this.setState({ photoFile: null, photoUrl: null });
     }
@@ -114,26 +114,20 @@ class SessionForm extends React.Component {
       photoFile,
     } = this.state.userParams;
     const formData = new FormData();
-    // debugger;
+
     formData.append("user[email]", email);
     formData.append("user[password]", password);
     formData.append("user[age]", age);
     formData.append("user[gender]", gender);
     formData.append("user[username]", username);
     formData.append("user[photo]", photoFile);
-    // debugger;
+  
     this.props.signup(formData).then(this.props.closeModal);
   }
 
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   debugger;
-  //   const user = Object.assign({}, this.state.userParams);
-  //   this.props.signup(user).then(this.props.closeModal);
-  // }
 
   checkValidEmail(email) {
-    // debugger;
+
     if (email.split("@").length === 2) {
       if (email.split(".").length === 2) {
         if (email.split("").indexOf("@") < email.split("").indexOf(".")) {
@@ -155,7 +149,7 @@ class SessionForm extends React.Component {
   handleClick(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state.userParams);
-    // debugger;
+
     if (
       this.props.formType === "Create Account" &&
       this.state.stage === "one"

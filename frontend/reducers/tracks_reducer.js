@@ -10,15 +10,15 @@ import { RECEIVE_ALL_COMMENTS } from "../actions/comment_actions";
 
 const tracksReducer = (state = {}, action) => {
   Object.freeze(state);
-  // debugger;
+
   switch (action.type) {
     case RECEIVE_ALL_COMMENTS:
-      // debugger;
+   
       return merge({}, state, action.comments.comments);
     case RECEIVE_TRACKS:
       return action.tracks;
     case RECEIVE_TRACK:
-      // debugger;
+     
       return Object.assign({}, state, {
         [action.track.track.id]: action.track.track,
       });

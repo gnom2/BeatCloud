@@ -158,7 +158,7 @@ class ProfileShow extends React.Component {
         return null;
       }
     });
-    debugger;
+
 
     return (
       <>

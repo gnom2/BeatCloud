@@ -13,15 +13,9 @@ class CommentForm extends React.Component {
     this.update = this.update.bind(this);
   }
 
-  // componentDidMount() {
-  //   debugger;
-  //   if (this.props.track.id) {
-  //     this.props.fetchTrackComments(this.props.track.id);
-  //   }
-  // }
 
   componentWillReceiveProps(nextProps) {
-    // debugger;
+
     if (nextProps.track.id !== this.props.track.id) {
       this.setState({ track_id: nextProps.track.id });
     }
@@ -29,7 +23,7 @@ class CommentForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger;
+
     this.props.createComment(this.state).then(this.setState({ body: "" }));
   }
 

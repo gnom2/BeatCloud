@@ -36,43 +36,29 @@ class TrackShow extends React.Component {
       track_id: this.props.match.params.trackId,
       author_id: this.props.currentUser.id,
     };
-    // debugger;
+
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.update = this.update.bind(this);
   }
 
-  // componentDidUpdate() {
-  //   this.props.fetchTrackComments(this.state.track_id);
-  // }
-
-  // componentWillMount() {
-  //   debugger;
-
-  // }
 
   componentDidMount() {
-    // debugger;
+
     this.props.fetchTrack(this.props.match.params.trackId);
     this.props.requestComments(this.props.match.params.trackId);
 
-    // this.props.requestComments();
-    // ;
-    // this.setState({
-    //   body: "",
-    // });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // debugger;
 
     this.props.createComment(this.state).then(this.setState({ body: "" }));
   }
 
   handleDelete(e) {
-    // debugger;
+
     this.props
       .deleteComment(e.currentTarget.value)
       .then(this.setState({ body: "" }));
@@ -92,7 +78,7 @@ class TrackShow extends React.Component {
     let commentCount = 0;
 
     if (Object.keys(comments).length !== 0) {
-      // debugger;
+ 
       commentLi = Object.keys(comments).map((key) => {
         if (comments[key].track_id === track.id) {
           commentCount++;
@@ -141,7 +127,7 @@ class TrackShow extends React.Component {
         }
       });
     }
-    // debugger;
+    
     return (
       <>
         <NavBarContainer />

@@ -12,7 +12,7 @@ class CommentItem extends React.Component {
   }
 
   handleDelete(e) {
-    // debugger;
+
     this.props.deleteComment(parseInt(e.currentTarget.value));
   }
 
@@ -20,7 +20,7 @@ class CommentItem extends React.Component {
     const { comments, currentUser } = this.props;
 
     const commentLi = comments.map((comment) => {
-      //   debugger;
+
       if (comment.author.username === currentUser.username) {
         return (
           <li key={comment.id} className="comment-item">
@@ -65,7 +65,7 @@ class CommentItem extends React.Component {
         );
       }
     });
-    // debugger;
+
     return <ul className="comment-list">{commentLi}</ul>;
   }
 }

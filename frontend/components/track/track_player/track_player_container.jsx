@@ -10,7 +10,7 @@ import {
 import { fetchUser } from "../../../actions/user_actions";
 
 const msp = (state, ownProps) => {
-  // debugger;
+
   return {
     currentUser: state.entities.users[state.session.id],
     trackPlayer: state.entities.tracks[state.ui.trackPlayer.track_id],

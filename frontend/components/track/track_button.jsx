@@ -6,14 +6,13 @@ class TrackButton extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.audioRef = React.createRef();
     this.handlePause = this.handlePause.bind(this);
     this.handlePlay = this.handlePlay.bind(this);
   }
 
   handlePause(track) {
     let audioPlayer = document.getElementById("audio-element");
-    // debugger;
+
     this.props.receiveCurrentTrack(track);
 
     if (
@@ -21,32 +20,32 @@ class TrackButton extends React.Component {
       this.props.track.id === this.props.currentTrackId
     ) {
       this.props.pauseTrack();
-      // this.audioRef.current.pause();
+    
       audioPlayer.pause();
     }
   }
 
   handlePlay(track) {
     let audioPlayer = document.getElementById("audio-element");
-    // debugger;
+
     if (
       this.props.playing &&
       this.props.track.id !== this.props.currentTrackId
     ) {
-      // debugger;
+
       this.props.pauseTrack();
-      // this.audioRef.current.pause();
+    
       audioPlayer.pause();
     }
     this.props.receiveCurrentTrack(track);
     this.props.playTrack();
     audioPlayer.setAttribute("autoPlay", "");
     audioPlayer.play();
-    // this.audioRef.current.play();
+
   }
 
   render() {
-    // debugger;
+ 
     return (
       <div className="track-show-btn" onClick={(e) => e.stopPropagation()}>
         {this.props.playing &&
@@ -64,17 +63,7 @@ class TrackButton extends React.Component {
           ></FontAwesomeIcon>
         )}
 
-        {/* <div className="audioplayer-container">
-          <audio
-            id="audio-element"
-            ref={this.audioRef}
-            className="audioplayer"
-            controlsList="nodownload"
-            controls
-            volume="0.5"
-            src={this.props.track.trackUrl}
-          />
-        </div> */}
+  
       </div>
     );
   }

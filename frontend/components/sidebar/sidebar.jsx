@@ -66,7 +66,7 @@ class Sidebar extends React.Component {
         </div>
       );
     });
-    debugger;
+
     return (
       <section className="side-content-container">
         <div className="side-top-content">
@@ -131,84 +131,3 @@ class Sidebar extends React.Component {
 }
 
 export default Sidebar;
-
-// const Sidebar = (props) => {
-//   let trackCount;
-//   debugger;
-//   if (this.props.users) {
-//     const userLi = Object.values(this.props.users).map((user, i) => {
-//       trackCount = Object.values(user.tracks).length;
-
-//       return (
-//         <div key={user.id} className={`side-user-follow${i}`}>
-//           <img id="side-user-pic" src={user.photoUrl} alt="" />
-
-//           <div className="side-user-info">
-//             <div id="side-user-info-top">{user.username}</div>
-
-//             <div id="side-user-info-bottom">
-//               <span>
-//                 <FontAwesomeIcon icon={faUserFriends} />
-//                 <p>{Math.floor(Math.random() * 500)}</p>
-//               </span>
-//               <span>
-//                 <FontAwesomeIcon icon={faChartBar} />
-//                 <p>{trackCount}</p>
-//               </span>
-//             </div>
-//           </div>
-//         </div>
-//       );
-//     });
-//   }
-
-//   return (
-//     <section className="side-content-container">
-//       <div className="side-top-content">
-//         <div className="stats-title-format">
-//           <span className="title-format">
-//             <div className="title-icon">
-//               <FontAwesomeIcon icon={faChartBar} />
-//             </div>
-//             Stats
-//           </span>
-//           <span className="title-format">View all</span>
-//         </div>
-//         <div className="side-top-info">
-//           <div className="side-stats">
-//             <div id="side-stats-left">
-//               <h3 id="left-stats">Plays last 24 hours</h3>
-//               <span id="left-num">352</span>
-//             </div>
-//             <div id="side-stats-right">
-//               <h3 id="right-stats">Plays last 7 days</h3>
-//               <span id="right-num">1953</span>
-//             </div>
-//           </div>
-
-//           <div className="side-stats-total">
-//             <h3>103.5K plays in total</h3>
-//           </div>
-//         </div>
-//       </div>
-//       <div className="side-middle-content">
-//         <div className="stats-title-middle">
-//           <span className="title-format">
-//             <div className="title-icon">
-//               <FontAwesomeIcon icon={faUserFriends} />
-//             </div>
-//             Who to follow
-//           </span>
-//           <span className="title-format">
-//             <div className="title-icon">
-//               <FontAwesomeIcon icon={faRedo} />
-//             </div>
-//             Refresh
-//           </span>
-//         </div>
-//         <div className="side-middle-info">{userLi}</div>
-//       </div>
-//       <div className="side-bottom-content"></div>
-//     </section>
-//   );
-// };

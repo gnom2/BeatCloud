@@ -23,14 +23,14 @@ class Discover extends React.Component {
 
   handlePlay(track) {
     let audioPlayer = document.getElementById("audio-element");
-    // debugger;
+
     if (
       this.props.playing &&
       this.props.track.id !== this.props.currentTrackId
     ) {
-      // debugger;
+
       this.props.pauseTrack();
-      // this.audioRef.current.pause();
+
       audioPlayer.pause();
     }
     this.props.receiveCurrentTrack(track);
