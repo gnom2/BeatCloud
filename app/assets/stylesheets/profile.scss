@@ -79,13 +79,13 @@
   line-height: 1.8;
 }
 
-.profile-menu-item a,
-a.visited {
+.profile-menu-item div,
+div.visited {
   text-decoration: none;
   color: black;
 }
 
-.profile-menu-item a:hover {
+.profile-menu-item div:hover {
   border-bottom: 1px solid #bd3d3a;
   color: #bd3d3a;
 }

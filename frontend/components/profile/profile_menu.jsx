@@ -5,34 +5,34 @@ const ProfileMenu = () => {
     <div className="profile-main-menu">
       <ul className="main-menu-list">
         <li className="profile-menu-item">
-          <a id="list-item-1" href="">
+          <div id="list-item-1" href="">
             All
-          </a>
+          </div>
         </li>
         <li className="profile-menu-item">
-          <a id="list-item-2" href="">
+          <div id="list-item-2" href="#">
             Popular Tracks
-          </a>
+          </div>
         </li>
         <li className="profile-menu-item">
-          <a id="list-item-3" href="">
+          <div id="list-item-3" href="#">
             Tracks
-          </a>
+          </div>
         </li>
         <li className="profile-menu-item">
-          <a id="list-item-4" href="">
+          <div id="list-item-4" href="#">
             Albums
-          </a>
+          </div>
         </li>
         <li className="profile-menu-item">
-          <a id="list-item-5" href="">
+          <div id="list-item-5" href="#">
             Playlists
-          </a>
+          </div>
         </li>
         <li className="profile-menu-item">
-          <a id="list-item-6" href="">
+          <div id="list-item-6" href="#">
             Reposts
-          </a>
+          </div>
         </li>
       </ul>
     </div>
