@@ -12,7 +12,11 @@
     <meta property="og:image" content='<%= image_url asset_path('beatcloud-img.PNG') %>'/>
     <meta property="og:description" content="Social music sharing platform for both artists and music enthusiasts" />
 
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link href="//db.onlinewebfonts.com/c/67c875133a76f1dc00e6beab89cd7329?family=Interstate" rel="stylesheet" type="text/css"/>
+    <%= favicon_link_tag asset_path('favicon.png') %>
+
 
     <script type="text/javascript">
       window.track1URL = "<%= image_url('track1.png') %>";
