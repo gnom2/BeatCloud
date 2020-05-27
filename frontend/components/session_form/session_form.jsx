@@ -28,7 +28,6 @@ class SessionForm extends React.Component {
   }
 
   componentWillUnmount() {
-
     this.props.setErrors([]);
   }
 
@@ -97,7 +96,6 @@ class SessionForm extends React.Component {
           },
         });
       };
-     
     } else {
       this.setState({ photoFile: null, photoUrl: null });
     }
@@ -121,13 +119,11 @@ class SessionForm extends React.Component {
     formData.append("user[gender]", gender);
     formData.append("user[username]", username);
     formData.append("user[photo]", photoFile);
-  
+
     this.props.signup(formData).then(this.props.closeModal);
   }
 
-
   checkValidEmail(email) {
-
     if (email.split("@").length === 2) {
       if (email.split(".").length === 2) {
         if (email.split("").indexOf("@") < email.split("").indexOf(".")) {
@@ -287,24 +283,9 @@ class SessionForm extends React.Component {
         <a id="help-link" href="">
           Need help?
         </a>
-        <div id="disclaimer-info">
-          We may use your email and devices for updates and tips on BeatCloud's{" "}
-          <br />
-          products and services, and for activities notifications. You can
-          unsubscribe <br />
-          for free at any time in your notification settings. <br />
-          <br />
-          We may use information you provide us in order to show you targeted
-          ads as described in our{" "}
-          <a id="privacy-link" href="">
-            Privacy Policy
-          </a>
-        </div>
       </div>
     );
   }
 }
 
 export default SessionForm;
-
-// {this.state.stage === "one" ? stageOne() : stageTwo()}
