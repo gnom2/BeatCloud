@@ -37,7 +37,6 @@ class Discover extends React.Component {
     this.props.playTrack();
     audioPlayer.setAttribute("autoPlay", "");
     audioPlayer.play();
-    // this.audioRef.current.play();
   }
 
   render() {
