@@ -11,7 +11,6 @@ const msp = (state) => ({
 
 const mdp = (dispatch) => ({
   createComment: (comment) => dispatch(createComment(comment)),
-  // fetchTrackComments: (trackId) => dispatch(fetchTrackComments(trackId)),
 });
 
 export default connect(msp, mdp)(CommentForm);
