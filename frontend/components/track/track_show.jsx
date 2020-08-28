@@ -6,7 +6,7 @@ import TrackButton from "../track/track_button_container";
 // import CommentItemContainer from "../comments/comment_item_container";
 // import SideBarContainer from "../sidebar/sidebar_container";
 // import CommentFormContainer from "../comments/comment_form_container";
-// import WaveFormContainer from "./waveform/waveform_container";
+
 
 import { Link } from "react-router-dom";
 import {
@@ -78,7 +78,7 @@ class TrackShow extends React.Component {
     let commentCount = 0;
 
     if (Object.keys(comments).length !== 0) {
- 
+
       commentLi = Object.keys(comments).map((key) => {
         if (comments[key].track_id === track.id) {
           commentCount++;
@@ -127,7 +127,7 @@ class TrackShow extends React.Component {
         }
       });
     }
-    
+
     return (
       <>
         <NavBarContainer />
@@ -195,8 +195,8 @@ class TrackShow extends React.Component {
                       </form>
                     </section>
                   ) : (
-                    <></>
-                  )}
+                      <></>
+                    )}
 
                   <div className="track-show-bottom-stats-flex">
                     <div className="track-show-bottom-icons">
