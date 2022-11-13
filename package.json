@@ -23,7 +23,7 @@
     "webpack": "^4.23.1"
   },
   "devDependencies": {
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.3.12"
   },
   "engines": {
     "node": "10.13.0",
